@@ -7,12 +7,12 @@ export default function Testimonials() {
             <div className='w-full h-screen flex justify-center items-center'>
                 <h3>Youtube Carousel</h3>
             </div>
-            <div className="flex flex-col gap-12 items-center pb-10">
+            <div className="flex flex-col gap-12 xl:gap-20 items-center pb-10">
                 {
                     testimonials.map(
                         (testimonial, index) =>
                         (
-                            <div key={index} className="w-[80%] h-[300px]">
+                            <div key={index} className="w-[92%] md:w-[80%] xl:w-[70%] max-w-[1126px] md:h-[300px]">
                                 <TestimonialCard testimonial={testimonial} />
                             </div>
                         )
