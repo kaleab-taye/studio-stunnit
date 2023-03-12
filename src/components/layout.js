@@ -1,4 +1,5 @@
 import React from 'react'
+import FloatingButton from './floatingButton'
 import FooterSection from './sections/footerSection'
 
 export default function Layout({ children }) {
@@ -6,6 +7,7 @@ export default function Layout({ children }) {
     <div>
         <div>{children}</div>
         <div>
+            <FloatingButton/>
             <FooterSection />
         </div>
     </div>

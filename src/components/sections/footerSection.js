@@ -14,7 +14,7 @@ export default function FooterSection() {
     var itemHeading = 'uppercase font-bold text-md'
     var item = 'font-light'
     return (
-        <div className='grid'>
+        <div className='grid bg-background2 pt-12'>
             <LeftRightAligner>
                 <GetInTouchSection />
                 <div className=''>
