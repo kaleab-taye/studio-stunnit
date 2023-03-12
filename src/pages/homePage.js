@@ -24,7 +24,7 @@ export default function HomePage() {
                                 <Navbar />
                                 <WhatWeDoSection />
                                 <WhyChooseUsSection />
-                                <DesignInStepsSection />
+                                {/* <DesignInStepsSection /> */}
                 </Layout>
                         </main>
                 </>
