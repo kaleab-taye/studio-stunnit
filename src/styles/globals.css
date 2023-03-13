@@ -21,7 +21,10 @@
   transform: rotate(180deg);
   /* text-orientation: upright; */
 }
-
+/* .stickyTop{
+  position: fixed;
+  top: 0;
+} */
 /* custom css added end */
 
 :root {

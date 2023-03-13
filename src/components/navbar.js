@@ -11,7 +11,7 @@ export default function Navbar() {
     return (
         <LeftRightAligner>
 
-            <div className='top-0 sticky py-3 grid grid-flow-col'>
+            <div className='sticky top-0 py-3 grid grid-flow-col'>
                 {/* logo start */}
                 <div className='mr-auto my-auto grid'>
                     <Image className='max-w-[70px]' src={logo} />

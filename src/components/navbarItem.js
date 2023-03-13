@@ -18,8 +18,11 @@ export default function NavbarItem({ name, path }) {
     <Link href={path}>
       <div className='grid relative'>
         <div className='grid text-center uppercase font-medium my-auto text-sm lg:text-lg'>{name}</div>
-      { path === router.pathname ? <div className='absolute bottom-[-7px] w-full h-[3px] bg-primary rounded'></div>:null}
-      <div className='opacity-0 hover:opacity-100 absolute bottom-[-7px] w-full h-[3px] bg-primary rounded'></div>
+        {path === router.pathname ? <div className='absolute bottom-[-7px] w-full h-[3px] bg-primary rounded'></div> : null}
+        <div className='opacity-0 hover:opacity-100 absolute w-full h-full'>
+          <div className='absolute bottom-[-5px] h-[7px] w-full'></div>
+          <div className='absolute bottom-[-7px] w-full h-[3px] bg-primary rounded'></div>
+        </div>
       </div>
     </Link>
   )
