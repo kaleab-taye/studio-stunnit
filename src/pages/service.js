@@ -1,8 +1,8 @@
 import Layout from '@/components/layout'
 import LeftRightAligner from '@/components/left-right-aligner'
 import Navbar from '@/components/navbar'
+import PageHeading from '@/components/pageHeading'
 import ServiceCard from '@/components/serviceCard'
-import Image from 'next/image'
 import React from 'react'
 import { IoMdMenu } from 'react-icons/io'
 import serviceImage from '../../public/images/Asset_20.png'
@@ -14,13 +14,7 @@ export default function service() {
     <div>
       <Layout>
         <Navbar />
-        <div className='relative grid'>
-          <Image className='brightness-90' src={serviceImage} />
-          <div className='absolute w-full h-full grid'>
-
-            <div className='uppercase m-auto text-4xl font-bold text-primaryColor'>Services</div>
-          </div>
-        </div>
+        <PageHeading image={serviceImage} name='Services' />
         <LeftRightAligner>
           <div className='grid gap-10 my-10'>
             <ServiceCard heading='design only'>
