@@ -10,6 +10,7 @@ import ProgressBar from '../progressBar'
 import img1 from '../../../public/images/Asset_16.png'
 import img2 from '../../../public/images/Asset_14.png'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Carousel } from 'flowbite-react'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -53,12 +54,15 @@ export default function DesignInStepsSection() {
         </div>
         <div className='grid mx-auto'>
           <div className='bg-yellow-500 p-5 max-w-[1000px]'>
-            <AutoPlaySwipeableViews /* index={currentDesignStep} */ className='max-w-[1000px] bg-red-500 mx-auto grid ' interval={4000} >
+            {/* <Carousel>
+
+              <AutoPlaySwipeableViews index={currentDesignStep}  className = 'max-w-[1000px] bg-red-500 mx-auto grid ' interval={4000} >
               <Image className='max-w-[400px] mx-auto' src={teamImage} />
               <Image className='max-w-[400px] mx-auto bg-green-400' src={teamImage} />
               <Image className='max-w-[400px]' src={teamImage} />
               <Image className='max-w-[400px]' src={teamImage} />
-            </AutoPlaySwipeableViews>
+              </AutoPlaySwipeableViews> 
+            </Carousel> */}
 
             <div>
             </div>
