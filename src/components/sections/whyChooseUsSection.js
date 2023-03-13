@@ -4,7 +4,7 @@ import WhyChooseUsCard from '../whyChooseUsCard'
 
 export default function WhyChooseUsSection() {
   return (
-    <div className='bg-background2 py-8'>
+    <div className='bg-surface py-8'>
 
       <LeftRightAligner>
         <div className='mx-auto max-w-[1100px] gap-8 grid grid-flow-row md:grid-flow-col text-center md:text-left'>

@@ -10,7 +10,8 @@ import LeftRightAligner from './left-right-aligner'
 export default function Navbar() {
     return (
         <LeftRightAligner>
-            <div className=' py-3 grid grid-flow-col '>
+
+            <div className='sticky top-0 py-3 grid grid-flow-col'>
                 {/* logo start */}
                 <div className='mr-auto my-auto grid'>
                     <Image className='max-w-[70px]' src={logo} />
@@ -18,12 +19,12 @@ export default function Navbar() {
                 {/* nav items start */}
                 <div className=' ml-auto my-auto grid grid-flow-col gap-8'>
                     <div className='my-auto grid-flow-col gap-8 hidden md:grid'>
-                        <NavbarItem name='Home' />
-                        <NavbarItem name='service' />
-                        <NavbarItem name='projects' />
-                        <NavbarItem name='about us' />
-                        <NavbarItem name='testimonials' />
-                        <NavbarItem name='faq' />
+                        <NavbarItem name='Home' path='/' />
+                        <NavbarItem name='service' path='/service' />
+                        <NavbarItem name='projects' path='/projects'/>
+                        <NavbarItem name='about us' path='/about_us'/>
+                        <NavbarItem name='testimonials' path='/testimonials' />
+                        <NavbarItem name='faq' path='/faq'/>
                     </div>
                     <Button name='get in touch' />
                     <div className='my-auto grid md:hidden'>
@@ -32,6 +33,7 @@ export default function Navbar() {
 
                 </div>
             </div>
+          
         </LeftRightAligner>
     )
 }

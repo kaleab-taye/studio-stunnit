@@ -1,19 +1,30 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}",],
+  content: ["./src/**/*.{js,ts,jsx,tsx}",'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      colors : {
-        "accentColor" : "#bc8028",//orange
-        "primaryColor" : "#f3f3f3",//white background
-        "secondaryColor":"#000000",//black
-        "background2":"#e5e5e5",//gray background
-        "darkGray":"#808080",//darker gray (footer background)
+      colors: {
+        primary: "#bc8028",//orange
+        "primaryColor": "#f3f3f3",//darker white background
+        "darkGray": "#808080",//darker gray (footer background)
+        background: {
+          100: "#ffffff",
+          700: "#808080"
+        },
+        surface: "#f9f9f9",
+        onPrimary:"#ffffff",
+        onBackground:"#000000",
+        onSurface:"#000000",
+      },
 
-      }
+      fontFamily: {
+        'common_font': ['Montserrat']
+      },
     },
   },
   plugins: [
     require('tailwind-scrollbar'),
+    require('flowbite/plugin')
   ],
 }

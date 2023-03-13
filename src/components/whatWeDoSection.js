@@ -47,7 +47,7 @@ export default function WhatWeDoSection() {
                             design only and design with
                             execution
                         </div>
-                        <div className='text-accentColor grid grid-flow-col gap-1 mr-auto'>Learn More <IoIosArrowForward className='my-auto font-bold w-[20px] h-[20px]'/> </div>
+                        <div className='text-primary grid grid-flow-col gap-1 mr-auto'>Learn More <IoIosArrowForward className='my-auto font-bold w-[20px] h-[20px]'/> </div>
                     </div>
                     <div className='grid md:grid-flow-col gap-8'>
                         <WhatWeDoSectionCard

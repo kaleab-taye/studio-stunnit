@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function WhatWeDoSectionCard({ heading, description, children }) {
     return (
-        <div className='grid max-w-[300px] bg-background2 text-center py-8 px-6 gap-4 rounded-md mx-auto'>
+        <div className='grid max-w-[300px] bg-surface text-center py-8 px-6 gap-4 rounded-md mx-auto'>
             <div className='mx-auto'>{children}</div>
             <div className='grid gap-2'>
 

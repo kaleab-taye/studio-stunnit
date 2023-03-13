@@ -14,15 +14,15 @@ export default function FooterSection() {
     var itemHeading = 'uppercase font-bold text-md'
     var item = 'font-light'
     return (
-        <div className='grid'>
-            {/* <LeftRightAligner>
+        <div className='grid bg-surface pt-12'>
+            <LeftRightAligner>
                 <GetInTouchSection />
-                <div className=''>
+                <div className='mb-20'>
 
                     <GetInTouchForm />
                 </div>
-            </LeftRightAligner> */}
-            <div className='bg-darkGray text-primaryColor pt-10 pb-4'>
+            </LeftRightAligner>
+            <div className='bg-background-700 text-primaryColor pt-10 pb-4'>
                 <LeftRightAligner>
                     <div className='grid grid-flow-row md:grid-flow-col col-flow-4 gap-5'>
                         <div className='grid sm:grid-flow-col'>

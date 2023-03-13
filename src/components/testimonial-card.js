@@ -7,7 +7,7 @@ export default function TestimonialCard({ testimonial }) {
         <div className='flex flex-col md:flex-row gap-10 md:gap-x-2 items-center justify-around w-full h-fit md:h-full px-6 py-24 md:p-10 rounded-md bg-gray-300 scroll'>
             <div className='flex justify-center'>
                 <img
-                    className={"w-[230px] md:w-[150px] rounded-full"}
+                    className={"w-[230px] md:w-[170px] rounded-full"}
                     src={testimonial.imageUrl}
                     alt={testimonial.customerName}
                 />
@@ -16,13 +16,13 @@ export default function TestimonialCard({ testimonial }) {
                 <div className='flex flex-col md:flex-row md:justify-between items-center max-md:gap-4'>
                     <div className='flex flex-col md:flex-row  items-center gap-2 md:gap-2'>
                         <h3 className='font-bold text-4xl md:text-3xl'>{testimonial.customerName},</h3>
-                        <h5 className='text-xl md:text-sm text-accentColor text-center'>{testimonial.position}</h5>
+                        <h5 className='text-xl md:text-sm text-primary text-center'>{testimonial.position}</h5>
                     </div>
                     <div>
                         <RatingStars ratingCount={testimonial.rating} />
                     </div>
                 </div>
-                <div className='overflow-auto h-fit max-md:text-md md:h-full max-md:text-center scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-300 md:pr-7'>
+                <div className='overflow-auto h-fit max-md:text-md md:h-full max-md:text-center font-common_font scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-300 md:pr-7'>
                     {
                         '"' + testimonial.detail + '"'
                     }
