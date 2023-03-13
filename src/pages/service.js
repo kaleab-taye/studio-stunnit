@@ -66,11 +66,11 @@ export default function service() {
           </div>
         </LeftRightAligner>
         {/* orange divider */}
-        <div className='h-5 bg-accentColor my-16'></div>
+        <div className='h-5 bg-primary my-16'></div>
         <LeftRightAligner>
 
           <div className='grid grid-cols-4' >
-            <div className='col-span-1 mt-14'><IoMdMenu className='text-accentColor w-20 h-20' /></div>
+            <div className='col-span-1 mt-14'><IoMdMenu className='text-primary w-20 h-20' /></div>
             <div className='grid gap-8 col-span-3'>
               <div className='font-bold text-3xl uppercase'>our process</div>
               <div className='grid gap-8 font-light text-sm' >

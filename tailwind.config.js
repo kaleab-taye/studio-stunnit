@@ -5,12 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "accentColor": "#bc8028",//orange
+        primary: "#bc8028",//orange
         "primaryColor": "#f3f3f3",//darker white background
-        "secondaryColor": "#000000",//black
-        "background1": "#ffffff",//white
-        "background2": "#f9f9f9",//gray background
         "darkGray": "#808080",//darker gray (footer background)
+        background: {
+          100: "#ffffff",
+          700: "#808080"
+        },
+        surface: "#f9f9f9",
+        onPrimary:"#ffffff",
+        onBackground:"#000000",
+        onSurface:"#000000",
       },
 
       fontFamily: {

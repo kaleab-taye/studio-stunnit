@@ -11,7 +11,7 @@ export default function FloatingButton() {
             {/* </div> */}
             <div className='text-primaryColor bg-darkGray mx-auto p-1'><MdEmail className='w-7 h-7 ' /></div>
             <div className='h-20 '>
-                <div className='bg-accentColor rounded-tr-lg grid absolute writing-mode-vertical-lr uppercase text-primaryColor text-sm font-light w-[100%] h-[100%]'>
+                <div className='bg-primary rounded-tr-lg grid absolute writing-mode-vertical-lr uppercase text-primaryColor text-sm font-light w-[100%] h-[100%]'>
                     <div className='m-auto'>
                         quick contact
                     </div>

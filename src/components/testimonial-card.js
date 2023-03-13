@@ -16,7 +16,7 @@ export default function TestimonialCard({ testimonial }) {
                 <div className='flex flex-col md:flex-row md:justify-between items-center max-md:gap-4'>
                     <div className='flex flex-col md:flex-row  items-center gap-2 md:gap-2'>
                         <h3 className='font-bold text-4xl md:text-3xl'>{testimonial.customerName},</h3>
-                        <h5 className='text-xl md:text-sm text-accentColor text-center'>{testimonial.position}</h5>
+                        <h5 className='text-xl md:text-sm text-primary text-center'>{testimonial.position}</h5>
                     </div>
                     <div>
                         <RatingStars ratingCount={testimonial.rating} />
