@@ -22,7 +22,7 @@ export default function TestimonialCard({ testimonial }) {
                         <RatingStars ratingCount={testimonial.rating} />
                     </div>
                 </div>
-                <div className='overflow-auto h-fit max-md:text-md md:h-full max-md:text-center scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-300 md:pr-7'>
+                <div className='overflow-auto h-fit max-md:text-md md:h-full max-md:text-center font-common_font scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-300 md:pr-7'>
                     {
                         '"' + testimonial.detail + '"'
                     }
