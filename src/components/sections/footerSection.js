@@ -17,7 +17,7 @@ export default function FooterSection() {
         <div className='grid bg-surface pt-12'>
             <LeftRightAligner>
                 <GetInTouchSection />
-                <div className=''>
+                <div className='mb-20'>
 
                     <GetInTouchForm />
                 </div>
