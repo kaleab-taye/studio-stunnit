@@ -6,7 +6,6 @@ import Navbar from '@/components/navbar';
 import { Carousel } from 'flowbite-react';
 import Image from 'next/image';
 import React, { useState } from 'react'
-import HorizontalScroll from 'react-scroll-horizontal'
 import Slider from 'react-slick';
 import img1 from '../../../public/images/Asset_14.png'
 export default function Index() {
