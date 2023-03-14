@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import LeftRightAligner from '../left-right-aligner'
 import StageIcon from '../stageIcon'
 import teamImage from '../../../public/SVG/team.svg'
-import SwipeableViews from 'react-swipeable-views'
-import { autoPlay } from 'react-swipeable-views-utils';
+// import SwipeableViews from 'react-swipeable-views'
+// import { autoPlay } from 'react-swipeable-views-utils';
 import ProgressBar from '../progressBar'
 
 import img1 from '../../../public/images/Asset_16.png'
@@ -12,7 +12,7 @@ import img2 from '../../../public/images/Asset_14.png'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Carousel } from 'flowbite-react'
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 export default function DesignInStepsSection() {
 
