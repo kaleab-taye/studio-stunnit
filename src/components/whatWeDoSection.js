@@ -6,6 +6,8 @@ import image1 from '../../public/images/Asset_16.png'
 import WhatWeDoSectionCard from './whatWeDoSectionCard'
 import { FiSettings } from 'react-icons/fi';
 import { IoIosArrowForward } from 'react-icons/io';
+import Link from 'next/link'
+import PrimaryLinkButton from './primaryLinkButton'
 
 export default function WhatWeDoSection() {
     return (
@@ -28,7 +30,9 @@ export default function WhatWeDoSection() {
                             </div>
                             <div className='grid my-auto md:mr-auto gap-2'>
                                 <div className='md:mr-auto'>
-                                    <Button name='Get in touch' />
+                                    <Link href='#get-in-touch'>
+                                        <Button name='Get in touch' path='#get-in-touch' />
+                                    </Link>
                                 </div>
                                 <div className='text-sm opacity-60'>Schedule your project and let’s get started!</div>
                             </div>
@@ -47,7 +51,13 @@ export default function WhatWeDoSection() {
                             design only and design with
                             execution
                         </div>
-                        <div className='text-primary grid grid-flow-col gap-1 mr-auto'>Learn More <IoIosArrowForward className='my-auto font-bold w-[20px] h-[20px]'/> </div>
+                        <div className='mr-auto'>
+                            <Link href='/service'>
+                                <PrimaryLinkButton text='Learn More'/>
+
+                            </Link>
+
+                        </div>
                     </div>
                     <div className='grid md:grid-flow-col gap-8'>
                         <WhatWeDoSectionCard

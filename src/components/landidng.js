@@ -1,13 +1,27 @@
+import { Carousel } from "flowbite-react";
 import Image from "next/image";
-import logo from '../../public/SVG/Asset_27.svg'
+import logo from '../../public/SVG/Asset_27.svg';
+import background1 from '../../public/images/Asset_14.png';
 
 export default function LandingComponet() {
     return <>
-        <div className='grid h-screen' >
-            <div className="grid bg-[url('/images/Asset_14.png')] bg-cover bg-center">
+        <div className='grid h-screen ' >
+            <div className="grid relative bg-cover bg-center h-screen">
+                {/* <div className=" bg-red-500 w-full h-full"> */}
 
-                <div className="m-auto">
-                    <Image className="max-w-[400px]" src={logo} />
+                <Carousel className=' ' leftControl=" "
+                    rightControl=" " slideInterval={5000}>
+                    <div className="grid relative bg-cover h-screen bg-[url('/images/Asset_14.png')] bg-center"></div>
+                    <div className="grid relative bg-cover h-screen bg-[url('/images/Asset_14.png')] bg-center"></div>
+                    <div className="grid relative bg-cover h-screen bg-[url('/images/Asset_14.png')] bg-center"></div>
+                  
+                </Carousel>
+                {/* </div> */}
+                <div className="absolute grid w-full h-full m-auto pointer-events-none">
+                    <div className="m-auto grid h-screen">
+
+                    <Image className="max-w-[400px] m-auto " src={logo} />
+                    </div>
                 </div>
             </div>
         </div>

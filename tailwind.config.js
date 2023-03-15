@@ -7,11 +7,12 @@ module.exports = {
       colors: {
         primary: "#bc8028",//orange
         "primaryColor": "#f3f3f3",//darker white background
-        "darkGray": "#808080",//darker gray (footer background)
+        darkGray: "#808080",//darker gray (footer background)
         background: {
           100: "#ffffff",
           700: "#808080"
         },
+        // text:'#',
         surface: "#f9f9f9",
         onPrimary:"#ffffff",
         onBackground:"#000000",

@@ -2,6 +2,7 @@ import LandingComponet from '@/components/landidng'
 import Layout from '@/components/layout'
 import Navbar from '@/components/navbar'
 import DesignInStepsSection from '@/components/sections/designInStepsSection'
+import HomeTestimonialSection from '@/components/sections/homeTestimonialSection'
 import WhyChooseUsSection from '@/components/sections/whyChooseUsSection'
 import WhatWeDoSection from '@/components/whatWeDoSection'
 import Head from 'next/head'
@@ -22,11 +23,16 @@ export default function HomePage() {
 
                                 <LandingComponet />
                                 <Navbar />
+
                                 <WhatWeDoSection />
                                 <WhyChooseUsSection />
                                 <DesignInStepsSection />
+                                <HomeTestimonialSection />
+                                <div id='get-in-touch'>
+                                </div>
                         </Layout>
                 </main>
         </>
 }
+
 
