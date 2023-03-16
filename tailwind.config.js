@@ -1,7 +1,7 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}",'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
+  content: ["./src/**/*.{js,ts,jsx,tsx}", 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -14,11 +14,13 @@ module.exports = {
         },
         // text:'#',
         surface: "#f9f9f9",
-        onPrimary:"#ffffff",
-        onBackground:"#000000",
-        onSurface:"#000000",
+        onPrimary: "#ffffff",
+        onBackground: "#000000",
+        onSurface: "#000000",
       },
-
+      screens: {
+        lg2: "1060px"
+      },
       fontFamily: {
         'common_font': ['Montserrat']
       },
