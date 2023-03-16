@@ -28,41 +28,35 @@ export default function DesignInStepsSection() {
   const data = [{ id: 1, src: img1 }, { id: 2, src: img2 }]
   const designSteps = [teamImage, teamImage, teamImage]
 
-  useEffect(() => {
-    let counter =0
-    setInterval(() => {
 
-      // setCount(counter++%8)
-      
-      console.log('gg', (counter+1)%8)
+  useEffect(()=>{
+    console.log('focheee',progressBar)
 
-      if((counter+1)%8 > 0){
-        setStatus1('passed')
-      }else{
-        setStatus1('notPassed')
-      }
+    if(progressBar > 12.5){
+      setStatus1('passed')
+    }else{
+      setStatus1('notPassed')
+    }
 
-      if((counter+1)%8 > 2){
-        setStatus2('passed')
-      }else{
-        setStatus2('notPassed')
-      }
+    if(progressBar > 37.5){
+      setStatus2('passed')
+    }else{
+      setStatus2('notPassed')
+    }
 
-      if((counter+1)%8 > 4){
-        setStatus3('passed')
-      }else{
-        setStatus3('notPassed')
-      }
+    if(progressBar > 62.5){
+      setStatus3('passed')
+    }else{
+      setStatus3('notPassed')
+    }
 
-      if((counter+1)%8 > 6){
-        setStatus4('passed')
-      }else{
-        setStatus4('notPassed')
-      }
-      counter++
-   
-    }, 2500)
-  }, [])
+    if(progressBar > 87.5){
+      setStatus4('passed')
+    }else{
+      setStatus4('notPassed')
+    }
+    
+  },[progressBar])
 
   return (
     <LeftRightAligner>
