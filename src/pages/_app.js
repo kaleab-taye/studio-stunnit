@@ -12,7 +12,7 @@ Router.events.on('routeChangeError', () => NProgress.done());
 NProgress.configure({ showSpinner: false });
 
 export default function App({ Component, pageProps }) {
-  return (<div className='bg-background-100 font-common_font tracking-widest leading-loose'>
+  return (<div className='bg-background-100 dark:bg-background-100 text-onBackground dark:text-onBackground font-common_font tracking-widest leading-loose'>
     <NextNProgress showSpinner color="#bc8028" startPosition={0.3} stopDelayMs={200} height={4} showOnShallow={true} />
     
     <Component {...pageProps} />
