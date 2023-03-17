@@ -1,3 +1,4 @@
+import HomeProjectsSection from '@/components/homeProjectsSection'
 import LandingComponet from '@/components/landidng'
 import Layout from '@/components/layout'
 import Navbar from '@/components/navbar'
@@ -27,6 +28,7 @@ export default function HomePage() {
                                 <WhatWeDoSection />
                                 <WhyChooseUsSection />
                                 <DesignInStepsSection />
+                                <HomeProjectsSection />
                                 <HomeTestimonialSection />
                                 <div id='get-in-touch'>
                                 </div>
