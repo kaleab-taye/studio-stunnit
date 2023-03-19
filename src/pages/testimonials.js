@@ -2,18 +2,63 @@ import Layout from '@/components/layout'
 import LeftRightAligner from '@/components/left-right-aligner'
 import Navbar from '@/components/navbar'
 import TestimonialCard from '@/components/testimonial-card'
-import React from 'react'
+import { Carousel } from 'flowbite-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import React, { useState } from 'react'
+import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
+import Slider from 'react-slick'
+import YouTube from 'react-youtube'
+
 
 export default function Testimonials() {
+    const [currentProject, setCurrentProject] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+
+    const opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+            // https://developers.google.com/youtube/player_parameters
+            autoplay: 0,
+        }
+    }
+
+    const testimonialsYT = [{ videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }]
+    // <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={(e) => { e.target.pauseVideo(); }} />
+
     return (
         <div>
             <Layout>
                 <Navbar />
                 <LeftRightAligner>
-                    <div className='w-full h-56 flex justify-center items-center'>
-                        <h3>Youtube Carousel</h3>
+                    <div className='w-full grid relative'>
+                        <div className='opacity-0 my-10'>
+
+                            <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={(e) => { e.target.pauseVideo(); }} />
+                        </div>
+                        <div className='absolute w-full h-full'>
+
+                            <Carousel slide={false} leftControl={<MdArrowBackIosNew className='grid text-4xl text-darkGray hover:text-onSurface' />} rightControl={<MdArrowForwardIos className='text-4xl text-darkGray hover:text-onSurface' />} className='m-auto' indicators={false}>
+                                {
+                                    testimonialsYT.map(
+                                        (testimonial, index) =>
+                                        (
+                                            // <div key={index} className="w-[92%] md:w-[80%] xl:w-[70%] max-w-[1126px] md:h-[300px]">
+                                            <div key={index} className="w-[100%] grid">
+                                                <div className='m-auto'>
+
+                                                    <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={(e) => { e.target.pauseVideo(); }} />
+                                                </div>
+
+                                            </div>
+                                        )
+                                    )
+                                }
+                            </Carousel>
+                        </div>
                     </div>
-                    <div className="flex flex-col gap-12 xl:gap-20 items-center pb-10">
+                    <div className="my-16 flex flex-col gap-12 xl:gap-20 items-center pb-10">
                         {
                             testimonials.map(
                                 (testimonial, index) =>
@@ -30,6 +75,8 @@ export default function Testimonials() {
         </div>
     )
 }
+
+
 
 
 const testimonials = [
