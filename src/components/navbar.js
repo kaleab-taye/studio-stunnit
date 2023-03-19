@@ -29,7 +29,7 @@ export default function Navbar() {
                 </div>
                 {/* nav items start */}
                 <div className=' ml-auto my-auto grid grid-flow-col gap-8'>
-                    <div className='my-auto grid-flow-col gap-8 hidden md:grid'>
+                    <div className='my-auto grid-flow-col md:gap-4 lg:gap-8 hidden md:grid'>
                         <NavbarItem name='Home' path='/' />
                         <NavbarItem name='services' path='/services' />
                         <NavbarItem name='projects' path='/projects' />
@@ -38,7 +38,10 @@ export default function Navbar() {
                         <NavbarItem name="faqs" path='/faq' />
                     </div>
                     <Link href='/getInTouch'>
-                        <Button name='get in touch' />
+                        <div className='mx-auto underline-offset-8 rounded-md text-sm m-auto bg-primary text-onPrimary px-5 py-3 hover:underline'>
+                            GET IN TOUCH
+                        </div>
+                        {/* <Button name='get in touch' /> */}
                     </Link>
                     <div className='my-auto grid md:hidden cursor-pointer'>
                         <div onClick={() => toggleDrawer(true)}>
