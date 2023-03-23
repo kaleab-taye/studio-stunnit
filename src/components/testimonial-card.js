@@ -4,7 +4,7 @@ import RatingStars from './rating-stars'
 
 export default function TestimonialCard({ testimonial }) {
     return (
-        <div className='flex flex-col md:flex-row gap-10 md:gap-x-5 lg2:gap-x-2 items-center justify-around w-full h-fit md:h-full px-6 py-24 md:p-10 rounded-md bg-gray-300 scroll'>
+        <div className='flex flex-col md:flex-row gap-10 md:gap-x-5 lg2:gap-x-2 items-center justify-around w-full h-fit md:h-full px-6 py-24 md:p-10 rounded-md bg-[#ececec] scroll'>
             <div className='flex justify-center'>
                 <img
                     className={"w-[230px] md:w-[170px] rounded-full"}

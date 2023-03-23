@@ -1,3 +1,4 @@
+import FounderCard from '@/components/founderCard'
 import Layout from '@/components/layout'
 import LeftRightAligner from '@/components/left-right-aligner'
 import Navbar from '@/components/navbar'
@@ -47,8 +48,52 @@ export default function About_us() {
                             meaningful is our quest!”
                         </div>
                     </div>
+                    <div>
+                        <div className='h-[30px] bg-primary'>
+
+                        </div>
+                    </div>
+                    <div className='grid gap-20 px-3 my-32 mx-auto  xl:grid-cols-2'>
+                        {
+                            founders.map(founder => (
+                                <div key={founder.key} className="max-w-[600px]  overflow-hidden">
+                                    <FounderCard founder={founder} />
+                                </div>
+                            ))
+                        }
+                    </div>
                 </LeftRightAligner>
             </Layout>
         </div>
     )
 }
+
+
+
+
+const founders = [
+    {
+        name: "K Murthy",
+        position: "Director Manager, K Murthy",
+        avatarUrl: "/images/Asset 17.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
+    },
+    {
+        name: "Aruna",
+        position: "Director Manager, K Murthy",
+        avatarUrl: "/images/Asset 12.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
+    },
+    {
+        name: "Sanjeev",
+        position: "Director Manager, K Murthy",
+        avatarUrl: "/images/Asset 18.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similiqu", rating: 4
+    },
+    {
+        name: "Punith",
+        position: "Director Manager, K Murthy",
+        avatarUrl: "/images/Asset 19.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
+    }
+]
