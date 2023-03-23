@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import LeftRightAligner from '../left-right-aligner'
 import StageIcon from '../stageIcon'
 import teamImage from '../../../public/SVG/team.svg'
+import meeting from '../../../public/SVG/meeting.svg'
+import design from '../../../public/SVG/design.svg'
+import move_in from '../../../public/SVG/move-in.svg'
 import ProgressBar from '../progressBar'
 
 import img1 from '../../../public/images/Asset_16.png'
@@ -21,10 +24,10 @@ export default function DesignInStepsSection() {
   const [status4, setStatus4] = useState('notPassed')
 
   const data = [
-    { id: '1', img: teamImage, heading: "meeting", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
-    { id: '2', img: teamImage, heading: "design", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
+    { id: '1', img: meeting, heading: "meeting", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
+    { id: '2', img: design, heading: "design", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
     { id: '3', img: teamImage, heading: "execution", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
-    { id: '4', img: teamImage, heading: "move-in", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
+    { id: '4', img: move_in, heading: "move-in", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
 
   ]
 

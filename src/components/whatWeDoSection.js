@@ -16,19 +16,19 @@ export default function WhatWeDoSection() {
                 {/* top section */}
                 <div className='flex flex-col-reverse md:grid grid-flow-row md:grid-flow-col gap-16 md:gap-14 lg:gap-20 mx-auto'>
                     {/* left section */}
-                    <div className='grid my-auto gap-8 md:max-w-[500px] max-w-[400px] '>
+                    <div className='grid my-auto mx-auto gap-8 md:max-w-[500px] max-w-[400px] '>
                         <div className='uppercase font-bold text-3xl lg:text-10xl xl:text-10xl'>
                             STEP INTO STUNNING
                             SPACES THROUGH
                             STUNNIT!
                         </div>
-                        <div className='grid my-auto gap-6'>
+                        <div className='grid my-auto gap-6 mx-auto'>
                             <div className='text-md opacity-70'>
                                 We help you step into stunning Interior design spaces that is
                                 customized to fit your personal value. Get in touch and let’s
                                 start customizing a design that fits just right for you!
                             </div>
-                            <div className='grid my-auto md:mr-auto gap-2'>
+                            <div className='grid my-auto mx-auto md:mr-auto gap-2'>
                                 <div className='md:mr-auto'>
                                     <Link href='#get-in-touch'>
                                         <Button name='Get in touch' path='#get-in-touch' />
@@ -40,7 +40,7 @@ export default function WhatWeDoSection() {
                     </div>
                     {/* right section */}
                     <div className='grid mx-auto'>
-                        <Image className='rounded-3xl max-w-[350px]' src={image1} />
+                        <Image className='rounded-3xl max-w-[420px] md:max-w-[350px] lg:max-w-[450px]' src={image1} />
                     </div>
                 </div>
                 {/* bottom section */}
@@ -51,7 +51,7 @@ export default function WhatWeDoSection() {
                             design only and design with
                             execution
                         </div>
-                        <div className='mr-auto'>
+                        <div className='mr-auto ml-auto md:ml-0 md:mr-auto'>
                             <Link href='/service'>
                                 <PrimaryLinkButton text='Learn More'/>
 
