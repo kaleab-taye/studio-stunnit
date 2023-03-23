@@ -25,7 +25,7 @@ export default function FooterSection() {
             <div className='bg-background-700 text-primaryColor pt-10 pb-4'>
                 <LeftRightAligner>
                     <div className='grid grid-flow-row md:grid-flow-col col-flow-4 gap-5'>
-                        <div className='grid sm:grid-flow-col'>
+                        <div className='grid grid-flow-col gap-2'>
                             <div className='grid mb-auto gap-4'>
                                 <div>
                                     <Image className='max-w-[140px]' src={logo} />
@@ -50,37 +50,39 @@ export default function FooterSection() {
                             </div>
 
                         </div>
-                        <div className='grid gap-2 mb-auto'>
-                            <div className={itemHeading}>Contact</div>
-                            <div className='grid gap-1 '>
-                                <div className={item}>Location: Hyberbad, India</div>
-                                <div className={item}>Phone: +01983 619505</div>
-                                <div className={item}>Email: studio.stunnit@gmail.comI</div>
-                                <div className={item}>Instagram: @studio_stunnit</div>
-                                <div className={item}>YouTube: @studio_stunnit</div>
+                        <div className='grid gap-8'>
+                            <div className='grid gap-2 mb-auto'>
+                                <div className={itemHeading}>Contact</div>
+                                <div className='grid gap-1 '>
+                                    <div className={item}>Location: Hyberbad, India</div>
+                                    <div className={item}>Phone: +01983 619505</div>
+                                    <div className={item}>Email: studio.stunnit@gmail.comI</div>
+                                    <div className={item}>Instagram: @studio_stunnit</div>
+                                    <div className={item}>YouTube: @studio_stunnit</div>
+                                </div>
                             </div>
-                        </div>
-                        <div className='grid gap-2 mb-auto'>
-                            <div className='uppercase text-xl font-bold'>join us on:</div>
-                            <div className='grid grid-flow-col gap-4 mr-auto'>
-                                <FooterIconContainer>
-                                    <BsYoutube className='w-[27px] h-[27px] m-auto' />
-                                </FooterIconContainer>
-                                <FooterIconContainer>
-                                    <BsInstagram className='w-[27px] h-[27px] m-auto' />
-                                </FooterIconContainer>
-                                <FooterIconContainer>
-                                    <FaLinkedinIn className='w-[27px] h-[27px] m-auto' />
-                                </FooterIconContainer>
-                                <FooterIconContainer>
-                                    <TiSocialTwitter className='w-[27px] h-[27px] m-auto' />
-                                </FooterIconContainer>
+                            <div className='grid gap-2 mb-auto'>
+                                <div className='uppercase text-xl font-bold'>join us on:</div>
+                                <div className='grid grid-flow-col gap-4 mr-auto'>
+                                    <FooterIconContainer>
+                                        <BsYoutube className='w-[24px] h-[24px] m-auto' />
+                                    </FooterIconContainer>
+                                    <FooterIconContainer>
+                                        <BsInstagram className='w-[24px] h-[24px] m-auto' />
+                                    </FooterIconContainer>
+                                    <FooterIconContainer>
+                                        <FaLinkedinIn className='w-[24px] h-[24px] m-auto' />
+                                    </FooterIconContainer>
+                                    <FooterIconContainer>
+                                        <TiSocialTwitter className='w-[25px] h-[25px] m-auto' />
+                                    </FooterIconContainer>
 
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className='mx-auto text-md mt-5'>Copyright @ 2023 Studio Stunnit</div>
+                    <div className='mx-auto text-md mt-8'>Copyright @ 2023 Studio Stunnit</div>
                 </LeftRightAligner>
             </div>
         </div>
