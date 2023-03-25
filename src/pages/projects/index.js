@@ -65,7 +65,7 @@ export default function Index() {
                                             <div className='grid sm:hidden whitespace-pre-line'>
 
                                                 <div>
-                                                    {smallScreenFullTextContent == false && projects[selectedProject].description.length > 70 ? projects[selectedProject].description.substring(0, 300) + '. . .' : projects[selectedProject].description}
+                                                    {smallScreenFullTextContent == false && projects[selectedProject].description.length > 300 ? projects[selectedProject].description.substring(0, 300) + '. . .' : projects[selectedProject].description}
                                                 </div>
                                                 {smallScreenFullTextContent == false ? <div className='my-5 mx-auto border px-5 rounded' onClick={() => setSmallScreenFullTextContent(true)}>
                                                     Read More

@@ -13,10 +13,13 @@ import { useRouter } from 'next/router'
 export default function Navbar() {
 
     const [drawerState, toggleDrawer] = useState(false)
-    let currentPage = ''
+    const [getInTouchPageSelected, setGetInTouchPageSelected] = useState('text-center mx-auto underline-offset-8 rounded-md text-sm m-auto bg-primary text-onPrimary px-5 py-3 hover:underline')
+    
     const router = useRouter()
     useEffect(() => {
-        currentPage = router.pathname
+        if (router.pathname == '/getInTouch') {
+            setGetInTouchPageSelected('text-center mx-auto underline-offset-8 rounded-md text-sm m-auto bg-primary text-onPrimary px-5 py-3 underline')
+        }
     }, [router])
 
     return (
@@ -26,7 +29,7 @@ export default function Navbar() {
                 {/* logo start */}
                 <div className='mr-auto my-auto grid my-auto'>
                     <Link href='/'>
-                    <Image className='max-w-[70px]' src={logo} alt='logo' />
+                        <Image className='max-w-[70px]' src={logo} alt='logo' />
                     </Link>
                 </div>
                 {/* nav items start */}
@@ -42,7 +45,7 @@ export default function Navbar() {
                     <div className='grid grid-flow-col gap-4 my-auto'>
 
                         <Link href='/getInTouch'>
-                            <div className='text-center mx-auto underline-offset-8 rounded-md text-sm m-auto bg-primary text-onPrimary px-5 py-3 hover:underline'>
+                            <div className={getInTouchPageSelected}>
                                 GET IN TOUCH
                             </div>
                             {/* <Button name='get in touch' /> */}
