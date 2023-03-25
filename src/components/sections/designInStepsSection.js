@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import LeftRightAligner from '../left-right-aligner'
 import StageIcon from '../stageIcon'
 import teamImage from '../../../public/SVG/team.svg'
+import meeting from '../../../public/SVG/meeting.svg'
+import design from '../../../public/SVG/design.svg'
+import move_in from '../../../public/SVG/move-in.svg'
 import ProgressBar from '../progressBar'
 
 import img1 from '../../../public/images/Asset_16.png'
@@ -21,10 +24,10 @@ export default function DesignInStepsSection() {
   const [status4, setStatus4] = useState('notPassed')
 
   const data = [
-    { id: '1', img: teamImage, heading: "meeting", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
-    { id: '2', img: teamImage, heading: "design", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
+    { id: '1', img: meeting, heading: "meeting", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
+    { id: '2', img: design, heading: "design", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
     { id: '3', img: teamImage, heading: "execution", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
-    { id: '4', img: teamImage, heading: "move-in", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
+    { id: '4', img: move_in, heading: "move-in", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
 
   ]
 
@@ -87,67 +90,47 @@ export default function DesignInStepsSection() {
         </div>
 
         <div className='grid mx-auto relative'>
-          {/* hidden field to prevent layout shift start */}
-          <div className='m-auto grid gap-4 opacity-0'>
-            <Image className='m-auto max-h-[400px]' src={currentProject.img} />
-            <div>
-              <div className='max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
-                <div className='grid grid-flow-col mb-auto gap-2'>
-                  <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor'>
-                    <div className='m-auto'>
-                      {currentProject.id}
+          <div className=''>
+            <motion.div
+              // layout
+              // key={currentProject.id}
+              // initial={{ scale: 0 }}
+              // animate={{ scale: 1 }}
+              // exit={{ scale: 0, opacity: 0 }}
+              // transition={{ duration: 0.5 }}
+              // layout
+              key={currentProject.id}
+              // style={{ x: -100 }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              // exit={{ y:50 }}
+              // transition={{ duration: 2 }}
+              className='grid '
+            >
+              <div className='m-auto grid gap-4 '>
+
+                <div className='h-[250px] sm:h-[350px] md:h-[450px]'>
+
+                  <Image alt='' className='m-auto h-[250px] sm:h-[350px] md:h-[450px] p-10' src={currentProject.img} />
+                </div>
+                <div>
+                  <div className='max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
+                    <div className='grid grid-flow-col mb-auto gap-2'>
+                      <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor'>
+                        <div className='m-auto'>
+                          {currentProject.id}
+                        </div>
+                      </div>
+                      <div className='uppercase font-bold text-md mb-auto my-auto'>{currentProject.heading}</div>
+                    </div>
+                    <div className='text-sm text-onSurface'>{currentProject.content}
                     </div>
                   </div>
-                  <div className='uppercase font-bold text-md mb-auto'>{currentProject.heading}</div>
-                </div>
-                <div className='text-sm text-onSurface'>{currentProject.content}
                 </div>
               </div>
-            </div>
-          </div>
-          {/* hidden field to prevent layout shift end */}
-
-          <div className='absolute'>
-
-            <AnimatePresence className=' '>
-              {/* {currentProject.map((item) => ( */}
-              <motion.div
-                // layout
-                // key={currentProject.id}
-                // initial={{ scale: 0 }}
-                // animate={{ scale: 1 }}
-                // exit={{ scale: 0, opacity: 0 }}
-                // transition={{ duration: 0.5 }}
-                // layout
-                key={currentProject.id}
-                // style={{ x: -100 }}
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                // exit={{ y:50 }}
-                // transition={{ duration: 2 }}
-                className='grid '
-              >
-                <div className='m-auto grid gap-4 '>
-
-                  <Image className='m-auto max-h-[400px]' src={currentProject.img} />
-                  <div>
-                    <div className='max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
-                      <div className='grid grid-flow-col mb-auto gap-2'>
-                        <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor'>
-                          <div className='m-auto'>
-                            {currentProject.id}
-                          </div>
-                        </div>
-                        <div className='uppercase font-bold text-md mb-auto'>{currentProject.heading}</div>
-                      </div>
-                      <div className='text-sm text-onSurface'>{currentProject.content}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-              {/* // ))} */}
-            </AnimatePresence>
+            </motion.div>
+            {/* // ))} */}
+            {/* </AnimatePresence> */}
           </div>
         </div>
 
@@ -158,4 +141,3 @@ export default function DesignInStepsSection() {
     </LeftRightAligner>
   )
 }
-

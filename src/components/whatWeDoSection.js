@@ -3,6 +3,10 @@ import React from 'react'
 import Button from './button'
 import LeftRightAligner from './left-right-aligner'
 import image1 from '../../public/images/Asset_16.png'
+import icon1 from '../../public/images/Asset_10.png'
+import icon2 from '../../public/images/Asset_11.png'
+
+
 import WhatWeDoSectionCard from './whatWeDoSectionCard'
 import { FiSettings } from 'react-icons/fi';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -16,19 +20,19 @@ export default function WhatWeDoSection() {
                 {/* top section */}
                 <div className='flex flex-col-reverse md:grid grid-flow-row md:grid-flow-col gap-16 md:gap-14 lg:gap-20 mx-auto'>
                     {/* left section */}
-                    <div className='grid my-auto gap-8 md:max-w-[500px] max-w-[400px] '>
-                        <div className='uppercase font-bold text-3xl lg:text-10xl xl:text-10xl'>
+                    <div className='grid my-auto mx-auto gap-8 md:max-w-[500px] max-w-[400px] '>
+                        <div className='uppercase font-bold text-2xl sm:text-3xl lg:text-10xl xl:text-10xl'>
                             STEP INTO STUNNING
                             SPACES THROUGH
                             STUNNIT!
                         </div>
-                        <div className='grid my-auto gap-6'>
+                        <div className='grid my-auto gap-6 mx-auto'>
                             <div className='text-md opacity-70'>
                                 We help you step into stunning Interior design spaces that is
                                 customized to fit your personal value. Get in touch and let’s
                                 start customizing a design that fits just right for you!
                             </div>
-                            <div className='grid my-auto md:mr-auto gap-2'>
+                            <div className='grid my-auto gap-3'>
                                 <div className='md:mr-auto'>
                                     <Link href='#get-in-touch'>
                                         <Button name='Get in touch' path='#get-in-touch' />
@@ -39,19 +43,19 @@ export default function WhatWeDoSection() {
                         </div>
                     </div>
                     {/* right section */}
-                    <div className='grid mx-auto'>
-                        <Image className='rounded-3xl max-w-[350px]' src={image1} />
+                    <div className='grid w-full'>
+                        <Image alt='intro' className='mx-auto rounded-3xl max-w-[420px] md:max-w-[350px] lg:max-w-[450px] h-full w-full' src={image1} />
                     </div>
                 </div>
                 {/* bottom section */}
                 <div className='grid md:grid-flow-col gap-8 mx-auto'>
-                    <div className='grid my-auto gap-2 max-w-[360px]'>
+                    <div className='grid my-auto gap-2 max-w-[360px] mx-auto '>
                         <div className='font-semibold text-2xl'>what we do</div>
                         <div className='opacity-80'>We provide two kinds of service,
                             design only and design with
                             execution
                         </div>
-                        <div className='mr-auto'>
+                        <div className='mr-auto ml-auto md:ml-0 md:mr-auto'>
                             <Link href='/service'>
                                 <PrimaryLinkButton text='Learn More'/>
 
@@ -59,7 +63,7 @@ export default function WhatWeDoSection() {
 
                         </div>
                     </div>
-                    <div className='grid md:grid-flow-col gap-8'>
+                    <div className='grid sm:grid-flow-col gap-8'>
                         <WhatWeDoSectionCard
                             heading="Design Only Service"
                             description="Our experienced interior designers’
@@ -68,7 +72,7 @@ export default function WhatWeDoSection() {
                         implementation of the design. You’ll be
                         at liberty to implement the design with
                         or without blending other ideas">
-                            <FiSettings />
+                            <Image height={50}  src={icon2} alt='icon'/>
                         </WhatWeDoSectionCard>
                         <WhatWeDoSectionCard
                             heading="Design with Execution"
@@ -77,7 +81,7 @@ export default function WhatWeDoSection() {
                         implementing those designs by choosing materials, planning, organizing
                         transportation, carrying out the project,
                         and managing it">
-                            <FiSettings />
+                            <Image height={50}  src={icon1} alt='icon'/>
                         </WhatWeDoSectionCard>
                     </div>
                 </div>

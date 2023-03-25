@@ -5,7 +5,8 @@ import GetInTouchForm from '@/components/sections/getInTouchForm'
 import GetInTouchSection from '@/components/sections/getInTouchSection'
 import { border } from '@mui/system'
 import Image from 'next/image'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 import { BsInstagram, BsYoutube } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { TiSocialTwitter } from 'react-icons/ti'
@@ -42,8 +43,10 @@ export default function GetInTouch() {
         }]
     ]
 
-    var itemHeading = 'uppercase font-bold text-md'
-    var item = 'font-light'
+    var itemHeading = 'uppercase font-bold text-md';
+    var item = 'font-light';
+    
+    
 
     return (
         <div>
