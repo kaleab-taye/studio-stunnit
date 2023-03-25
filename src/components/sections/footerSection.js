@@ -8,6 +8,7 @@ import { TiSocialTwitter } from 'react-icons/ti';
 import FooterIconContainer from '../footerIconContainer';
 import GetInTouchSection from './getInTouchSection';
 import GetInTouchForm from './getInTouchForm';
+import Link from 'next/link';
 
 
 export default function FooterSection() {
@@ -50,7 +51,7 @@ export default function FooterSection() {
                             </div>
 
                         </div>
-                        <div className='grid gap-8'>
+                        <div className='grid gap-8 xl:grid-flow-col'>
                             <div className='grid gap-2 mb-auto'>
                                 <div className={itemHeading}>Contact</div>
                                 <div className='grid gap-1 '>
@@ -82,7 +83,13 @@ export default function FooterSection() {
                             </div>
                         </div>
                     </div>
-                    <div className='mx-auto text-md mt-8'>Copyright @ 2023 Studio Stunnit</div>
+                    <div className='mx-auto text-md mt-8'>Copyright @ 2023 &nbsp;
+                        <Link href='/'>
+                            <span className='font-semibold hover:text-primary'>
+                                Studio Stunnit
+                            </span>
+                        </Link>
+                    </div>
                 </LeftRightAligner>
             </div>
         </div>

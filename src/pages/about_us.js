@@ -14,9 +14,9 @@ export default function About_us() {
                 <Navbar />
                 <PageHeading name='About Us' image={aboutUsImage} />
                 <LeftRightAligner>
-                    <div className='grid grid-cols-4 my-20' >
-                        <div className='col-span-1 mt-14'><IoMdMenu className='text-primary w-20 h-20' /></div>
-                        <div className='grid gap-8 col-span-3'>
+                    <div className='grid sm:grid-cols-4 my-20 mx-2' >
+                        <div className='col-span-1 mb-auto hidden sm:grid'><IoMdMenu className='text-primary w-20 h-20' /></div>
+                        <div className='grid gap-8 sm:col-span-3'>
                             <div className='grid gap-8 font-light text-sm' >
                                 <div>
                                     Studio Stunnit is a multidisciplinary design firm envisioning interior designs that are unique
@@ -42,7 +42,7 @@ export default function About_us() {
                         </div>
                     </div>
                     <div className='text-center my-16'>
-                        <div className='italic mx-auto font-bold text-sm max-w-[500px]'>
+                        <div className='italic mx-auto font-bold text-sm max-w-[520px]'>
                             “It&apos;s always about you and how you use spaces. <br />
                             At the end of the day, making your space attractive and  <br />
                             meaningful is our quest!”

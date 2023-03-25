@@ -90,67 +90,47 @@ export default function DesignInStepsSection() {
         </div>
 
         <div className='grid mx-auto relative'>
-          {/* hidden field to prevent layout shift start */}
-          <div className='m-auto grid gap-4 opacity-0'>
-            <Image className='m-auto max-h-[400px]' src={currentProject.img} />
-            <div>
-              <div className='max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
-                <div className='grid grid-flow-col mb-auto gap-2'>
-                  <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor'>
-                    <div className='m-auto'>
-                      {currentProject.id}
+          <div className=''>
+            <motion.div
+              // layout
+              // key={currentProject.id}
+              // initial={{ scale: 0 }}
+              // animate={{ scale: 1 }}
+              // exit={{ scale: 0, opacity: 0 }}
+              // transition={{ duration: 0.5 }}
+              // layout
+              key={currentProject.id}
+              // style={{ x: -100 }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              // exit={{ y:50 }}
+              // transition={{ duration: 2 }}
+              className='grid '
+            >
+              <div className='m-auto grid gap-4 '>
+
+                <div className='h-[250px] sm:h-[350px] md:h-[450px]'>
+
+                  <Image alt='' className='m-auto h-[250px] sm:h-[350px] md:h-[450px] p-10' src={currentProject.img} />
+                </div>
+                <div>
+                  <div className='max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
+                    <div className='grid grid-flow-col mb-auto gap-2'>
+                      <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor'>
+                        <div className='m-auto'>
+                          {currentProject.id}
+                        </div>
+                      </div>
+                      <div className='uppercase font-bold text-md mb-auto my-auto'>{currentProject.heading}</div>
+                    </div>
+                    <div className='text-sm text-onSurface'>{currentProject.content}
                     </div>
                   </div>
-                  <div className='uppercase font-bold text-md mb-auto'>{currentProject.heading}</div>
-                </div>
-                <div className='text-sm text-onSurface'>{currentProject.content}
                 </div>
               </div>
-            </div>
-          </div>
-          {/* hidden field to prevent layout shift end */}
-
-          <div className='absolute'>
-
-            <AnimatePresence className=' '>
-              {/* {currentProject.map((item) => ( */}
-              <motion.div
-                // layout
-                // key={currentProject.id}
-                // initial={{ scale: 0 }}
-                // animate={{ scale: 1 }}
-                // exit={{ scale: 0, opacity: 0 }}
-                // transition={{ duration: 0.5 }}
-                // layout
-                key={currentProject.id}
-                // style={{ x: -100 }}
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                // exit={{ y:50 }}
-                // transition={{ duration: 2 }}
-                className='grid '
-              >
-                <div className='m-auto grid gap-4 '>
-
-                  <Image className='m-auto max-h-[400px]' src={currentProject.img} />
-                  <div>
-                    <div className='max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
-                      <div className='grid grid-flow-col mb-auto gap-2'>
-                        <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor'>
-                          <div className='m-auto'>
-                            {currentProject.id}
-                          </div>
-                        </div>
-                        <div className='uppercase font-bold text-md mb-auto'>{currentProject.heading}</div>
-                      </div>
-                      <div className='text-sm text-onSurface'>{currentProject.content}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-              {/* // ))} */}
-            </AnimatePresence>
+            </motion.div>
+            {/* // ))} */}
+            {/* </AnimatePresence> */}
           </div>
         </div>
 
@@ -161,4 +141,3 @@ export default function DesignInStepsSection() {
     </LeftRightAligner>
   )
 }
-
