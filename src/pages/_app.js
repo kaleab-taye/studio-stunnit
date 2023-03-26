@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
           variants={{
             initial: {
               opacity: 0,
-              scale: 0.7,
+              scale: 1.5,
             },
             animate: {
               opacity: 1,

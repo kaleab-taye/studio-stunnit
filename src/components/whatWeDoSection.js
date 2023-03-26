@@ -44,7 +44,7 @@ export default function WhatWeDoSection() {
                     </div>
                     {/* right section */}
                     <div className='grid w-full '>
-                        <Image alt='intro' className='mx-auto rounded-3xl max-w-[420px] md:max-w-[350px] lg:max-w-[450px]' src={image1} />
+                        <Image alt='intro' className='mx-auto rounded-3xl max-w-[420px] md:max-w-[350px] lg:max-w-[450px] w-full' src={image1} />
                     </div>
                 </div>
                 {/* bottom section */}
