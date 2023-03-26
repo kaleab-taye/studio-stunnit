@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 /* custom css added start */
+
+html {
+  scroll-behavior: smooth;
+}
+
 .direction-rtl {
   direction: rtl;
   padding-left: 20px;
