@@ -5,7 +5,7 @@ import Button from '../button'
 
 export default function GetInTouchForm() {
     return (
-        <div className=' lg:min-w-[900px] gap-10 grid border-[2px] border-primary/70 relative py-10 px-5 md:p-12 md:m-5 rounded'>
+        <div className=' lg:min-w-[900px] gap-10 grid border-[2px] border-primary/70 relative py-10 px-3 sm:px-5 md:p-12 md:m-5 rounded'>
             <div className='absolute top-[-25px] left-[45%] bg-primary mx-auto p-3 rounded-full text-primaryColor font-light '>OR</div>
             <div className='mx-auto font-semibold text-lg opacity-70 text-center'>Enter your details below and we’ll contact you within 24 hours</div>
             <div className='grid grid-flow-row md:grid-flow-col gap-4'>

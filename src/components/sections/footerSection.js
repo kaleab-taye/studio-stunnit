@@ -19,7 +19,6 @@ export default function FooterSection() {
             <LeftRightAligner>
                 <GetInTouchSection />
                 <div className='mb-20'>
-
                     <GetInTouchForm />
                 </div>
             </LeftRightAligner>
