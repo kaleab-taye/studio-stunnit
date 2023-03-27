@@ -109,8 +109,7 @@ export default function Testimonials() {
 
                     </div>
                 </div>
-                <svg class="animate-spin h-5 w-5 mr-3 bg-red-600 rounded-full text-surface" viewBox="0 0 24 24">
-                </svg>
+                
                 <LeftRightAligner>
 
                     <div className="my-16 flex flex-col gap-12 xl:gap-20 items-center pb-10">
