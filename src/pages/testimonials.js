@@ -1,6 +1,7 @@
 import Layout from '@/components/layout'
 import LeftRightAligner from '@/components/left-right-aligner'
 import Navbar from '@/components/navbar'
+import Placeholder from '@/components/placeholder'
 import TestimonialCard from '@/components/testimonial-card'
 import { Carousel } from 'flowbite-react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -13,6 +14,7 @@ import YouTube from 'react-youtube'
 export default function Testimonials() {
     const [currentProject, setCurrentProject] = useState(0)
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [loadingState, setLoadingState] = useState(true)
 
 
     const opts =
@@ -43,10 +45,8 @@ export default function Testimonials() {
             }
         }
     }
-
     const testimonialsYT = [{ videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }]
     // <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={(e) => { e.target.pauseVideo(); }} />
-
     return (
         <div>
             <Layout>
@@ -58,12 +58,7 @@ export default function Testimonials() {
                     </div>
 
                     <div className='w-full grid relative my-4'>
-                        {/* <div className='opacity-0 my-10 h-[590px] w-[640px] bg-red-600'>
-
-                            <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={(e) => { e.target.pauseVideo(); }} />
-                        </div> */}
                         <div className=' w-full h-[300px] sm:h-[350px] md:h-[500px] grid'>
-
                             <Carousel slide={false} leftControl={<MdArrowBackIosNew className='grid text-4xl text-darkGray hover:text-onSurface m-auto' />} rightControl={<MdArrowForwardIos className='m-auto text-4xl text-darkGray hover:text-onSurface' />} className='m-auto' indicators={false}>
                                 {
                                     testimonialsYT.map(
@@ -72,16 +67,32 @@ export default function Testimonials() {
                                             // <div key={index} className="w-[92%] md:w-[80%] xl:w-[70%] max-w-[1126px] md:h-[300px]">
                                             <div key={index} className="w-[100%] h-[100%] grid">
                                                 <div className='m-auto grid sm:hidden'>
+                                                    <Placeholder isLoading={loadingState}>
 
-                                                    <YouTube videoId={testimonial.videoId} opts={opts.small} onReady={(e) => { e.target.pauseVideo(); }} />
+                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={testimonial.videoId} opts={opts.small} />
+                                                    </Placeholder>
+                                                    {/* {loadingState ? <div className='absolute w-full h-full bg-surface animate-pulse '>
+                                                    </div> : <div></div>} */}
                                                 </div>
-                                                <div className='m-auto hidden sm:grid md:hidden'>
+                                                <div className='m-auto hidden sm:grid md:hidden bg-red-500'>
+                                                    <Placeholder isLoading={loadingState}>
 
-                                                    <YouTube videoId={testimonial.videoId} opts={opts.medium} onReady={(e) => { e.target.pauseVideo(); }} />
+                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={testimonial.videoId} opts={opts.medium} />
+                                                    </Placeholder>
+                                                    {/* {loadingState ? <div className='absolute w-full h-full bg-surface animate-pulse '>
+
+                                                    </div> : <div></div>} */}
+                                                    {/* <YouTube onReady={(e) => finishedLoading(e, setLoadingState)} videoId={testimonial.videoId} opts={opts.medium} /> */}
                                                 </div>
-                                                <div className='hidden m-auto md:grid'>
+                                                <div className='hidden m-auto md:grid relative'>
+                                                    <Placeholder isLoading={loadingState}>
 
-                                                    <YouTube videoId={testimonial.videoId} opts={opts.large} onReady={(e) => { e.target.pauseVideo(); }} />
+                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={testimonial.videoId} opts={opts.large} />
+                                                    </Placeholder>
+                                                    {/* {loadingState ? <div className='absolute w-full h-full bg-surface animate-pulse '>
+
+                                                    </div> : <div></div>} */}
+                                                    {/* <YouTube onReady={(e) => finishedLoading(e, setLoadingState)} videoId={testimonial.videoId} opts={opts.large} /> */}
                                                 </div>
 
                                             </div>
@@ -98,6 +109,8 @@ export default function Testimonials() {
 
                     </div>
                 </div>
+                <svg class="animate-spin h-5 w-5 mr-3 bg-red-600 rounded-full text-surface" viewBox="0 0 24 24">
+                </svg>
                 <LeftRightAligner>
 
                     <div className="my-16 flex flex-col gap-12 xl:gap-20 items-center pb-10">
@@ -118,7 +131,12 @@ export default function Testimonials() {
     )
 }
 
+function finishedLoading(e, setLoadingState) {
+    console.log('finished loading');
+    e.target.pauseVideo();
 
+    setLoadingState(true);
+}
 
 
 const testimonials = [

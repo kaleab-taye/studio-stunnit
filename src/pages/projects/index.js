@@ -14,6 +14,7 @@ import { GrDown } from 'react-icons/gr';
 import ProjectsData from '../../../public/dummyData/projectsData';
 import img1 from '../../../public/images/Asset_14.png'
 import img2 from '../../../public/images/Asset_20.png'
+import ProjectsProjectsSection from '@/components/projectsProjectsSection';
 
 export default function Index() {
     const projects = ProjectsData()
@@ -33,8 +34,8 @@ export default function Index() {
                     console.log(selectedProject)
                 }
             })
-        }else{
-            
+        } else {
+
         }
 
         console.log(selectedProject)
@@ -47,18 +48,19 @@ export default function Index() {
                 <Navbar />
                 <div className='grid gap-2 '>
                     {selectedProject == -1 ? <></> : <div >
-                        <div className='hidden sm:flex w-[100%] m-auto h-56 sm:h-[372px] lg:h-[472px] gap-3 overflow-x-auto overflow-y-hidden'>
+                        <div className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-56 sm:h-[372px] lg:h-[472px] gap-3 overflow-x-auto overflow-y-hidden'>
+                            {/* <div className='snap-center w-[400px] h-[10px] bg-red-500'></div> */}
                             {projects[selectedProject].imageUrl.map((imgUrl) =>
-                                <Image key={imgUrl} className='m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
+                                <Image key={imgUrl} className='snap-center m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
                             )}
 
                         </div>
                         <LeftRightAligner>
-                            <div className='grid gap-6 sm:gap-16 my-10 sm:my-24'>
+                            <div className='grid gap-6 sm:gap-12 my-10 sm:my-24'>
                                 <div className='grid grid-flow-col sm:gap-20 lg:gap-40'>
                                     <div className='grid gap-4 sm:gap-5'>
-                                        <div className='text-2xl sm:text-3xl md:text-4xl'>{projects[selectedProject].title}</div>
-                                        <div className='text-md sm:text-[13px] '>
+                                        <div className='text-2xl sm:text-[28px] md:text-[34px]'>{projects[selectedProject].title}</div>
+                                        <div className='leading-loose font-light text-xs sm:text-[13px] font-light '>
                                             <div className='hidden sm:grid whitespace-pre-line'>
                                                 {projects[selectedProject].description}
                                             </div>
@@ -79,20 +81,24 @@ export default function Index() {
                                             <div>
                                                 Other Projects
                                             </div>
-                                            
+
                                             <div className='mx-auto bg-surface rounded-full text-5xl grid'><GrDown className='m-auto p-2 font-' /></div>
                                         </div>
                                     </Link>
                                 </div>
-                                {/* <div className='grid sm:hidden gap-2'>
-                                    <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img2} />
+                                {/* responsive mobile project image */}
+                                <div className='grid sm:hidden gap-2'>
+                                    {projects[selectedProject].imageUrl.map((imgUrl) =>
+                                        <Image key={imgUrl} className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' alt='detail image' src={imgUrl} />
+                                    )}
+                                    {/* <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img2} />
                                     <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img1} />
-                                    <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img2} />
+                                    <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img2} /> */}
 
-                                </div> */}
+                                </div>
                                 <div className='grid gap-4 sm:gap-5'>
-                                    <div className='text-2xl sm:text-3xl md:text-4xl'>Client’s Word :</div>
-                                    <div className='text-md sm:text-[13px] whitespace-pre-line'>
+                                    <div className='text-2xl sm:text-[28px] md:text-[34px]'>Client’s Word :</div>
+                                    <div className='leading-loose font-light text-xs sm:text-[13px] whitespace-pre-line'>
                                         {projects[selectedProject].testimony}
                                     </div>
                                 </div>
@@ -105,13 +111,12 @@ export default function Index() {
                                 <div className='mx-auto'>
                                     Other Projects
                                 </div>
-                                <div className='mx-auto bg-surface rounded-full text-4xl'><IoIosArrowDown /></div>
+                                <div className='mx-auto bg-surface rounded-full text-4xl animate-bounce'><IoIosArrowDown /></div>
                             </div>
                         </Link>
                     </div>}
                     <div id='projects-list'>
-                        <HomeProjectsSection />
-
+                        <ProjectsProjectsSection />
                     </div>
 
                 </div>

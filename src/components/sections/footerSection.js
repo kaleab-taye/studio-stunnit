@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export default function FooterSection() {
     var itemHeading = 'uppercase font-bold text-md'
-    var item = 'font-light'
+    var item = 'font-light '
     return (
         <div className='grid bg-surface pt-12'>
             <LeftRightAligner>
@@ -40,12 +40,24 @@ export default function FooterSection() {
                             <div className='grid gap-2 mb-auto'>
                                 <div className={itemHeading}>PAGES</div>
                                 <div className='grid gap-1'>
-                                    <div className={item}>Home</div>
-                                    <div className={item}>Services</div>
-                                    <div className={item}>Projects</div>
-                                    <div className={item}>About Us</div>
-                                    <div className={item}>Testimonials</div>
-                                    <div className={item}>FAQs</div>
+                                    <Link href='/'>
+                                    <div className={item + ' hover:underline underline-offset-4'}>Home</div>
+                                    </Link>
+                                    <Link href='/services'>
+                                    <div className={item + ' hover:underline underline-offset-4'}>Services</div>
+                                    </Link>
+                                    <Link href='/projects'>
+                                    <div className={item + ' hover:underline underline-offset-4'}>Projects</div>
+                                    </Link>
+                                    <Link href='/about_us'>
+                                    <div className={item+ ' hover:underline underline-offset-4'}>About Us</div>
+                                    </Link>
+                                    <Link href='/testimonials'>
+                                    <div className={item + " hover:underline underline-offset-4"}>Testimonials</div>
+                                    </Link>
+                                    <Link href='/faq'>
+                                    <div className={item +' hover:underline underline-offset-4'}>FAQs</div>
+                                    </Link>
                                 </div>
                             </div>
 

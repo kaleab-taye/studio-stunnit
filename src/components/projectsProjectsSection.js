@@ -11,7 +11,7 @@ import LeftRightAligner from './left-right-aligner'
 import Link from 'next/link'
 import ProjectsData from '../../public/dummyData/projectsData'
 
-export default function HomeProjectsSection() {
+export default function ProjectsProjectsSection() {
 
 
     const data = ProjectsData()
@@ -22,7 +22,7 @@ export default function HomeProjectsSection() {
     return (
         <div className="relative grid bg-center bg-surface">
             <Image src={image2} alt='place' className='absolute opacity-0 mx-auto cover max-h-screen max-w-screen' />
-            <div className='w-full h-screen grid my-auto overflow-hidden'>
+            <div className='w-full h-[91vh] grid my-auto overflow-hidden'>
                 <div className='m-auto '>
 
                     {/* <Image alt='project image' src={currentProject.primaryImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-75' /> */}
@@ -51,11 +51,31 @@ export default function HomeProjectsSection() {
                 </div>
             </div>
             {/* section heading end */}
+            <div className='absolute w-full h-full '>
+                <div className='grid w-full h-full'>
 
+                    <div className='grid place-content-between w-full grid-flow-col max-w-[1500px] m-auto'>
+                        <div className=' '>
+                            <div className='grid h-full ml-2'>
+                                <div className=' m-auto cursor-pointer' onClick={() => setCurrentProject(data[prev(currentIndex, setCurrentIndex, data)])}>
+                                    <MdArrowBackIos className='text-2xl hover:3xl md:text-4xl mr-4 text-onPrimary font-bold ' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='  '>
+                            <div className='grid h-full mr-2'>
+                                <div className='m-auto cursor-pointer' onClick={() => setCurrentProject(data[next(currentIndex, setCurrentIndex, data)])}>
+                                    <MdArrowForwardIos className='text-2xl hover:3xl md:text-4xl ml-4 text-onPrimary font-bold' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div className='absolute bottom-14 w-full'>
 
-                <div className=' flex justify-between px-5 sm:px-10 lg:px-0 mx-auto max-w-[1000px]'>
+                <div className=' flex justify-between px-2 sm:px-10 lg:px-0 mx-auto max-w-[1000px]'>
                     <Link href={'/projects?id=' + currentProject.id}>
                         <div className='ml-3 text-xl sm:text-3xl font-medium underline underline-offset-8 text-onPrimary'>
                             {currentProject.title}

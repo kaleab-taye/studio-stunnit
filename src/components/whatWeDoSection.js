@@ -56,7 +56,7 @@ export default function WhatWeDoSection() {
                             execution
                         </div>
                         <div className='mr-auto ml-auto md:ml-0 md:mr-auto'>
-                            <Link href='/service'>
+                            <Link href='/services'>
                                 <PrimaryLinkButton text='Learn More'/>
 
                             </Link>

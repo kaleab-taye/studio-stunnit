@@ -73,32 +73,32 @@ export default function Navbar() {
                     <div className='border'></div>
                     <div className='grid-flow-row my-2 grid mx-5'>
                         <Link href='/'>
-                            <div className={router.pathname == '/' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 '}>
+                            <div className={router.pathname == '/' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Home
                             </div>
                         </Link>
                         <Link href='/services'>
-                            <div className={router.pathname == '/services' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1'}>
+                            <div className={router.pathname == '/services' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Services
                             </div>
                         </Link>
                         <Link href='/projects'>
-                            <div className={router.pathname == '/projects' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1'}>
+                            <div className={router.pathname == '/projects' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Projects
                             </div>
                         </Link>
                         <Link href='/about_us'>
-                            <div className={router.pathname == '/about_us' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1'}>
+                            <div className={router.pathname == '/about_us' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 About Us
                             </div>
                         </Link>
                         <Link href='/testimonials'>
-                            <div className={router.pathname == '/testimonials' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1'}>
+                            <div className={router.pathname == '/testimonials' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Testimonials
                             </div>
                         </Link>
                         <Link href='/faq'>
-                            <div className={router.pathname == '/faq' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1'}>
+                            <div className={router.pathname == '/faq' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 FAQ&apos;s
                             </div>
                         </Link>
