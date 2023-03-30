@@ -55,17 +55,17 @@ export default function ProjectsProjectsSection() {
                 <div className='grid w-full h-full'>
 
                     <div className='grid place-content-between w-full grid-flow-col max-w-[1500px] m-auto'>
-                        <div className=' '>
+                        <div className='ml-6 '>
                             <div className='grid h-full ml-2'>
                                 <div className=' m-auto cursor-pointer' onClick={() => setCurrentProject(data[prev(currentIndex, setCurrentIndex, data)])}>
-                                    <MdArrowBackIos className='text-2xl hover:3xl md:text-4xl mr-4 text-onPrimary font-bold ' />
+                                    <MdArrowBackIos className='text-3xl hover:4xl md:text-5xl mr-4 text-onPrimary font-bold ' />
                                 </div>
                             </div>
                         </div>
-                        <div className='  '>
+                        <div className=' mr-6 '>
                             <div className='grid h-full mr-2'>
                                 <div className='m-auto cursor-pointer' onClick={() => setCurrentProject(data[next(currentIndex, setCurrentIndex, data)])}>
-                                    <MdArrowForwardIos className='text-2xl hover:3xl md:text-4xl ml-4 text-onPrimary font-bold' />
+                                    <MdArrowForwardIos className='text-3xl hover:4xl md:text-5xl ml-4 text-onPrimary font-bold' />
                                 </div>
                             </div>
                         </div>

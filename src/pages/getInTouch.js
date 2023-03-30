@@ -11,7 +11,7 @@ import React, { useEffect } from 'react'
 import { BsInstagram, BsYoutube } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { TiSocialTwitter } from 'react-icons/ti'
-import logo from '../../public/SVG/Asset_26.svg'
+import logo from '../../public/SVG/Asset_27.svg'
 
 export default function GetInTouch() {
 

@@ -10,7 +10,7 @@ export default function GetInTouchForm() {
             <div className='mx-auto font-semibold text-lg opacity-70 text-center'>Enter your details below and we’ll contact you within 24 hours</div>
             <div className='grid grid-flow-row md:grid-flow-col gap-4'>
                 <div className='grid grid-flow-row gap-3'>
-                    <input placeholder='NAME' className='text-sm border-2 border-primary/70 rounded p-2 bg-surface' />
+                    <input placeholder='NAME' className='text-sm border-2 border-primary/70 rounded p-2 bg-surface focus:bg-surface' />
                     <input placeholder='EMAIL' className='text-sm border-2 border-primary/70 rounded p-2 bg-surface' />
 
                     <div className='relative'>
