@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/faqList.css'
 import NextNProgress from 'nextjs-progressbar';
 import { motion } from 'framer-motion';
 
