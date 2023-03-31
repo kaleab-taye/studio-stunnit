@@ -1,9 +1,9 @@
 // import { Carousel } from 'flowbite';
 // import { Carousel } from 'flowbite';
-import HomeProjectsSection from '@/components/homeProjectsSection';
-import Layout from '@/components/layout';
-import LeftRightAligner from '@/components/left-right-aligner';
-import Navbar from '@/components/navbar';
+import HomeProjectsSection from '../../components/homeProjectsSection';
+import Layout from '../../components/layout';
+import LeftRightAligner from '../../components/left-right-aligner';
+import Navbar from '../../components/navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -14,7 +14,7 @@ import { GrDown } from 'react-icons/gr';
 import ProjectsData from '../../../public/dummyData/projectsData';
 import img1 from '../../../public/images/Asset_14.png'
 import img2 from '../../../public/images/Asset_20.png'
-import ProjectsProjectsSection from '@/components/projectsProjectsSection';
+import ProjectsProjectsSection from '../../components/projectsProjectsSection';
 
 export default function Index() {
     const projects = ProjectsData()

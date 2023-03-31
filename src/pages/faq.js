@@ -1,6 +1,6 @@
-import Layout from '@/components/layout'
-import LeftRightAligner from '@/components/left-right-aligner'
-import Navbar from '@/components/navbar'
+import Layout from '../components/layout'
+import LeftRightAligner from '../components/left-right-aligner'
+import Navbar from '../components/navbar'
 import { Accordion, Tabs } from 'flowbite-react'
 import React, { useEffect, useState } from 'react'
 
