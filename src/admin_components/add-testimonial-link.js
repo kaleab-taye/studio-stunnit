@@ -5,6 +5,7 @@ import YoutubeLinks from './youtube_links'
 import Heading from './heading'
 import apiUrl from '../../config'
 import CircularProgress from '@mui/joy/CircularProgress';
+import TestimonialLinkTextformfield from './testimonial-link-TF'
 
 const AddTestimonialLink = ({ links, addLinks, removeLink }) => {
   const [isLinkInvalid, setIsLinkInvalid] = useState()
@@ -83,7 +84,7 @@ const AddTestimonialLink = ({ links, addLinks, removeLink }) => {
             <Heading heading='Add Testimonial Youtube Link' />
           </div>
           <form onSubmit={onSubmit} encType='multipart/form-data'>
-            <LinkTextformfield value={inputValues.link} inputChange={handleChange} label="Testimonial Youtube Link" />
+            <TestimonialLinkTextformfield value={inputValues.link} inputChange={handleChange} label="Testimonial Youtube Link" />
             {
               (isLinkInvalid && (<div className='text-dangerColor '>
                 <p>Please enter a valid youtube link</p>
