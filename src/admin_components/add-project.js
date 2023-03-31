@@ -97,7 +97,7 @@ export default function AddProject({ addProject }) {
       });
 
       let data = await response.text();
-      addProject(data)
+      addProject(JSON.parse(data))
       handleButtonClick();
       clearTxt();
       setLoading(false)
