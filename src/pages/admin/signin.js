@@ -8,7 +8,7 @@ import cookieCutter from 'cookie-cutter'
 import { useRouter } from 'next/router'
 
 let router
-const signin = () => {
+const Signin = () => {
     router = useRouter()
     const [isValid, setIsValid] = useState(true)
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -53,4 +53,4 @@ const signin = () => {
     }
 }
 
-export default signin
+export default Signin

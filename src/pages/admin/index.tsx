@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Projects from './projects/index'
 import apiUrl from '../../../config'
+import React from 'react'
 
 const Home: NextPage = (projects) => {
 

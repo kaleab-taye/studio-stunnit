@@ -46,7 +46,7 @@ export default function ProjectsList({ projects, deleteProject }) {
                 <p>Are you sure you want to delete this project ?</p>
             </Modal>
             <div className='flex justify-end'>
-                <Link href={`/admin/projects/${currentProject.id}/edit`}><div className='text-xl font-bold text-primary mr-2 cursor-pointer'>Edit</div></Link>
+                <Link href={`/admin/projects/${currentProject ? currentProject.id : null}/edit`}><div className='text-xl font-bold text-primary mr-2 cursor-pointer'>Edit</div></Link>
                 <div onClick={handleOpenModal} className='text-xl font-bold mr-5 text-dangerColor cursor-pointer'>Delete</div>
             </div>
             <div className="relative grid bg-center h-[650px] max-h-[70vh] w-full">
@@ -57,7 +57,7 @@ export default function ProjectsList({ projects, deleteProject }) {
                             {/* {currentProject.map((item) => ( */}
                             <motion.div
 
-                                key={currentProject.id}
+                                key={currentProject ?  currentProject.id : null}
                                 // style={{ x: -100 }}
                                 initial={{ x: -100, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
@@ -65,7 +65,7 @@ export default function ProjectsList({ projects, deleteProject }) {
                                 // transition={{ duration: 2 }}
                                 className=' grid h-full'
                             >
-                                <img src={currentProject.mainImage} className='h-[650px] max-h-[70vh] w-screen mx-auto  object-cover rounded-md' />
+                                <img alt='img' src={currentProject?  currentProject.mainImage : null} className='h-[650px] max-h-[70vh] w-screen mx-auto  object-cover rounded-md' />
                             </motion.div>
                         </AnimatePresence>
                     </div>
@@ -81,7 +81,7 @@ export default function ProjectsList({ projects, deleteProject }) {
                 <div className='absolute bottom-5 w-full'>
                     <div className=' flex justify-between px-5 sm:px-10 lg:px-0 mx-auto max-w-[1000px]'>
                         <div className='ml-3 text-3xl font-medium underline text-onPrimary'>
-                            {currentProject.title}
+                            {currentProject ? currentProject.title : null}
                         </div>
                         <div className='ml-auto mr-3'>
                             <div className='grid grid-flow-col gap-2'>

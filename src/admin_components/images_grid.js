@@ -10,8 +10,8 @@ const ImagesGrid = () => {
   return (
     <div className="grid grid-cols-3 gap-[20px] mt-5">
       {images.map((image) => (
-        <div>
-          <Image className='w-[250px] h-[150px] rounded-lg' src={image}/>
+        <div key={image} >
+          <Image alt='img' className='w-[250px] h-[150px] rounded-lg' src={image}/>
         </div>
       ))}
     </div>

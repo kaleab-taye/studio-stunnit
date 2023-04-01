@@ -5,7 +5,7 @@ import FaqList from '../../../admin_components/faq_list'
 import apiUrl from '../../../../config'
 import LeftRightAligner from '../../../admin_components/left-right-aligner'
 
-const faq = ({ faqs }) => {
+const Faq = ({ faqs }) => {
   const [allFaqs, setAllFaqs] = useState(faqs)
   return (
     <>
@@ -22,7 +22,7 @@ const faq = ({ faqs }) => {
   )
 }
 
-export default faq
+export default Faq
 
 export async function getStaticProps() {
   try {

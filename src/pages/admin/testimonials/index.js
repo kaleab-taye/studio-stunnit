@@ -5,7 +5,7 @@ import TestimonialsList from '../../../admin_components/testimonials_list'
 import apiUrl from '../../../../config'
 import LeftRightAligner from '../../../admin_components/left-right-aligner'
 
-const testimonials = ({ testimonials }) => {
+const Testimonials = ({ testimonials }) => {
   const [allTestimonials, setAllTestimonials] = useState(testimonials)
   return (
     <>
@@ -21,7 +21,7 @@ const testimonials = ({ testimonials }) => {
   )
 }
 
-export default testimonials
+export default Testimonials
 
 export async function getStaticProps() {
 

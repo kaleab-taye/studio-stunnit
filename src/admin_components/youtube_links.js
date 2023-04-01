@@ -79,7 +79,7 @@ const YoutubeLinks = ({ sth, removeLink }) => {
       </Modal>
       {links.map((link, index) => editLinkId === link.id ?
         (
-          <form onSubmit={(e) => onSubmit(e, index)}>
+          <form onSubmit={(e) => onSubmit(e, index)} key={index}>
             <div className='flex flex-row'>
               <div className='w-full mt-2'>
                 <LinkTextformfield value={link.youtubeLink} />

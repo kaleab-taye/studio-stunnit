@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-const linkTextformfield = ({label, value}) => {
+const LinkTextformfield = ({label, value}) => {
   const [data, setData] = useState(value)
 
   label = label ? label : "";
@@ -14,4 +14,4 @@ const linkTextformfield = ({label, value}) => {
   )
 }
 
-export default linkTextformfield
+export default  LinkTextformfield 

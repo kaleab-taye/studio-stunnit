@@ -5,7 +5,7 @@ import ProjectsList from '../../../admin_components/projects_list'
 import { useEffect, useState } from 'react'
 import LeftRightAligner from '../../../admin_components/left-right-aligner'
 
-const projects = ({ projects }) => {
+const Projects = ({ projects }) => {
         const [allProjects, setAllProjects] = useState(projects)
         return <>
                 <Head>
@@ -27,4 +27,4 @@ const projects = ({ projects }) => {
         </>
 }
 
-export default projects
+export default Projects

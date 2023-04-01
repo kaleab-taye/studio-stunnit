@@ -53,7 +53,7 @@ export default function Modal({ isOpen, onClose, title, children, onClick }) {
             color="failure"
             onClick={onClick}
           >
-            Yes, I'm sure
+            Yes, I&apos;m sure
           </Button>
           <Button
             color="gray"

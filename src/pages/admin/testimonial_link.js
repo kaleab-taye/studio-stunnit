@@ -4,7 +4,7 @@ import AddTestimonialLink from '../../admin_components/add-testimonial-link'
 import apiUrl from '../../../config'
 import LeftRightAligner from '../../admin_components/left-right-aligner'
 
-const testimonials = ({ links }) => {
+const Testimonials = ({ links }) => {
 
   const  [allLinks, setAllLinks] = useState(links)
 
@@ -20,7 +20,7 @@ const testimonials = ({ links }) => {
   )
 }
 
-export default testimonials
+export default Testimonials
 
 export async function getStaticProps() {
   try {
