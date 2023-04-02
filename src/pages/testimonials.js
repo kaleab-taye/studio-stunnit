@@ -9,7 +9,6 @@ import React, { useState } from 'react'
 import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
 import Slider from 'react-slick'
 import YouTube from 'react-youtube'
-import apiUrl from '../../config'
 
 
 

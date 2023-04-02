@@ -27,7 +27,7 @@ export default function WhatWeDoSection() {
                             STUNNIT!
                         </div>
                         <div className='grid my-auto gap-6 mx-auto'>
-                            <div className='text-md opacity-70'>
+                            <div className='text-md '>
                                 We help you step into stunning Interior design spaces that is
                                 customized to fit your personal value. Get in touch and let’s
                                 start customizing a design that fits just right for you!
@@ -38,7 +38,7 @@ export default function WhatWeDoSection() {
                                         <Button name='Get in touch' path='#get-in-touch' />
                                     </Link>
                                 </div>
-                                <div className='text-sm opacity-60'>Schedule your project and let’s get started!</div>
+                                <div className='text-sm'>Schedule your project and let’s get started!</div>
                             </div>
                         </div>
                     </div>

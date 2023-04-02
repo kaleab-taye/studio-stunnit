@@ -4,7 +4,6 @@ import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
 import Image from 'next/image'
 import Link from 'next/link'
 import Modal from './modal';
-import apiUrl from '../../config'
 
 
 export default function ProjectsList({ projects, deleteProject }) {

@@ -3,8 +3,6 @@ import LeftRightAligner from '../components/left-right-aligner'
 import Navbar from '../components/navbar'
 import { Accordion, Tabs } from 'flowbite-react'
 import React, { useEffect, useState } from 'react'
-// import apiUrl from '../../config'
-import apiUrl from '../../config'
 
 export default function Faq({faqs}) {
   const [currentCategoryId, setCurrentCategoryId] = useState(faqCategories[0]?.id)

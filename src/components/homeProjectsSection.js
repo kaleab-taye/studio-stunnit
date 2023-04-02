@@ -11,7 +11,7 @@ import LeftRightAligner from './left-right-aligner'
 import Link from 'next/link'
 import ProjectsData from '../../public/dummyData/projectsData'
 
-export default function HomeProjectsSection({projects}) {
+export default function HomeProjectsSection({ projects }) {
 
     const PathToImages = '/../..'
 
@@ -39,22 +39,25 @@ export default function HomeProjectsSection({projects}) {
                         // transition={{ duration: 2 }}
                         className=' grid h-full'
                     >
-                        <img alt='project image' src={PathToImages+currentProject.mainImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-[.8]' />
+                        <img alt='project image' src={PathToImages + currentProject.mainImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-[.8]' />
                     </motion.div>
                     {/* </AnimatePresence> */}
                 </div>
             </div>
             {/* section heading start */}
-            <div className=" absolute grid w-full m-auto ">
-                <div className="m-auto grid h-screen">
+            <div className="absolute grid w-full m-auto z-8">
+                <Link href={'/projects?id=' + currentProject.id}>
 
-                    <div className="max-w-[400px] mx-auto uppercase mt-10 font-bold text-3xl text-onPrimary" >Projects </div>
-                </div>
+                    <div className="m-auto grid h-screen">
+
+                        <div className="max-w-[400px] mx-auto uppercase mt-10 font-bold text-3xl text-onPrimary" >Projects </div>
+                    </div>
+                </Link>
             </div>
             {/* section heading end */}
 
 
-            <div className='absolute bottom-14 w-full'>
+            <div className='absolute bottom-14 w-full z-10'>
 
                 <div className=' flex justify-between px-5 sm:px-10 lg:px-0 mx-auto max-w-[1000px]'>
                     <Link href={'/projects?id=' + currentProject.id}>

@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../../../../admin_components/navbar'
 import EditFAQ from '../../../../admin_components/edit-faq'
-import apiUrl from '../../../../../config'
 import LeftRightAligner from '../../../../admin_components/left-right-aligner'
 
 const editFaq = ({ faq }) => {

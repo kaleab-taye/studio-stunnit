@@ -4,7 +4,6 @@ import React from 'react'
 import RatingStars from './rating-stars'
 import { useState } from 'react';
 import Modal from './modal';
-import apiUrl from '../../config';
 
 export default function TestimonialCard({ testimonial, removeTestimonial }) {
     const [isOpen, setIsOpen] = useState(false);

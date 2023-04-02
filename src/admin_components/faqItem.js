@@ -3,7 +3,6 @@ import React from 'react'
 import { useState } from 'react'
 import { AiOutlineDown, AiOutlineUp, AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai'
 import Modal from './modal';
-import apiUrl from '../../config';
 
 const FaqItem = ({ items, removeFaq }) => {
   const [activeIndex, setActiveIndex] = useState(0)

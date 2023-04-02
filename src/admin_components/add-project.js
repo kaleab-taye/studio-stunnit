@@ -4,7 +4,6 @@ import DescriptionTF from './descriptionTF'
 import ClientTF from './clientTF'
 import Button2 from './button2'
 import Heading from './heading'
-import apiUrl from '../../config'
 import { useState, useEffect } from 'react'
 import UploadButton from './upload_button'
 import CircularProgress from '@mui/joy/CircularProgress';

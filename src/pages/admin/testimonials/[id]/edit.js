@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../../../../admin_components/navbar'
 import EditTestimonial from '../../../../admin_components/edit-testimonials';
-import apiUrl from '../../../../../config';
 import LeftRightAligner from '../../../../admin_components/left-right-aligner';
 
 export default function editTestimonial({ testimonial }) {

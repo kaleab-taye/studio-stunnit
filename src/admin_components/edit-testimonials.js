@@ -5,7 +5,6 @@ import Button2 from './button2'
 import Rating from './rate'
 import UploadTestimonialImage from './upload-testimonial-image'
 import Heading from './heading'
-import apiUrl from '../../config'
 import { useRouter } from 'next/router'
 import UploadButton from './upload_button';
 import { useState } from 'react'

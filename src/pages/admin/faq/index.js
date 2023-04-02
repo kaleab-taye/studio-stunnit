@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Navbar from '../../../admin_components/navbar'
 import AddFAQ from '../../../admin_components/add-faq'
 import FaqList from '../../../admin_components/faq_list'
-import apiUrl from '../../../../config'
 import LeftRightAligner from '../../../admin_components/left-right-aligner'
 
 const Faq = ({ faqs }) => {

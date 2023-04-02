@@ -6,7 +6,6 @@ import Button2 from './button2'
 import Heading from './heading'
 import UploadButton from './upload_button'
 import { useState } from 'react'
-import apiUrl from '../../config'
 import { Url } from '../../config'
 import { useRouter } from 'next/router'
 import CircularProgress from '@mui/joy/CircularProgress';

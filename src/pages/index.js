@@ -10,7 +10,6 @@ import WhyChooseUsSection from '../components/sections/whyChooseUsSection'
 import HomeTestimonialSection from '../components/sections/homeTestimonialSection'
 import HomeProjectsSection from '../components/homeProjectsSection'
 import DesignInStepsSection from '../components/sections/designInStepsSection'
-import apiUrl from '../../config'
 
 
 

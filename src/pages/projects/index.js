@@ -16,8 +16,6 @@ import img1 from '../../../public/images/Asset_14.png'
 import img2 from '../../../public/images/Asset_20.png'
 import ProjectsProjectsSection from '../../components/projectsProjectsSection';
 
-import apiUrl from '../../../config'
-
 
 export default function Index({projects}) {
     // const projects = ProjectsData()

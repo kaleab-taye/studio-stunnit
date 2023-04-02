@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../../admin_components/navbar'
 import AddTestimonialLink from '../../admin_components/add-testimonial-link'
-import apiUrl from '../../../config'
 import LeftRightAligner from '../../admin_components/left-right-aligner'
 
 const Testimonials = ({ links }) => {

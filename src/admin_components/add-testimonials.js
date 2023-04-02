@@ -5,7 +5,6 @@ import Button2 from './button2'
 import Rating from './rate'
 import UploadTestimonialImage from './upload-testimonial-image'
 import Heading from './heading'
-import apiUrl from '../../config'
 import { useState, useEffect } from 'react'
 import UploadButton from './upload_button';
 import CircularProgress from '@mui/joy/CircularProgress';

@@ -84,7 +84,7 @@ export default function DesignInStepsSection() {
             <StageIcon status={status3} name='3' desc='execution' />
             <StageIcon status={status4} name='4' desc='move-in' />
           </div>
-          <ProgressBar className='absolute top-6' progress={progressBar} setProgress={setProgressBar} duration={20000} />
+          <ProgressBar className='absolute top-[19px]' progress={progressBar} setProgress={setProgressBar} duration={20000} />
         </div>
 
         <div className='grid mx-auto relative '>

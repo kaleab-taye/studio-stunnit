@@ -4,7 +4,6 @@ import DescriptionTF from './descriptionTF'
 import Button2 from './button2'
 import Dropdown from './dropdown'
 import Heading from './heading'
-import apiUrl from '../../config'
 import { useRouter } from 'next/router'
 import CircularProgress from '@mui/joy/CircularProgress';
 import { useState } from 'react'

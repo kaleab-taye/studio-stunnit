@@ -4,7 +4,6 @@ import { MdDone } from 'react-icons/md'
 import { useState } from 'react';
 import Modal from './modal';
 import LinkTextformfield from './linkTF';
-import apiUrl from '../../config';
 
 const YoutubeLinks = ({ sth, removeLink }) => {
   const [deleteLinkId, setLinkId] = useState()
