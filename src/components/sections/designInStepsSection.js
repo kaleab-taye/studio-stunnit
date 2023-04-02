@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import LeftRightAligner from '../left-right-aligner'
 import StageIcon from '../stageIcon'
-import teamImage from '../../../public/SVG/team.svg'
-import meeting from '../../../public/SVG/meeting.svg'
-import design from '../../../public/SVG/design.svg'
-import move_in from '../../../public/SVG/move-in.svg'
+import execution from '../../../public/SVG/Execution.svg'
+import meeting from '../../../public/SVG/Meeting.svg'
+import design from '../../../public/SVG/Design.svg'
+import move_in from '../../../public/SVG/Move-in.svg'
 import ProgressBar from '../progressBar'
 
 import img1 from '../../../public/images/Asset_16.png'
@@ -26,7 +26,7 @@ export default function DesignInStepsSection() {
   const data = [
     { id: '1', img: meeting, heading: "meeting", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
     { id: '2', img: design, heading: "design", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
-    { id: '3', img: teamImage, heading: "execution", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
+    { id: '3', img: execution, heading: "execution", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
     { id: '4', img: move_in, heading: "move-in", content: "Here we will delve into the details. It is the time we choose the right material, make timely decisions, keep track of your budget, trust our process and let the design manifest." },
 
   ]
@@ -78,14 +78,12 @@ export default function DesignInStepsSection() {
       <div className='mx-auto grid gap-10 my-10'>
         <div className='mx-auto text-3xl font-semibold text-center'>COMPLETE INTERIOR DESIGN IN 4 EASY STEPS</div>
         <div className='relative'>
-
           <div className='grid grid-flow-col'>
             <StageIcon status={status1} name='1' desc='meeting' />
             <StageIcon status={status2} name='2' desc='design' />
             <StageIcon status={status3} name='3' desc='execution' />
             <StageIcon status={status4} name='4' desc='move-in' />
           </div>
-
           <ProgressBar className='absolute top-6' progress={progressBar} setProgress={setProgressBar} duration={20000} />
         </div>
 
