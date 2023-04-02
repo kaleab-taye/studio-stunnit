@@ -38,7 +38,7 @@ const YoutubeLinks = ({ sth, removeLink }) => {
       "youtubeLink": event.target.link.value,
     });
 
-    let response = await fetch(`${apiUrl}/testimonial-youtube-links?id=${editLinkId}`, {
+    let response = await fetch(`${process.env.url}/testimonial-youtube-links?id=${editLinkId}`, {
       method: "PATCH",
       body: bodyContent,
       headers: headersList
@@ -60,7 +60,7 @@ const YoutubeLinks = ({ sth, removeLink }) => {
       "Accept": "*/*"
     }
 
-    let response = await fetch(`${apiUrl}/testimonial-youtube-links?id=${deleteLinkId}`, {
+    let response = await fetch(`${process.env.url}/testimonial-youtube-links?id=${deleteLinkId}`, {
       method: "DELETE",
       headers: headersList
     });

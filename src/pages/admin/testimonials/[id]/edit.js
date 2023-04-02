@@ -24,7 +24,7 @@ export async function getStaticPaths() {
   const ids = [];
 
   try {
-    let res = await fetch(`${apiUrl}/testimonials`);
+    let res = await fetch(`${process.env.url}/testimonials`);
     let testimonials = await res.json();
     const id = testimonials.map((testimonial) => testimonial.id)
     ids.push(...id)
@@ -47,7 +47,7 @@ export async function getStaticProps({ params }) {
       "Accept": "*/*",
     }
 
-    let response = await fetch(`${apiUrl}/testimonials`, {
+    let response = await fetch(`${process.env.url}/testimonials`, {
       method: "GET",
       headers: headersList
     });

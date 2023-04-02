@@ -54,7 +54,7 @@ const AddTestimonialLink = ({ links, addLinks, removeLink }) => {
         "youtubeLink": event.target.link.value
       });
   
-      let response = await fetch(`${apiUrl}/testimonial-youtube-links`, {
+      let response = await fetch(`${process.env.url}/testimonial-youtube-links`, {
         method: "POST",
         body: bodyContent,
         headers: headersList

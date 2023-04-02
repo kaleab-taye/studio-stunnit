@@ -90,7 +90,7 @@ export default function AddProject({ addProject }) {
         bodyContent.append("moreImages", image);
       })
 
-      let response = await fetch(`${apiUrl}/projects`, {
+      let response = await fetch(`${process.env.url}/projects`, {
         method: "POST",
         body: bodyContent,
         headers: headersList

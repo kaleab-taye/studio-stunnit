@@ -87,7 +87,7 @@ export default function DesignInStepsSection() {
           <ProgressBar className='absolute top-6' progress={progressBar} setProgress={setProgressBar} duration={20000} />
         </div>
 
-        <div className='grid mx-auto relative'>
+        <div className='grid mx-auto relative '>
           <div className=''>
             <motion.div
               // layout
@@ -111,10 +111,10 @@ export default function DesignInStepsSection() {
 
                   <Image alt='' className='m-auto h-[250px] sm:h-[350px] md:h-[450px] p-10' src={currentProject.img} />
                 </div>
-                <div>
-                  <div className='max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
-                    <div className='grid grid-flow-col mb-auto gap-2'>
-                      <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor'>
+                <div className='grid'>
+                  <div className='mx-auto max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
+                    <div className='grid grid-flow-col mb-auto sm:gap-2'>
+                      <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor '>
                         <div className='m-auto'>
                           {currentProject.id}
                         </div>

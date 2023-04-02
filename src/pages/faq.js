@@ -3,10 +3,13 @@ import LeftRightAligner from '../components/left-right-aligner'
 import Navbar from '../components/navbar'
 import { Accordion, Tabs } from 'flowbite-react'
 import React, { useEffect, useState } from 'react'
+// import apiUrl from '../../config'
+import apiUrl from '../../config'
 
-export default function Faq() {
+export default function Faq({faqs}) {
   const [currentCategoryId, setCurrentCategoryId] = useState(faqCategories[0]?.id)
-  console.log(faqCategories, FAQs)
+  console.log("loggg faqs", faqs)
+  console.log("loggg", process.env.url)
 
   return (
     <div>
@@ -35,9 +38,10 @@ export default function Faq() {
                         key='heading-1'
                       >
                         <Accordion>
-                          {FAQs.map(faqItem => faqItem.categoryId == item.id ?
+                          {faqs.map(faqItem => faqItem.category === item.name ?
                             <Accordion.Panel key={faqItem.categoryId} >
                               <Accordion.Title>
+                              {faqItem.categoryId}
                                 {faqItem.question}
                               </Accordion.Title>
                               <Accordion.Content>
@@ -114,63 +118,45 @@ const FAQs = [
 const faqCategories = [
   {
     id: "c1",
-    name: "Category 1"
+    name: "Option 1"
   },
   {
     id: "c2",
-    name: "Category 2"
+    name: "Option 2"
   },
   {
     id: "c3",
-    name: "Category 3"
+    name: "Option 3"
   },
   {
     id: "c4",
-    name: "Category 4"
+    name: "Option 4"
   },
-  {
-    id: "c5",
-    name: "Category 5"
-  },
+  // {
+  //   id: "c5",
+  //   name: "Option 5"
+  // },
 ]
 
+export async function getStaticProps() {
+  try {
+    let res = await fetch(`${process.env.url}/faqs`);
+    let faqs = await res.json();
 
+    return {
+      props: {
+        faqs: faqs,
+      },
+      revalidate: 10,
+    };
+  } catch (error) {
+    console.error("error happened while fetching projects : ",error)
 
-
-{/* <Tabs.Group
-                  aria-label="Tabs with icons"
-                  style="underline"
-                >
-                  <Tabs.Item
-                    title="Profile"
-                  >
-                    <Accordion>
-                      <Accordion.Panel>
-                        <Accordion.Title>
-                          What is Flowbite?
-                        </Accordion.Title>
-                        <Accordion.Content>
-                          <p className="mb-2 text-gray-500 dark:text-gray-400">
-                            Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
-                          </p>
-                          <p className="text-gray-500 dark:text-gray-400">
-                            Check out this guide to learn how to
-                            <a
-                              href="https://flowbite.com/docs/getting-started/introduction/"
-                              className="text-blue-600 hover:underline dark:text-blue-500"
-                            >
-                              get started
-                            </a>
-                            and start developing websites even faster with components on top of Tailwind CSS.
-                          </p>
-                        </Accordion.Content>
-                      </Accordion.Panel>
-                    </Accordion>
-
-                  </Tabs.Item>
-                  <Tabs.Item
-                    title="Profile"
-                  >
-                    Profile content
-                  </Tabs.Item>
-                </Tabs.Group> */}
+    return {
+      props: {
+        faqs: [],
+        // error: error,
+      }
+    };
+  }
+}

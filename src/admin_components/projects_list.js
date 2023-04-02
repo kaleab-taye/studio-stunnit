@@ -29,7 +29,7 @@ export default function ProjectsList({ projects, deleteProject }) {
             "Accept": "*/*"
         }
 
-        let response = await fetch(`${apiUrl}/projects?id=${currentProject.id}`, {
+        let response = await fetch(`${process.env.url}/projects?id=${currentProject.id}`, {
             method: "DELETE",
             headers: headersList
         });

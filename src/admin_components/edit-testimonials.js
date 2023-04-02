@@ -46,7 +46,7 @@ const EditTestimonial = ({testimonial}) => {
      bodyContent.append("description", event.target.description.value);
      bodyContent.append("avatar", image);
      
-     let response = await fetch(`${apiUrl}/testimonials?id=${testimonial.id}`, { 
+     let response = await fetch(`${process.env.url}/testimonials?id=${testimonial.id}`, { 
        method: "PATCH",
        body: bodyContent,
        headers: headersList

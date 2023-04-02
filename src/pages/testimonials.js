@@ -9,9 +9,12 @@ import React, { useState } from 'react'
 import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
 import Slider from 'react-slick'
 import YouTube from 'react-youtube'
+import apiUrl from '../../config'
 
 
-export default function Testimonials() {
+
+export default function Testimonials({ testimonials, testimonialsYT }) {
+console.log("logg youtubeVIDExtractor",youtubeVIDExtractor("https://www.youtube.com/watch?v=knPnspjCgcU"))
     const [currentProject, setCurrentProject] = useState(0)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [loadingState, setLoadingState] = useState(true)
@@ -45,7 +48,7 @@ export default function Testimonials() {
             }
         }
     }
-    const testimonialsYT = [{ videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }]
+    // const testimonialsYT = [{ videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }, { videoId: '2g811Eo7K8U', title: "vid-1" }]
     // <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={(e) => { e.target.pauseVideo(); }} />
     return (
         <div>
@@ -69,7 +72,7 @@ export default function Testimonials() {
                                                 <div className='m-auto grid sm:hidden'>
                                                     <Placeholder isLoading={loadingState}>
 
-                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={testimonial.videoId} opts={opts.small} />
+                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={youtubeVIDExtractor(testimonial.youtubeLink)} opts={opts.small} />
                                                     </Placeholder>
                                                     {/* {loadingState ? <div className='absolute w-full h-full bg-surface animate-pulse '>
                                                     </div> : <div></div>} */}
@@ -77,7 +80,7 @@ export default function Testimonials() {
                                                 <div className='m-auto hidden sm:grid md:hidden bg-red-500'>
                                                     <Placeholder isLoading={loadingState}>
 
-                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={testimonial.videoId} opts={opts.medium} />
+                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={youtubeVIDExtractor(testimonial.youtubeLink)} opts={opts.medium} />
                                                     </Placeholder>
                                                     {/* {loadingState ? <div className='absolute w-full h-full bg-surface animate-pulse '>
 
@@ -87,7 +90,7 @@ export default function Testimonials() {
                                                 <div className='hidden m-auto md:grid relative'>
                                                     <Placeholder isLoading={loadingState}>
 
-                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={testimonial.videoId} opts={opts.large} />
+                                                        <YouTube iframeClassName='' onReady={(e) => setLoadingState(false)} videoId={youtubeVIDExtractor(testimonial.youtubeLink)} opts={opts.large} />
                                                     </Placeholder>
                                                     {/* {loadingState ? <div className='absolute w-full h-full bg-surface animate-pulse '>
 
@@ -109,7 +112,7 @@ export default function Testimonials() {
 
                     </div>
                 </div>
-                
+
                 <LeftRightAligner>
 
                     <div className="my-16 flex flex-col gap-12 xl:gap-20 items-center pb-10">
@@ -137,33 +140,40 @@ function finishedLoading(e, setLoadingState) {
     setLoadingState(true);
 }
 
+function youtubeVIDExtractor(ytLink){
 
-const testimonials = [
-    {
-        customerName: "K Murthy",
-        position: "Director Manager, K Murthy",
-        imageUrl: "/images/Asset 17.png",
-        detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
-        rating: 5
-    },
-    {
-        customerName: "Aruna",
-        position: "Director Manager, K Murthy",
-        imageUrl: "/images/Asset 12.png",
-        detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
-        rating: 4
-    },
-    {
-        customerName: "Sanjeev",
-        position: "Director Manager, K Murthy",
-        imageUrl: "/images/Asset 18.png",
-        detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similiqu", rating: 4
-    },
-    {
-        customerName: "Punith",
-        position: "Director Manager, K Murthy",
-        imageUrl: "/images/Asset 19.png",
-        detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
-        rating: 5
+    let res = ytLink.split('v=')
+    console.log("logg youtubeVIDExtractor or",res)
+
+    return res[1]
+}
+
+
+
+export async function getStaticProps() {
+    try {
+        let testimonialsRes = await fetch(`${process.env.url}/testimonials`);
+        let testimonials = await testimonialsRes.json()
+
+        let testimonialsYTRes = await fetch(`${process.env.url}/testimonial-youtube-links`);
+        let testimonialsYT = await testimonialsYTRes.json()
+
+        return {
+            props: {
+                testimonials: testimonials,
+                testimonialsYT: testimonialsYT,
+            },
+            revalidate: 10,
+        };
+    } catch (error) {
+        console.error("error happened while fetching testimonials : ", error)
+
+        return {
+            props: {
+                testimonials: [],
+                testimonialsYT: [],
+                //       error: error,
+            }
+        };
     }
-]
+}

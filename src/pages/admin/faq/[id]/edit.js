@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const ids = [];
 
   try {
-    let res = await fetch(`${apiUrl}/faqs`);
+    let res = await fetch(`${process.env.url}/faqs`);
     let faqs = await res.json();
     const id = faqs.map((faq) => faq.id)
     ids.push(...id)
@@ -50,7 +50,7 @@ export async function getStaticProps({ params }) {
       "Accept": "*/*",
     }
 
-    let response = await fetch(`${apiUrl}/faqs?id=${params.id}`, {
+    let response = await fetch(`${process.env.url}/faqs?id=${params.id}`, {
       method: "GET",
       headers: headersList
     });

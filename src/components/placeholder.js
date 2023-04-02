@@ -9,7 +9,7 @@ console.log('is',isLoading)
     <div className="relative">
       {isLoading ? (
         <div className=" absolute w-full h-full grid">
-          <span class="m-auto animate-pulse inline-flex h-full w-full bg-surface opacity-5"></span>
+          <span class="m-auto animate-pulse inline-flex h-full w-full bg-surface"></span>
         </div>
       ) : null}
       <motion.div

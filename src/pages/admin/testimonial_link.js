@@ -24,7 +24,7 @@ export default Testimonials
 
 export async function getStaticProps() {
   try {
-    let res = await fetch(`${apiUrl}/testimonial-youtube-links`);
+    let res = await fetch(`${process.env.url}/testimonial-youtube-links`);
     let data = await res.json();
     return {
       props: {

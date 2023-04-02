@@ -7,7 +7,8 @@ import LeftRightAligner from '../left-right-aligner'
 import PrimaryLinkButton from '../primaryLinkButton'
 import TestimonialCard from '../testimonial-card'
 
-export default function HomeTestimonialSection() {
+export default function HomeTestimonialSection({testimonials}) {
+    console.log("logg testimonials", testimonials)
     return (
         <LeftRightAligner>
             <div className='grid gap-6 my-16'>

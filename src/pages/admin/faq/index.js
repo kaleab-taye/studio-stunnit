@@ -26,7 +26,7 @@ export default Faq
 
 export async function getStaticProps() {
   try {
-    let res = await fetch(`${apiUrl}/faqs`);
+    let res = await fetch(`${process.env.url}/faqs`);
     let faqs = await res.json();
     return {
       props: {

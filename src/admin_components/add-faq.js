@@ -45,7 +45,7 @@ const AddFAQ = ({ addFaq }) => {
         "category": event.target.category.value
       });
 
-      let response = await fetch(`${apiUrl}/faqs`, {
+      let response = await fetch(`${process.env.url}/faqs`, {
         method: "POST",
         body: bodyContent,
         headers: headersList

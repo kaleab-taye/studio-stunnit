@@ -14,7 +14,7 @@ const Home: NextPage = (projects) => {
 
 export async function getStaticProps() {
   try {
-    let res = await fetch(`${apiUrl}/projects`);
+    let res = await fetch(`${process.env.url}/projects`);
     let projects = await res.json();
     return {
       props: {

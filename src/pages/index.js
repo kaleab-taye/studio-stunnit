@@ -10,10 +10,16 @@ import WhyChooseUsSection from '../components/sections/whyChooseUsSection'
 import HomeTestimonialSection from '../components/sections/homeTestimonialSection'
 import HomeProjectsSection from '../components/homeProjectsSection'
 import DesignInStepsSection from '../components/sections/designInStepsSection'
+import apiUrl from '../../config'
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({projects, testimonials}) {
+        console.log("loggg projects: ",projects)
+        console.log("loggg testimonials: ",testimonials)
+
   return (
     <>
                 <Head>
@@ -32,8 +38,8 @@ export default function Home() {
                                 <WhatWeDoSection />
                                 <WhyChooseUsSection />
                                 <DesignInStepsSection />
-                                <HomeProjectsSection />
-                                <HomeTestimonialSection />
+                                <HomeProjectsSection projects={projects} />
+                                <HomeTestimonialSection testimonials={testimonials} />
                                 <div id='get-in-touch'>
                                 </div>
                         </Layout>
@@ -41,3 +47,31 @@ export default function Home() {
         </>
   )
 }
+
+export async function getStaticProps() {
+        try {
+          let res = await fetch(`${process.env.url}/projects`);
+          let testimonialsRes = await fetch(`${process.env.url}/testimonials`);
+          let projects = await res.json();
+          let testimonials = await testimonialsRes.json()
+
+          return {
+            props: {
+              projects: projects,
+              testimonials: testimonials,
+            },
+            revalidate: 10,
+          };
+        } catch (error) {
+          console.error("error happened while fetching projects : ",error)
+      
+          return {
+            props: {
+              projects: [],
+              testimonials: [],
+        //       error: error,
+            }
+          };
+        }
+      }
+      

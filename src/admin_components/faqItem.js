@@ -29,7 +29,7 @@ const FaqItem = ({ items, removeFaq }) => {
       "Accept": "*/*"
     }
 
-    let response = await fetch(`${apiUrl}/faqs?id=${faqId}`, {
+    let response = await fetch(`${process.env.url}/faqs?id=${faqId}`, {
       method: "DELETE",
       headers: headersList
     });

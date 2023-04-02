@@ -7,6 +7,7 @@ import Heading from './heading'
 import UploadButton from './upload_button'
 import { useState } from 'react'
 import apiUrl from '../../config'
+import { Url } from '../../config'
 import { useRouter } from 'next/router'
 import CircularProgress from '@mui/joy/CircularProgress';
 
@@ -70,13 +71,13 @@ export default function EditProject({ project }) {
       if (typeof (images[ind]) !== 'string') {
         bodyContent.append("moreImages", images[ind])
       } else {
-        const res = await fetch(`http://localhost:3000${images[ind]}`);
+        const res = await fetch(`${Url}${images[ind]}`);
         const blob = await res.blob();
         bodyContent.append("moreImages", blob, `${ind}.png`);
         }
        }
 
-    let response = await fetch(`${apiUrl}/projects?id=${project.id}`, {
+    let response = await fetch(`${process.env.url}/projects?id=${project.id}`, {
       method: "PATCH",
       body: bodyContent,
       headers: headersList

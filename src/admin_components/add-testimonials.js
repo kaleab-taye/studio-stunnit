@@ -73,7 +73,7 @@ const AddTestimonial = ({ addTestimonial }) => {
       bodyContent.append("description", event.target.description.value);
       bodyContent.append("avatar", image);
 
-      let response = await fetch(`${apiUrl}/testimonials`, {
+      let response = await fetch(`${process.env.url}/testimonials`, {
         method: "POST",
         body: bodyContent,
         headers: headersList

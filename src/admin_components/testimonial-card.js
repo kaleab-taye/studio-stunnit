@@ -24,7 +24,7 @@ export default function TestimonialCard({ testimonial, removeTestimonial }) {
             "Accept": "*/*"
         }
 
-        let response = await fetch(`${apiUrl}/testimonials?id=${testimonial.id}`, {
+        let response = await fetch(`${process.env.url}/testimonials?id=${testimonial.id}`, {
             method: "DELETE",
             headers: headersList
         });

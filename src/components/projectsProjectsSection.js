@@ -11,10 +11,12 @@ import LeftRightAligner from './left-right-aligner'
 import Link from 'next/link'
 import ProjectsData from '../../public/dummyData/projectsData'
 
-export default function ProjectsProjectsSection() {
+export default function ProjectsProjectsSection({projects}) {
 
 
-    const data = ProjectsData()
+    // const data = ProjectsData()
+    const PathToImages = '/../..'
+    const data = projects
     const [currentProject, setCurrentProject] = useState(data[0])
     const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -38,7 +40,7 @@ export default function ProjectsProjectsSection() {
                         // transition={{ duration: 2 }}
                         className=' grid h-full'
                     >
-                        <Image alt='project image' src={currentProject.primaryImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-[.8]' />
+                        <img alt='project image' src={PathToImages + currentProject.mainImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-[.8]' />
                     </motion.div>
                     {/* </AnimatePresence> */}
                 </div>

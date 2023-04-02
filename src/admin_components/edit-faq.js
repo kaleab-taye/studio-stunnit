@@ -38,7 +38,7 @@ const EditFAQ = ({faq}) => {
        "category": event.target.category.value
      });
      
-     let response = await fetch(`${apiUrl}/faqs?id=${faq.id}`, { 
+     let response = await fetch(`${process.env.url}/faqs?id=${faq.id}`, { 
        method: "PATCH",
        body: bodyContent,
        headers: headersList
