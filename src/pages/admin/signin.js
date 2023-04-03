@@ -44,7 +44,7 @@ const signin = () => {
         setIsSubmitting(true)
         if (event.target.username.value === auth.username && event.target.password.value === auth.password) {
             setIsValid(true)
-            cookieCutter.set('signed-in', true)
+            cookieCutter.set('signed-in', true, { path: "/" })
             router.replace('/admin')
         } else {
             setIsSubmitting(false)

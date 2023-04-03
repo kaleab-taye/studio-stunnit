@@ -104,7 +104,7 @@ export default function Navbar() {
         </div>
     )
     function logout() {
-        cookieCutter.set('signed-in', false)
+        cookieCutter.set('signed-in', false, { path: "/" })
         router.replace('/admin/signin')
     }
 }
