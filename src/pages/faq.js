@@ -3,10 +3,39 @@ import LeftRightAligner from '../components/left-right-aligner'
 import Navbar from '../components/navbar'
 import { Accordion } from 'flowbite-react'
 import React, { useEffect, useState } from 'react'
-import { Box, Tab, Typography, useTheme } from '@mui/material';
+import { Box, styled, Tab, Typography, useTheme } from '@mui/material';
 import Tabs from '@mui/material/Tabs';
 // import { TabPanel } from '@mui/joy'
 import SwipeableViews from 'react-swipeable-views'
+
+const AntTab = styled((props) => <Tab disableRipple {...props} />)({
+  // borderBottom: '1px solid #e8e8e8',
+  // '& .MuiTabs-indicator': {
+  //   backgroundColor: '#1890ff',
+  // },
+  '&.Mui-selected': {
+    color: '#bc8028',
+    // fontWeight: theme.typography.fontWeightMedium,
+  },
+});
+
+const StyledTabs = styled((props) => (
+  <Tabs
+    {...props}
+    TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
+  />
+))({
+  '& .MuiTabs-indicator': {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+  },
+  '& .MuiTabs-indicatorSpan': {
+    maxWidth: 60,
+    width: '100%',
+    backgroundColor: '#bc8028',
+  },
+});
 
 
 export default function Faq({ faqs }) {
@@ -42,7 +71,7 @@ export default function Faq({ faqs }) {
             </div>
             <div className='grid w-full'>
               <div className="grid w-full grid ">
-                <Tabs
+                <StyledTabs
                   value={selectedTab}
                   onChange={handleChange}
                   indicatorColor="primary"
@@ -52,10 +81,10 @@ export default function Faq({ faqs }) {
                 >
                   {faqCategories.map((item, index) => {
 
-                    return <Tab label={item.name} key={index} value={index} >rr</Tab>
+                    return <AntTab label={item.name} key={index} value={index} >rr</AntTab>
                   })}
 
-                </Tabs>
+                </StyledTabs>
                 <SwipeableViews
                   axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                   index={selectedTab}
