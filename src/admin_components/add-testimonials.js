@@ -102,7 +102,7 @@ const AddTestimonial = ({ addTestimonial }) => {
             <p className='font-bold mt-2'>Image</p>
             {image ? (
               <div>
-                <img className="w-[170px] h-[170px] rounded-full my-5" src={URL.createObjectURL(image)} />
+                <img className="w-[170px] h-[170px] rounded-full my-5 object-cover" src={URL.createObjectURL(image)} />
               </div>
             ) : (<div></div>)}
             <div className="flex flex-col">

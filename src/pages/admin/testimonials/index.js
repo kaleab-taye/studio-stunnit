@@ -27,7 +27,6 @@ const Testimonials = ({ testimonials }) => {
 export default Testimonials
 
 export async function getStaticProps() {
-
   try {
     let res = await fetch(`${process.env.url}/testimonials`);
     let testimonials = await res.json();
@@ -42,7 +41,7 @@ export async function getStaticProps() {
     return {
       props: {
         testimonials: [],
-        error: error
+        // error: error
       }
     };
   }
