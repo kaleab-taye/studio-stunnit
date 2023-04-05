@@ -50,8 +50,8 @@ export default function WhatWeDoSection() {
                 {/* bottom section */}
                 <div className='grid md:grid-flow-col gap-8 mx-auto'>
                     <div className='grid my-auto gap-2 max-w-[360px] mx-auto '>
-                        <div className='font-semibold text-2xl'>what we do</div>
-                        <div className='opacity-80'>We provide two kinds of service,
+                        <div className='font-semibold text-2xl uppercase'>what we do</div>
+                        <div className=''>We provide two kinds of service,
                             design only and design with
                             execution
                         </div>

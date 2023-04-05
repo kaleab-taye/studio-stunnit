@@ -12,8 +12,8 @@ export default function GetInTouchSection() {
                 <div className='text-lg font-medium'>Phone Number</div>
                 <div className='grid sm:grid-flow-col mx-auto gap- sm:gap-5 sm:gap-24'>
                     <div className='font-light'>+01983619505</div>
-                    <div className='font-light'>+01983619505</div>
-                    <div className='font-light'>+01983619505</div>
+                    {/* <div className='font-light'>+01983619505</div> */}
+                    {/* <div className='font-light'>+01983619505</div> */}
                 </div>
             </div>
             <div>

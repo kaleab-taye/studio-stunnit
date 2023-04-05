@@ -28,7 +28,7 @@ export async function getStaticProps() {
     return {
       props: {
         projects: [],
-        error: error
+        // error: error
       }
     };
   }

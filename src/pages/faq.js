@@ -97,11 +97,13 @@ export default function Faq({ faqs }) {
                         {faqs.map(faqItem => faqItem.category === item.name ?
                           <Accordion.Panel key={faqItem.categoryId} >
                             <Accordion.Title>
-                              {faqItem.categoryId}
+                              {/* {faqItem.categoryId} */}
+                              <div className='text-md'>
                               {faqItem.question}
+                              </div>
                             </Accordion.Title>
                             <Accordion.Content>
-                              <p className="mb-2 text-gray-500 dark:text-gray-400">
+                              <p className="text-md mb-2 text-gray-500 dark:text-gray-400">
                                 {faqItem.answer}
                               </p>
 
