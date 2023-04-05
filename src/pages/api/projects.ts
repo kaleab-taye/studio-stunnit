@@ -6,7 +6,7 @@ import { functions, responses } from "../../../commons";
 import { Project } from "../../../types";
 import multer from 'multer';
 
-const dbPath = "./db/projects/"
+const dbPath = "db/projects/"
 const dataFilePath = dbPath + "data.json"
 const imagesRootPath = dbPath + "images/"
 const imagesUrlRootPath = "/api/uploads?path=" + imagesRootPath
