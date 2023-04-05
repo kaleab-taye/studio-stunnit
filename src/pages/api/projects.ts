@@ -6,13 +6,13 @@ import { functions, responses } from "../../../commons";
 import { Project } from "../../../types";
 import multer from 'multer';
 
-const dataFilePath = "./db/projects/data.json"
-const imagesRootPath = "./public"
-const imagesUrlRootPath = "/uploads/projects/images/"
-const imagesDirPath = imagesRootPath + imagesUrlRootPath
+const dbPath = "./db/projects/"
+const dataFilePath = dbPath + "data.json"
+const imagesRootPath = dbPath + "images/"
+const imagesUrlRootPath = "/api/uploads?path=" + imagesRootPath
 const upload = multer({
     storage: multer.diskStorage({
-        destination: imagesDirPath,
+        destination: imagesRootPath,
         filename: (req, file, cb) => cb(null, `${v4()}-${Date.now()}${file.originalname.substring(file.originalname.lastIndexOf("."))}`),
     }),
 })
@@ -60,7 +60,7 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
     .use((req, res, next) => {
         // @ts-ignore
         console.log(req.files)
-        next()      
+        next()
     })
     .post((req, res) => {
         // @ts-ignore
@@ -151,11 +151,11 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
                     project.description = description ?? project.description
                     project.clientsWord = clientsWord ?? project.clientsWord
                     if (mainImage[0]) {
-                        oldProjectImages = oldProjectImages.concat({ path: imagesRootPath + project.mainImage })
+                        oldProjectImages = oldProjectImages.concat({ path: getFilePath(project.mainImage) })
                         project.mainImage = mainImage[0] ? imagesUrlRootPath + mainImage[0].filename : project.mainImage
                     }
                     if (moreImages.length) {
-                        oldProjectImages = oldProjectImages.concat(project.moreImages.map(imageUrl => ({ path: imagesRootPath + imageUrl })))
+                        oldProjectImages = oldProjectImages.concat(project.moreImages.map(imageUrl => ({ path: getFilePath(imageUrl) })))
                         project.moreImages = moreImages.map((image: { filename: string }) => imagesUrlRootPath + image.filename)
                     }
                     updatedProject = project
@@ -181,7 +181,7 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
                 if (project.id === id) {
                     projects.splice(index, 1)
                     saveData()
-                    const deletedProjectImages = [{ path: imagesRootPath + project.mainImage }, ...project.moreImages.map(imageUrl => ({ path: imagesRootPath + imageUrl }))]
+                    const deletedProjectImages = [{ path: getFilePath(project.mainImage) }, ...project.moreImages.map(imageUrl => ({ path: getFilePath(imageUrl) }))]
                     deleteMulterFiles(deletedProjectImages)
                     break
                 }
@@ -210,4 +210,8 @@ function saveData() {
 
 function deleteMulterFiles(files: any[]) {
     files.forEach(file => functions.deleteFile(file.path))
+}
+
+function getFilePath(fileUrl) {
+    return fileUrl.substring(fileUrl.indexOf(imagesRootPath))
 }

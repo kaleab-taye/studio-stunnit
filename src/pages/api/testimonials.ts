@@ -6,14 +6,14 @@ import { functions, responses } from "../../../commons";
 import { Testimonial } from "../../../types";
 import multer from 'multer';
 
-const dataFilePath = "./db/testimonials/data.json"
-const imagesRootPath = "./public"
-const imagesUrlRootPath = "/uploads/testimonials/images/"
-const imagesDirPath = imagesRootPath + imagesUrlRootPath
+const dbPath = "./db/testimonials/"
+const dataFilePath = dbPath + "data.json"
+const imagesRootPath = dbPath + "images/"
+const imagesUrlRootPath = "/api/uploads?path=" + imagesRootPath
 const maxRating = 5
 const upload = multer({
     storage: multer.diskStorage({
-        destination: imagesDirPath,
+        destination: imagesRootPath,
         filename: (req, file, cb) => cb(null, v4() + file.originalname.substring(file.originalname.lastIndexOf("."))),
     }),
 })
@@ -131,7 +131,7 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
                 saveData()
                 res.end(JSON.stringify(updatedTestimonial))
                 if (oldTestimonialAvatarUrl) {
-                    functions.deleteFile(imagesRootPath + oldTestimonialAvatarUrl)
+                    functions.deleteFile(getFilePath(oldTestimonialAvatarUrl))
                 }
             } else {
                 res.status(404).end(responses.notFound)
@@ -153,7 +153,7 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
             saveData()
             res.end(responses.ok)
             if (deletedTestimonialAvatarUrl) {
-                functions.deleteFile(imagesRootPath + deletedTestimonialAvatarUrl)
+                functions.deleteFile(getFilePath(deletedTestimonialAvatarUrl))
             }
         }
 
@@ -170,4 +170,8 @@ export const config = {
 
 function saveData() {
     fs.writeFileSync(dataFilePath, JSON.stringify(testimonials))
+}
+
+function getFilePath(fileUrl) {
+    return fileUrl.substring(fileUrl.indexOf(imagesRootPath))
 }
