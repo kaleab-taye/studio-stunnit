@@ -8,15 +8,15 @@ export default function TestimonialCard({ testimonial }) {
             <div className='flex justify-center'>
                 <img
                     className={"w-[150px] h-[150px] rounded-full object-cover"}
-                    src={testimonial.imageUrl}
-                    alt={testimonial.customerName}
+                    src={testimonial.avatarUrl}
+                    alt={testimonial.name}
                 />
             </div>
             <div className='col-span-4 flex flex-col gap-10 md:gap-4 h-[80%] md:w-[70%]'>
                 <div className='flex flex-col md:flex-row md:justify-between items-center max-md:gap-4'>
                     <div className='flex flex-col md:flex-row  items-center gap-2 md:gap-2'>
-                        <h3 className='font-bold text-xl md:text-lg lg2:text-xl'>{testimonial.customerName}</h3>
-                        <h5 className='text-xs md:text-xs text-primary max-md:text-center'>{testimonial.position}</h5>
+                        <h3 className='font-bold text-xl md:text-lg lg2:text-xl'>{testimonial.name}</h3>
+                        <h5 className='text-xs md:text-xs text-primary max-md:text-center'>{testimonial.occupation}</h5>
                     </div>
                     <div>
                         <RatingStars ratingCount={testimonial.rating} />
@@ -24,7 +24,7 @@ export default function TestimonialCard({ testimonial }) {
                 </div>
                 <div className='overflow-auto h-fit text-xs  leading-8  md:h-full max-md:text-center font-common_font scrollbar scrollbar-thumb-gray-300 scrollbar-track-gray-200 md:pr-7'>
                     {
-                        '"' + testimonial.detail + '"'
+                        '"' + testimonial.description + '"'
                     }
                 </div>
             </div>
