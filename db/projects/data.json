@@ -1,1 +1,15 @@
-[{"id":"0dd24843-1cb3-4d7e-8f80-d2683a19cd8d","title":"K Murthy Project","description":"Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et","mainImage":"/api/uploads?path=db/projects/images/94635061-8413-4ff7-99ff-80d54a95f671-1680763097390.png","moreImages":["/api/uploads?path=db/projects/images/e2411826-0195-426b-a1f0-887d200e24fe-1680763097420.png","/api/uploads?path=db/projects/images/14b94e36-0abc-42c4-b496-6194777365e5-1680763097484.png","/api/uploads?path=db/projects/images/f342ffcf-dd51-4e8f-9485-59e4712f3aa2-1680763097502.png"],"clientsWord":"Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et","viewCount":0}]
+[
+    {
+        "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
+        "title": "K Murthy Project",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+        "mainImage": "/api/uploads?path=db/projects/images/94635061-8413-4ff7-99ff-80d54a95f671-1680763097390.png",
+        "moreImages": [
+            "/api/uploads?path=db/projects/images/e2411826-0195-426b-a1f0-887d200e24fe-1680763097420.png",
+            "/api/uploads?path=db/projects/images/14b94e36-0abc-42c4-b496-6194777365e5-1680763097484.png",
+            "/api/uploads?path=db/projects/images/f342ffcf-dd51-4e8f-9485-59e4712f3aa2-1680763097502.png"
+        ],
+        "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+        "viewCount": 0
+    }
+]

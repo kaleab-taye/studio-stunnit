@@ -141,3 +141,129 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+/* 3333333333333333333333333333333333333333333333333333333 */
+
+html, body, section.horizontal {
+  overflow-x: hidden;
+  background-color: #ff880033;
+}
+
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+section:nth-of-type(odd) {
+background-color: #df1313;
+}
+
+section:nth-of-type(even) {
+background-color: #81fd1c;
+}
+
+section.horizontal {
+  overflow-x: hidden;
+}
+
+section.horizontal .pin-wrap,
+section.horizontal .animation-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;  
+    height: 100vh;
+}
+
+
+section.horizontal .item {
+    position: relative;
+    padding: 150px 80px;
+    flex: 0 0 500px;
+    height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    line-height: 1.7;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: transparent;
+}
+
+section.horizontal .item:before {
+    position: absolute;
+    font-size: 100px;
+    opacity: .13;
+    font-weight: bold;    
+    z-index: -1;
+    -webkit-transform: translate(-30px, -50px);
+    transform: translate(-30px, -50px);
+    line-height: 1;
+}
+
+
+
+
+section.horizontal .animation-wrap.to-right {
+    counter-reset: item;
+    float: left;
+}
+
+section.horizontal .animation-wrap.to-left {
+    counter-reset: item 11;
+    float: right; 
+}
+
+section.horizontal .animation-wrap.to-right .item:before {
+    counter-increment: item;
+    content: counter(item);
+}
+
+section.horizontal .animation-wrap.to-left .item:before {
+    counter-increment: item -1;
+    content: counter(item);
+}
+
+
+
+section.horizontal .animation-wrap .item:nth-child(2n+2) {
+    align-items: flex-start;
+}
+
+section.horizontal .animation-wrap .item:nth-child(4n+4) {
+    align-items: flex-end;
+}
+
+
+
+/* ddddddddddddddddddddddd */
+#container {
+  overflow: hidden;
+  display: grid;
+  /* height: 200px; Set the desired height of the container */
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  /* grid-auto-flow: column; */
+  width: 98vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+/* Optional: Style your content with desired width */
+#content > * {
+  flex: 1 0 auto;
+  width: 500px; 
+  /* Set the desired width of each item in the content */
+}

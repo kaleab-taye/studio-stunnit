@@ -19,6 +19,8 @@ import ProjectsProjectsSection from '../../components/projectsProjectsSection';
 
 export default function Index({ projects }) {
 
+    console.log('projjjj', projects)
+
     const router = useRouter()
     const [selectedProject, setSelectedProject] = useState(-1);
     const [smallScreenFullTextContent, setSmallScreenFullTextContent] = useState(false)
@@ -36,54 +38,91 @@ export default function Index({ projects }) {
         }
     }, [router, selectedProject])
 
+
     useEffect(() => {
-        // const scrollContainer = document.querySelector("#horizontal-scrollable");
-        // console.log('test', document.querySelector("#horizontal-scrollable"))
-        // scrollContainer?.addEventListener("wheel", (evt) => {
-        //     evt.preventDefault();
-        //     scrollContainer.scrollLeft += evt.deltaY;
-        //     console.log('event happened')
-        // });
 
-        // const wrapper = document.querySelector('#wrapper');
-        // const carousel = document.querySelector('#carousel');
-        // let isScrolling = false;
-        // let lastScrollY = 0;
-        // console.log('wraaa', wrapper)
-        // wrapper?.addEventListener('scroll', () => {
-        //     console.log('scrolll')
-        //     isScrolling = true;
-        //     lastScrollY = wrapper.scrollTop;
-        //     requestAnimationFrame(updateCarousel); // Request an animation frame
-        // });
+        const container = document.getElementById('container');
+        const content = document.getElementById('content');
+        let isHorizontalScrolling = false; // Track horizontal scrolling state
 
-        // function updateCarousel() {
-        //     if (isScrolling) {
-        //         isScrolling = false;
-        //         const scrollY = lastScrollY;
-        //         carousel.style.transform = `translateX(${-scrollY}px)`;
-        //     }
-        // }
+        container?.addEventListener('wheel', (event) => {
+            // Check if horizontal scrolling is needed
+            if (content.scrollWidth > container.clientWidth) {
+                // Prevent vertical scrolling
+                event.preventDefault();
+
+                // Scroll horizontally
+                content.scrollLeft += event.deltaY;
+
+                // Update horizontal scrolling state
+                isHorizontalScrolling = true;
+
+                // Check if horizontal scrolling has reached the end
+                if (content.scrollLeft + container.clientWidth >= content.scrollWidth ||
+                    content.scrollLeft <= 0) {
+                    // Reset horizontal scrolling state when horizontal limit is reached
+                    isHorizontalScrolling = false;
+                }
+            } else {
+                // If not horizontally scrolling, scroll vertically
+                container.scrollTop += event.deltaY;
+            }
+        });
+
+        content?.addEventListener('scroll', () => {
+            // Reset horizontal scrolling state when horizontal scrolling ends
+            if (!content.scrollLeft && isHorizontalScrolling) {
+                isHorizontalScrolling = false;
+            }
+        });
+
     }, [selectedProject])
 
     return (
         <div>
+
+
             <Layout>
                 <Navbar />
                 <div className='grid gap-2 '>
                     {selectedProject == -1 ? <></> : <div >
                         {/* <div id='wrapper' className='height-screen overflow-hidden'> */}
-                            <div id='horizontal-scrollable' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-[68vh] gap-3 overflow-x-auto overflow-y-hidden'>
-                            {/* <div id='horizontal-scrollable' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-56 sm:h-[372px] lg:h-[472px] gap-3 overflow-x-auto overflow-y-hidden'> */}
-                            {/* <div className='snap-center w-[400px] h-[10px] bg-red-500'></div> */}
-                            {/* <div id='carousel' className='flex w-full h-full flex-nowrap	'> */}
+                        {/* <div id="container">
+                            <div id="content">
+                                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
+                                <div class="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
+                                <div class="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
+                                <div class="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
+                                <div class="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
+                                <div class="item">Rem nobis facere provident magni minima iste commodi aliquam harum? Facere error quos cumque perspiciatis voluptatibus deserunt maiores, fugiat sunt sit ab inventore natus saepe, eveniet alias ipsam placeat voluptas!</div>
+                                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
+                                <div class="item">Magnam eveniet inventore assumenda ullam. At saepe voluptatibus sed dicta reiciendis, excepturi nisi perferendis, accusantium est suscipit tempora dolorum praesentium cupiditate doloribus non? Sint numquam recusandae dolore quis esse ea?</div>
+                                <div class="item">Temporibus cum dolor minima consequatur esse veritatis enim nemo cupiditate laborum doloribus reiciendis perferendis, quas fugit earum rerum, at beatae alias amet aspernatur dolorem dolore error commodi. Perspiciatis, reiciendis amet!</div>
+                                <div class="item">Vitae, tenetur beatae error corrupti odit expedita quisquam commodi ea aspernatur aliquid, eveniet reprehenderit sequi, similique maiores praesentium quam! Optio tenetur saepe unde voluptatem minus tempora maxime temporibus ducimus ullam!</div>
+                            </div>
+                        </div> */}
+                        <div id='container' className='' >
+                            <div id='content' className=''>
+                                {/* <div id='horizontal-scrollable' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-56 sm:h-[372px] lg:h-[472px] gap-3 overflow-x-auto overflow-y-hidden'> */}
+                                {/* <div className='snap-center w-[400px] h-[10px] bg-red-500'></div> */}
+                                {/* <div id='carousel' className='flex w-full h-full flex-nowrap	'> */}
+
                                 {selectedProject.moreImages.map((imgUrl) =>
                                     // <img key={imgUrl} className='snap-center m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
+                                    <div key={imgUrl} className='h-[500px] w-[600px] border-2'>
+                                        <img key={imgUrl} className='object-cover w-full h-full' alt='detail image' src={imgUrl} />
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <hr />
+                        {/* <div id='container' >
+                            <div id='content' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-[68vh] gap-3 overflow-x-auto overflow-y-hidden'>
+                                {selectedProject.moreImages.map((imgUrl) =>
                                     <img key={imgUrl} className='snap-center m-auto object-cover h-[65vh]' alt='detail image' src={imgUrl} />
                                 )}
-                            {/* </div> */}
-
-                        </div>
+                            </div>
+                        </div> */}
                         <LeftRightAligner>
                             <div className='grid gap-6 sm:gap-12 my-10 sm:my-24'>
                                 <div className='grid grid-flow-col sm:gap-20 lg:gap-40'>
@@ -160,23 +199,69 @@ export default function Index({ projects }) {
 
 
 export async function getStaticProps() {
-    try {
-        let res = await fetch(`${process.env.url}/projects`);
-        let projects = await res.json();
-        return {
-            props: {
-                projects: projects,
-            },
-            revalidate: 10,
-        };
-    } catch (error) {
-        console.error("error happened while fetching projects : ", error)
+    // try {
+    //     let res = await fetch(`${process.env.url}/projects`);
+    //     let projects = await res.json();
+    //     return {
+    //         props: {
+    //             projects: projects,
+    //         },
+    //         revalidate: 10,
+    //     };
+    // } catch (error) {
+    //     console.error("error happened while fetching projects : ", error)
 
-        return {
-            props: {
-                projects: [],
-                //       error: error,
-            }
-        };
-    }
+    //     return {
+    //         props: {
+    //             projects: [],
+    //             //       error: error,
+    //         }
+    //     };
+    // }
+
+    return {
+        props: {
+            projects: [
+                {
+                    "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
+                    "title": "K Murthy Project",
+                    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+                    "mainImage": "/images/Asset_16.png",
+                    "moreImages": [
+                        "/images/Asset_16.png",
+                        "/images/Asset_14.png",
+                        "/images/Asset_15.png"
+                    ],
+                    "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+                    "viewCount": 0
+                }, {
+                    "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
+                    "title": "K Murthy Project",
+                    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+                    "mainImage": "/images/Asset_14.png",
+                    "moreImages": [
+                        "/images/Asset_16.png",
+                        "/images/Asset_14.png",
+                        "/images/Asset_15.png"
+                    ],
+                    "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+                    "viewCount": 0
+                }, {
+                    "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
+                    "title": "K Murthy Project",
+                    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+                    "mainImage": "/images/Asset_15.png",
+                    "moreImages": [
+                        "/images/Asset_16.png",
+                        "/images/Asset_14.png",
+                        "/images/Asset_15.png"
+                    ],
+                    "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
+                    "viewCount": 0
+                }
+            ],
+            //       error: error,
+        }
+    };
+
 }

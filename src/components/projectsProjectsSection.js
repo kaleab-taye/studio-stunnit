@@ -22,10 +22,12 @@ export default function ProjectsProjectsSection({ projects }) {
 
 
     return (
+
         <div className="relative grid bg-center bg-surface">
-            <Image src={image2} alt='place' className='absolute opacity-0 mx-auto cover max-h-screen max-w-screen' />
-            <div className='w-full h-[91vh] grid my-auto overflow-hidden'>
-                <div className='m-auto '>
+            {/* <Image src={image2} alt='place' className='absolute opacity-0 mx-auto cover max-h-screen max-w-screen' /> */}
+
+            <div className='w-full h-[91vh] grid my-auto overflow-hidden cursor-pointer' onClick={() => { console.log('cccccccccc') }}>
+                <div className='m-auto'>
 
                     {/* <Image alt='project image' src={currentProject.primaryImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-75' /> */}
                     {/* <AnimatePresence className=' '> */}
@@ -40,7 +42,9 @@ export default function ProjectsProjectsSection({ projects }) {
                         // transition={{ duration: 2 }}
                         className=' grid h-full'
                     >
-                        <img alt='project image' src={PathToImages + currentProject.mainImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-[.8]' />
+
+                        <img alt='project image' src={PathToImages + currentProject.mainImage} className='max-h-screen w-screen mx-auto  object-cover  brightness-[.8]' />
+
                     </motion.div>
                     {/* </AnimatePresence> */}
                 </div>
@@ -53,30 +57,35 @@ export default function ProjectsProjectsSection({ projects }) {
                 </div>
             </div>
             {/* section heading end */}
-            <div className='absolute w-full h-full'>
-                    <div className='grid w-full h-full'>
+            <Link href={'/projects?id=' + currentProject.id} className=''>
 
-                        <div className='grid place-content-between w-full grid-flow-col max-w-[1500px] m-auto'>
-                            <div className='ml-6 '>
-                                <div className='grid h-full ml-2'>
-                                    <div className=' m-auto cursor-pointer' onClick={() => setCurrentProject(data[prev(currentIndex, setCurrentIndex, data)])}>
-                                        <MdArrowBackIos className='text-3xl hover:4xl md:text-5xl mr-4 text-onPrimary font-bold ' />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=' mr-6 '>
-                                <div className='grid h-full mr-2'>
-                                    <div className='m-auto cursor-pointer' onClick={() => setCurrentProject(data[next(currentIndex, setCurrentIndex, data)])}>
-                                        <MdArrowForwardIos className='text-3xl hover:4xl md:text-5xl ml-4 text-onPrimary font-bold' />
-                                    </div>
-                                </div>
+                <div className='absolute top-0 w-full h-full z-20'>
+
+                </div>
+            </Link>
+            <div className='absolute grid w-full h-full pointer-events-none' >
+
+                <div className='z-20 pointer-events-none grid place-content-between w-full grid-flow-col max-w-[1500px] m-auto'>
+                    <div className='ml-6 '>
+                        <div className='grid h-full ml-2'>
+                            <div className=' pointer-events-auto m-auto cursor-pointer' onClick={() => setCurrentProject(data[prev(currentIndex, setCurrentIndex, data)])}>
+                                <MdArrowBackIos className='text-3xl hover:4xl md:text-5xl mr-4 text-onPrimary font-bold ' />
                             </div>
                         </div>
                     </div>
+                    <div className=' mr-6 '>
+                        <div className='grid h-full mr-2'>
+                            <div className='pointer-events-auto m-auto cursor-pointer' onClick={() => setCurrentProject(data[next(currentIndex, setCurrentIndex, data)])}>
+                                <MdArrowForwardIos className='text-3xl hover:4xl md:text-5xl ml-4 text-onPrimary font-bold' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
-            <div className='absolute bottom-14 w-full'>
+            <div className='absolute bottom-14 w-full z-20'>
 
                 <div className=' flex justify-between px-2 sm:px-10 lg:px-0 mx-auto max-w-[1000px]'>
                     <Link href={'/projects?id=' + currentProject.id}>

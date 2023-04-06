@@ -99,7 +99,7 @@ export default function Faq({ faqs }) {
                             <Accordion.Title>
                               {/* {faqItem.categoryId} */}
                               <div className='text-md'>
-                              {faqItem.question}
+                                {faqItem.question}
                               </div>
                             </Accordion.Title>
                             <Accordion.Content>
@@ -250,24 +250,57 @@ const faqCategories = [
 ]
 
 export async function getStaticProps() {
-  try {
-    let res = await fetch(`${process.env.url}/faqs`);
-    let faqs = await res.json();
+  // try {
+  //   let res = await fetch(`${process.env.url}/faqs`);
+  //   let faqs = await res.json();
 
-    return {
-      props: {
-        faqs: faqs,
-      },
-      revalidate: 10,
-    };
-  } catch (error) {
-    console.error("error happened while fetching projects : ", error)
+  //   return {
+  //     props: {
+  //       faqs: faqs,
+  //     },
+  //     revalidate: 10,
+  //   };
+  // } catch (error) {
+  //   console.error("error happened while fetching projects : ", error)
 
-    return {
-      props: {
-        faqs: [],
-        // error: error,
-      }
-    };
-  }
+  //   return {
+  //     props: {
+  //       faqs: [],
+  //       // error: error,
+  //     }
+  //   };
+  // }
+
+  return {
+    props: {
+      faqs: [
+        {
+          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
+          "category": "Design",
+          "question": "What if I don’t like the design? How many op- tions do I get?",
+          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
+        },
+        {
+          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
+          "category": "Excution",
+          "question": "What if I don’t like the design? How many op- tions do I get?",
+          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
+        },
+        {
+          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
+          "category": "Lourem",
+          "question": "What if I don’t like the design? How many op- tions do I get?",
+          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
+        },
+        {
+          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
+          "category": "Ipsum",
+          "question": "What if I don’t like the design? How many op- tions do I get?",
+          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
+        }
+      ],
+      // error: error,
+    }
+  };
+
 }
