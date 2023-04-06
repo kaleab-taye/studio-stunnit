@@ -29,7 +29,7 @@ export default function Navbar() {
                 {/* logo start */}
                 <div className='mr-auto my-auto grid my-auto'>
                     <Link href='/'>
-                        <Image className='max-w-[50px]' src={logo} alt='logo' />
+                        <Image className='max-w-[40px]' src={logo} alt='logo' />
                     </Link>
                 </div>
                 {/* nav items start */}
