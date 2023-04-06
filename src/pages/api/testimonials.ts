@@ -41,6 +41,13 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
         if (avatarFilepath) { functions.deleteFile(avatarFilepath) }
     }
 })
+    .get((req, res) => {
+        res.end(JSON.stringify(testimonials))
+
+        // @ts-ignore
+        const avatarFilepath = req.file?.path
+        if (avatarFilepath) { functions.deleteFile(avatarFilepath) }
+    })
     .use(uploadMiddleware)
     .post((req, res) => {
         // @ts-ignore
@@ -81,13 +88,6 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
             saveData()
             res.end(JSON.stringify(newTestimonial))
         }
-    })
-    .get((req, res) => {
-        res.end(JSON.stringify(testimonials))
-
-        // @ts-ignore
-        const avatarFilepath = req.file?.path
-        if (avatarFilepath) { functions.deleteFile(avatarFilepath) }
     })
     .patch((req, res) => {
         const { id } = req.query

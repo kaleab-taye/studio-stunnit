@@ -56,12 +56,33 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
         }
     }
 })
-    .use(uploadMiddleware)
-    .use((req, res, next) => {
+    .get((req, res) => {
         // @ts-ignore
-        console.log(req.files)
-        next()
+        if (req.files) {
+            // @ts-ignore
+            let { mainImage, moreImages } = req.files
+            const uploadedImages = [...(mainImage ?? []), ...(moreImages ?? [])]
+            deleteMulterFiles(uploadedImages)
+        }
+
+        const { id, incrementViewCount } = req.query
+        if (id) {
+            for (let project of projects) {
+                if (project.id === id) {
+                    if (incrementViewCount) {
+                        project.viewCount++
+                        saveData()
+                    }
+                    res.end(JSON.stringify(project))
+                    return
+                }
+            }
+            res.status(404).end(responses.notFound);
+        } else {
+            res.end(JSON.stringify(projects))
+        }
     })
+    .use(uploadMiddleware)
     .post((req, res) => {
         // @ts-ignore
         if (!req.body) {
@@ -96,32 +117,6 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
             projects.push(newProject)
             saveData()
             res.end(JSON.stringify(newProject))
-        }
-    })
-    .get((req, res) => {
-        // @ts-ignore
-        if (req.files) {
-            // @ts-ignore
-            let { mainImage, moreImages } = req.files
-            const uploadedImages = [...(mainImage ?? []), ...(moreImages ?? [])]
-            deleteMulterFiles(uploadedImages)
-        }
-
-        const { id, incrementViewCount } = req.query
-        if (id) {
-            for (let project of projects) {
-                if (project.id === id) {
-                    if (incrementViewCount) {
-                        project.viewCount++
-                        saveData()
-                    }
-                    res.end(JSON.stringify(project))
-                    return
-                }
-            }
-            res.status(404).end(responses.notFound);
-        } else {
-            res.end(JSON.stringify(projects))
         }
     })
     .patch((req, res) => {
