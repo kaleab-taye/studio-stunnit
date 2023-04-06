@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {AiFillCaretDown, AiFillCaretUp} from "react-icons/ai"
 
-const categories = ["Option 1", "Option 2", "Option 3", "Option 4"]
+const categories = ["Design", "Execution", "Lourem", "Ipsum"]
 
 const Dropdown = ({category, setSelectedItem}) => {
 
