@@ -230,6 +230,9 @@ export async function getStaticProps() {
                     "moreImages": [
                         "/images/Asset_16.png",
                         "/images/Asset_14.png",
+                        "/images/Asset_15.png",
+                        "/images/Asset_16.png",
+                        "/images/Asset_14.png",
                         "/images/Asset_15.png"
                     ],
                     "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
@@ -242,6 +245,9 @@ export async function getStaticProps() {
                     "moreImages": [
                         "/images/Asset_16.png",
                         "/images/Asset_14.png",
+                        "/images/Asset_15.png",
+                        "/images/Asset_16.png",
+                        "/images/Asset_14.png",
                         "/images/Asset_15.png"
                     ],
                     "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
@@ -252,6 +258,9 @@ export async function getStaticProps() {
                     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
                     "mainImage": "/images/Asset_15.png",
                     "moreImages": [
+                        "/images/Asset_16.png",
+                        "/images/Asset_14.png",
+                        "/images/Asset_15.png",
                         "/images/Asset_16.png",
                         "/images/Asset_14.png",
                         "/images/Asset_15.png"
