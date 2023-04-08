@@ -267,3 +267,9 @@ section.horizontal .animation-wrap .item:nth-child(4n+4) {
   width: 500px; 
   /* Set the desired width of each item in the content */
 }
+
+.test-stick {
+  position: sticky;
+  top: 0;
+  background-color: tomato;
+}

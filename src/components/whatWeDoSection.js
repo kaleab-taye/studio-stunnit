@@ -16,11 +16,11 @@ import PrimaryLinkButton from './primaryLinkButton'
 export default function WhatWeDoSection() {
     return (
         <LeftRightAligner>
-            <div className='grid text-center md:text-left  gap-14 md:gap-20  my-14 md:my-20'>
+            <div className=' grid text-center md:text-left  gap-14 md:gap-20  my-14 md:my-20'>
                 {/* top section */}
-                <div className='flex flex-col-reverse md:grid grid-flow-row md:grid-flow-col gap-16 md:gap-14 lg:gap-20 mx-auto'>
+                <div className=' justify-between w-full flex flex-col-reverse md:grid grid-flow-row md:grid-flow-col gap-16 md:gap-14 lg:gap-20 mx-auto'>
                     {/* left section */}
-                    <div className='grid my-auto mx-auto gap-8 md:max-w-[500px] max-w-[400px] '>
+                    <div className='grid my-auto mx-auto gap-8 md:max-w-[650px] max-w-[400px] '>
                         <div className='uppercase font-bold text-2xl sm:text-3xl lg:text-10xl xl:text-10xl'>
                             STEP INTO STUNNING
                             SPACES THROUGH
@@ -44,7 +44,7 @@ export default function WhatWeDoSection() {
                     </div>
                     {/* right section */}
                     <div className='grid w-full '>
-                        <Image alt='intro' className='mx-auto rounded-3xl max-w-[420px] md:max-w-[350px] lg:max-w-[450px] w-full' src={image1} />
+                        <Image alt='intro' className='mx-auto rounded-3xl max-w-[420px] md:max-w-[350px] lg:max-w-[500px] w-full' src={image1} />
                     </div>
                 </div>
                 {/* bottom section */}

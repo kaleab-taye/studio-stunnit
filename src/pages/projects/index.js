@@ -52,7 +52,12 @@ export default function Index({ projects }) {
                 event.preventDefault();
 
                 // Scroll horizontally
-                content.scrollLeft += event.deltaY;
+                // if(isHorizontalScrolling && event.deltaY){
+                //     console.log('isHorizontalScrolling', isHorizontalScrolling , event.deltaY )
+                    
+                    content.scrollLeft += event.deltaY;
+    
+                // }
 
                 // Update horizontal scrolling state
                 isHorizontalScrolling = true;
@@ -62,19 +67,33 @@ export default function Index({ projects }) {
                     content.scrollLeft <= 0) {
                     // Reset horizontal scrolling state when horizontal limit is reached
                     isHorizontalScrolling = false;
+                    console.log('vertically scrolling')
+                }else{
+                    isHorizontalScrolling = true;
+                    console.log('horizontally scrolling')
                 }
-            } else {
+            }
+            else {
+                console.log('else clicked')
                 // If not horizontally scrolling, scroll vertically
-                container.scrollTop += event.deltaY;
+                content.scrollTop += event.deltaY;
+            }
+
+            if(!isHorizontalScrolling && event.deltaY){
+                // console.log('isHorizontalScrolling', isHorizontalScrolling , event.deltaY )
+
+                content.scrollTop += event.deltaY;
+
             }
         });
 
-        content?.addEventListener('scroll', () => {
-            // Reset horizontal scrolling state when horizontal scrolling ends
-            if (!content.scrollLeft && isHorizontalScrolling) {
-                isHorizontalScrolling = false;
-            }
-        });
+        // content?.addEventListener('scroll', () => {
+        //     // Reset horizontal scrolling state when horizontal scrolling ends
+        //     if (!content.scrollLeft && isHorizontalScrolling) {
+        //         console.log('check')
+        //         isHorizontalScrolling = false;
+        //     }
+        // });
 
     }, [selectedProject])
 

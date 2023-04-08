@@ -11,7 +11,7 @@ export default function HomeTestimonialSection({testimonials}) {
     console.log("logg testimonials", testimonials)
     return (
         <LeftRightAligner>
-            <div className='grid gap-6 my-16'>
+            <div className='grid md:gap-6 my-16'>
 
                 <div className='grid text-center gap-2'>
                     <Heading heading='Testimonials' />

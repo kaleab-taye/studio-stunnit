@@ -19,7 +19,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home({ projects, testimonials }) {
   console.log(projects)
   return (
-    <>
+    <div>
       <Head>
         <title>Studio Stunnit</title>
         <meta name="description" content="We help you step into stunning Interior design spaces that is
@@ -47,7 +47,7 @@ export default function Home({ projects, testimonials }) {
           </div>
         </Layout>
       </main>
-    </>
+    </div>
   )
 }
 

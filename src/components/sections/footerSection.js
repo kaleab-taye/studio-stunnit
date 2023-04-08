@@ -94,7 +94,7 @@ export default function FooterSection() {
                             </div>
                         </div>
                     </div>
-                    <div className='mx-auto text-md mt-8'>Copyright @ 2023 &nbsp;
+                    <div className='mx-auto text-md mt-8 whitespace-nowrap'>Copyright @ 2023 &nbsp;
                         <Link href='/'>
                             <span className=' hover:text-primary'>
                                 Studio Stunnit
