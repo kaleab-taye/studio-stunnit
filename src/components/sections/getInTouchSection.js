@@ -1,9 +1,10 @@
 import React from 'react'
+import Heading from '../heading'
 
 export default function GetInTouchSection() {
     return (
         <div className='text-center grid gap-7'>
-            <div className='uppercase text-4xl'>get in touch</div>
+            <Heading heading='get in touch' />
             <div className='font-light'>
                 <div>Take some of the informations below to talk to one of our partners about your project, </div>
                 <div>learn more about our sercices or discuss fees and budgets.</div>

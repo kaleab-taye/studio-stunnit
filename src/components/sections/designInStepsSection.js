@@ -105,23 +105,23 @@ export default function DesignInStepsSection() {
               // transition={{ duration: 2 }}
               className='grid '
             >
-              <div className='m-auto grid gap-4 '>
+              <div className='m-auto grid gap- md:gap-4 '>
 
-                <div className='h-[250px] sm:h-[350px] md:h-[450px]'>
+                <div className='h-[350px] md:h-[450px]'>
 
-                  <Image alt='' className='m-auto h-[250px] sm:h-[350px] md:h-[450px] p-10' src={currentProject.img} />
+                  <Image alt='' className='m-auto h-[350px] md:h-[450px] p-3 md:p-10' src={currentProject.img} />
                 </div>
                 <div className='grid'>
-                  <div className='mx-auto max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-4 bg-surface px-6 py-10 grid rounded'>
-                    <div className='grid grid-flow-col mb-auto sm:gap-2'>
+                  <div className='mx-auto max-w-[800px] grid grid-flow-row sm:grid-flow-col gap-1 sm:gap-4 bg-surface px-6 py-10 grid rounded'>
+                    <div className='grid grid-flow-col mb-auto mr-auto gap-4 sm:mr-0 sm:gap-2'>
                       <div className='bg-primary grid rounded-full mx-auto p-2 w-10 h-10 text-sm text-primaryColor '>
                         <div className='m-auto'>
                           {currentProject.id}
                         </div>
                       </div>
-                      <div className='uppercase font-bold text-md mb-auto my-auto'>{currentProject.heading}</div>
+                      <div className='uppercase font-bold text-md mb-auto my-auto '>{currentProject.heading}</div>
                     </div>
-                    <div className='text-sm text-onSurface'>{currentProject.content}
+                    <div className='text-sm text-onSurface mt-2 ml-14 sm:ml-0'>{currentProject.content}
                     </div>
                   </div>
                 </div>

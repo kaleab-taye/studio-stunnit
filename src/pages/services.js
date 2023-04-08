@@ -67,7 +67,7 @@ export default function service() {
             <div className='sm:col-span-1 mt-14 hidden sm:grid'><IoMdMenu className='text-primary w-20 h-20' /></div>
             <div className='grid gap-8 sm:col-span-3'>
               <div className='font-bold text-3xl uppercase'>our process</div>
-              <div className='leading-loose grid gap-8 text-[0.8rem]' >
+              <div className='leading-8 grid gap-8 text-[0.8rem]' >
                 <div>
                   Building your dream home or spaces where you come together for work, fun, and livelihood
                   must speak to you through the ambience it weaves inside. At Studio Stunnit, our expert guidance and design philosophies are ready to lead you all through the way to realizing your perfect interiors.
@@ -131,10 +131,10 @@ export default function service() {
             </div>
           </div>
           <div className='text-center my-16 grid gap-2'>
-            <div className=' italic mx-auto font-bold text-xs max-w-[500px]'>“Design must reflect the practical and aesthetic in business but
+            <div className=' italic mx-auto font-bold text-[13px] max-w-[500px]'>“Design must reflect the practical and aesthetic in business but
               above all…good design must primarily serve people”
             </div>
-            <div className='text-xs font-light'>- Thomas J Watson.</div>
+            <div className='text-[13px] font-light'>- Thomas J Watson.</div>
           </div>
 
         </LeftRightAligner>

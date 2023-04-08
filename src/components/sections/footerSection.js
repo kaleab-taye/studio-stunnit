@@ -34,7 +34,7 @@ export default function FooterSection() {
                                     We are a young company always
                                     looking for new and creative ideas
                                     to help you with our products in
-                                    your everday work.
+                                    your everyday work.
                                 </div>
                             </div>
                             <div className='grid gap-2 mb-auto'>
@@ -96,7 +96,7 @@ export default function FooterSection() {
                     </div>
                     <div className='mx-auto text-md mt-8'>Copyright @ 2023 &nbsp;
                         <Link href='/'>
-                            <span className='font-semibold hover:text-primary'>
+                            <span className=' hover:text-primary'>
                                 Studio Stunnit
                             </span>
                         </Link>
