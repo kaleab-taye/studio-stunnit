@@ -245,7 +245,7 @@ section.horizontal .animation-wrap .item:nth-child(4n+4) {
 /* ddddddddddddddddddddddd */
 #container {
   overflow: hidden;
-  display: grid;
+  /* display: grid; */
   /* height: 200px; Set the desired height of the container */
 }
 

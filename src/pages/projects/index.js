@@ -101,7 +101,7 @@ export default function Index({ projects }) {
                                 <div class="item">Vitae, tenetur beatae error corrupti odit expedita quisquam commodi ea aspernatur aliquid, eveniet reprehenderit sequi, similique maiores praesentium quam! Optio tenetur saepe unde voluptatem minus tempora maxime temporibus ducimus ullam!</div>
                             </div>
                         </div> */}
-                        <div id='container' className='' >
+                        <div id='container' className='hidden sm:grid' >
                             <div id='content' className=''>
                                 {/* <div id='horizontal-scrollable' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-56 sm:h-[372px] lg:h-[472px] gap-3 overflow-x-auto overflow-y-hidden'> */}
                                 {/* <div className='snap-center w-[400px] h-[10px] bg-red-500'></div> */}
@@ -115,7 +115,7 @@ export default function Index({ projects }) {
                                 )}
                             </div>
                         </div>
-                        <hr />
+                        {/* <hr /> */}
                         {/* <div id='container' >
                             <div id='content' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-[68vh] gap-3 overflow-x-auto overflow-y-hidden'>
                                 {selectedProject.moreImages.map((imgUrl) =>
@@ -137,7 +137,7 @@ export default function Index({ projects }) {
                                                 <div>
                                                     {smallScreenFullTextContent == false && selectedProject.description.length > 300 ? selectedProject.description.substring(0, 300) + '. . .' : selectedProject.description}
                                                 </div>
-                                                {smallScreenFullTextContent == false ? <div className='my-5 mx-auto border px-5 rounded' onClick={() => setSmallScreenFullTextContent(true)}>
+                                                {smallScreenFullTextContent == false ? <div className='cursor-pointer my-5 mx-auto border px-5 rounded whitespace-nowrap' onClick={() => setSmallScreenFullTextContent(true)}>
                                                     Read More
                                                 </div> : <></>}
 
@@ -146,7 +146,7 @@ export default function Index({ projects }) {
                                     </div>
                                     <Link href='#projects-list'>
                                         <div className='hidden sm:grid mb-auto gap-3 mt-10'>
-                                            <div>
+                                            <div className='whitespace-nowrap'>
                                                 Other Projects
                                             </div>
 
