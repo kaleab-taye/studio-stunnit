@@ -36,7 +36,7 @@ export default nextConnect<NextApiRequest, NextApiResponse>({
             res.end(JSON.stringify(newFAQ))
         }
     })
-    .get((req, res) => {
+    .get(async (req, res) => {
         res.end(JSON.stringify(FAQs))
     })
     .patch((req, res) => {
