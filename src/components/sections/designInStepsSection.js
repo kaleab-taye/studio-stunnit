@@ -119,7 +119,7 @@ export default function DesignInStepsSection() {
                           {currentProject.id}
                         </div>
                       </div>
-                      <div className='uppercase font-bold text-md mb-auto my-auto '>{currentProject.heading}</div>
+                      <div className='uppercase font-bold text-md mb-auto my-auto whitespace-nowrap'>{currentProject.heading}</div>
                     </div>
                     <div className='text-sm text-onSurface mt-2 ml-14 sm:ml-0'>{currentProject.content}
                     </div>

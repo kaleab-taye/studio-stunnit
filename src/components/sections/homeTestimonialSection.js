@@ -19,7 +19,7 @@ export default function HomeTestimonialSection({testimonials}) {
                 </div>
                 <div className='grid gap-2'>
 
-                    <div className='h-[900px] md:h-80 grid'>
+                    <div className='min-h-[750px] md:min-h-80 grid'>
 
                         <Carousel slideInterval={5000} leftControl={<MdArrowBackIosNew className='text-4xl text-darkGray hover:text-onSurface' />} rightControl={<MdArrowForwardIos className='text-4xl text-darkGray hover:text-onSurface' />} className='m-auto' indicators={false}>
 
