@@ -121,7 +121,7 @@ export default function DesignInStepsSection() {
                       </div>
                       <div className='uppercase font-bold text-md mb-auto my-auto whitespace-nowrap'>{currentProject.heading}</div>
                     </div>
-                    <div className='text-sm text-onSurface mt-2 ml-14 sm:ml-0'>{currentProject.content}
+                    <div className='text-[14px] lg:text-md text-left opacity-60 text-onSurface mt-[6.5px] ml-14 sm:ml-0 leading-6'>{currentProject.content}
                     </div>
                   </div>
                 </div>

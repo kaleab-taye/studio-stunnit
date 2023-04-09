@@ -18,16 +18,16 @@ export default function About_us() {
                 <Navbar />
                 <PageHeading name='About Us' image={aboutUsImage} />
                 <LeftRightAligner>
-                    <div className='grid md:grid-cols-4 mt-20 mb-4 mx-2' >
+                    <div className='grid md:grid-cols-4 mt-8 md:mt-20 mb-4 mx-2' >
                         <div className='grid gap-8 md:col-span-3'>
                             <div className='text-md sm:text-[13px] grid'>
 
                                 {/* small screen selective display */}
                                 <div className='grid sm:hidden'>
 
-                                    <div>
+                                    <div className=''>
                                         {smallScreenFullTextContent == false ?
-                                            <div className='grid font-light text-sm'>
+                                            <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                                 Studio Stunnit is a multidisciplinary design firm envisioning interior designs that are unique
                                                 and spell-binding. Established in 2022, helmed by eminent interior designers in Hyderabad,
                                                 the studio focuses on crafting a premium style approach-visualising spaces with aesthetic coherence and functional congruity. With 8 years of design experience and work on 50-plus projects, principal designer Sahithi G entwines a myriad of bespoke elements that bring forth a remarkable impression to interior spaces. Sunny G ropes in 11 years of expertise in the corporate
@@ -36,53 +36,53 @@ export default function About_us() {
                                             </div>
                                             :
                                             <div className='grid gap-8 font-light text-sm' >
-                                                <div>
+                                                <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                                     Studio Stunnit is a multidisciplinary design firm envisioning interior designs that are unique
                                                     and spell-binding. Established in 2022, helmed by eminent interior designers in Hyderabad,
                                                     the studio focuses on crafting a premium style approach-visualising spaces with aesthetic coherence and functional congruity. With 8 years of design experience and work on 50-plus projects, principal designer Sahithi G entwines a myriad of bespoke elements that bring forth a remarkable impression to interior spaces. Sunny G ropes in 11 years of expertise in the corporate
                                                     domain and a passion for design, technology and entrepreneurship, adding an unparalleled
                                                     level of flavour to the studio&apos;s development and business strategies. </div>
-                                                <div>
+                                                <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                                     Our projects take off from a conceptual framework to delivering a complete spatial affair. For
                                                     assignments outside Hyderabad, we currently provide only designs. Our firm traces context,
                                                     social engagement, narrative and human interactions to define the essence of a particular
                                                     project  </div>
-                                                <div>
+                                                <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                                     “Studio Stunnit traverses ideas and innovations that transform your spaces.”    </div>
-                                                <div>
+                                                <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                                     Our concepts intimately weave with the client&apos;s needs and aspirations. At Studio Stunnit, our
                                                     designs explore a holistic composition, and we sensitively curate forms, textures, and material
                                                     combinations in spaces to create a tranquil and experiential living.      </div>
-                                                <div>
+                                                    <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                                     “We have a fabulous design idea. Are you ready to build your dreams?”
                                                 </div>
                                             </div>
                                         }
                                     </div>
-                                    {smallScreenFullTextContent == false ? <div className='my-5 mx-auto border px-5 rounded' onClick={() => setSmallScreenFullTextContent(true)}>
+                                    {smallScreenFullTextContent == false ? <div className='my-5 mx-auto border px-5 rounded cursor-pointer' onClick={() => setSmallScreenFullTextContent(true)}>
                                         Read More
                                     </div> : <></>}
                                 </div>
                                 {/* large screen full display */}
                                 <div className='hidden sm:grid gap-8 font-light text-sm' >
-                                    <div>
+                                <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         Studio Stunnit is a multidisciplinary design firm envisioning interior designs that are unique
                                         and spell-binding. Established in 2022, helmed by eminent interior designers in Hyderabad,
                                         the studio focuses on crafting a premium style approach-visualising spaces with aesthetic coherence and functional congruity. With 8 years of design experience and work on 50-plus projects, principal designer Sahithi G entwines a myriad of bespoke elements that bring forth a remarkable impression to interior spaces. Sunny G ropes in 11 years of expertise in the corporate
                                         domain and a passion for design, technology and entrepreneurship, adding an unparalleled
                                         level of flavour to the studio&apos;s development and business strategies. </div>
-                                    <div>
+                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         Our projects take off from a conceptual framework to delivering a complete spatial affair. For
                                         assignments outside Hyderabad, we currently provide only designs. Our firm traces context,
                                         social engagement, narrative and human interactions to define the essence of a particular
                                         project  </div>
-                                    <div>
+                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         “Studio Stunnit traverses ideas and innovations that transform your spaces.”    </div>
-                                    <div>
+                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         Our concepts intimately weave with the client&apos;s needs and aspirations. At Studio Stunnit, our
                                         designs explore a holistic composition, and we sensitively curate forms, textures, and material
                                         combinations in spaces to create a tranquil and experiential living.      </div>
-                                    <div>
+                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         “We have a fabulous design idea. Are you ready to build your dreams?”
                                     </div>
                                 </div>
@@ -107,10 +107,10 @@ export default function About_us() {
                             </div>
                         </div>
                     </div>
-                    <div className='text-center my-16'>
-                        <div className='italic mx-auto font-bold text-sm max-w-[520px]'>
-                            “It&apos;s always about you and how you use spaces. <br />
-                            At the end of the day, making your space attractive and  <br />
+                    <div className='text-center mt-10 mb-14 md:my-16'>
+                        <div className='italic mx-auto font-bold text-[13.5px] md:text-sm max-w-[520px]'>
+                            “It&apos;s always about you and how you use spaces. <br className='hidden md:grid' />
+                            At the end of the day, making your space attractive and  <br className='hidden md:grid'/>
                             meaningful is our quest!”
                         </div>
                     </div>
