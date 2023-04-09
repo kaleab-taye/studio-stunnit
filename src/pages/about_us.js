@@ -6,6 +6,8 @@ import PageHeading from '../components/pageHeading'
 import React, { useState } from 'react'
 import { IoMdMenu } from 'react-icons/io'
 import aboutUsImage from '../../public/images/Asset_20.png'
+import Link from 'next/link'
+import { GrDown } from 'react-icons/gr'
 
 export default function About_us() {
 
@@ -16,9 +18,8 @@ export default function About_us() {
                 <Navbar />
                 <PageHeading name='About Us' image={aboutUsImage} />
                 <LeftRightAligner>
-                    <div className='grid sm:grid-cols-4 mt-20 mb-4 mx-2' >
-                        <div className='col-span-1 mb-auto hidden sm:grid'><IoMdMenu className='text-primary w-20 h-20' /></div>
-                        <div className='grid gap-8 sm:col-span-3'>
+                    <div className='grid md:grid-cols-4 mt-20 mb-4 mx-2' >
+                        <div className='grid gap-8 md:col-span-3'>
                             <div className='text-md sm:text-[13px] grid'>
 
                                 {/* small screen selective display */}
@@ -92,6 +93,19 @@ export default function About_us() {
 
 
                         </div>
+                        <div className='col-span-1 mb-auto hidden md:grid'>
+                            <div className='mx-auto mb-auto'>
+                                <Link href='#meet-the-founders'>
+                                    <div className='hidden sm:grid mb-auto gap-3 mt-5'>
+                                        <div className='whitespace-nowrap'>
+                                            The Founders
+                                        </div>
+
+                                        <div className='mx-auto bg-surface rounded-full text-5xl grid'><GrDown className='m-auto p-2 font-' /></div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                     <div className='text-center my-16'>
                         <div className='italic mx-auto font-bold text-sm max-w-[520px]'>
@@ -101,7 +115,7 @@ export default function About_us() {
                         </div>
                     </div>
                 </LeftRightAligner>
-                <div className='h-[30px] bg-primary'>
+                <div id='meet-the-founders' className='h-[30px] bg-primary'>
 
                 </div>
                 <LeftRightAligner>

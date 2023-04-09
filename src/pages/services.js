@@ -6,12 +6,14 @@ import ServiceCard from '../components/serviceCard'
 import React from 'react'
 import { IoMdMenu } from 'react-icons/io'
 import serviceImage from '../../public/images/Asset_20.png'
+import Link from 'next/link'
+import { GrDown } from 'react-icons/gr'
 export default function service() {
 
 
 
   return (
-    <div className='leading-loose'>
+    <div className='leading-loose scroll-smooth'>
       <Layout>
         <Navbar />
         <PageHeading image={serviceImage} name='Services' />
@@ -63,9 +65,8 @@ export default function service() {
         <div className='h-5 bg-primary my-16'></div>
         <LeftRightAligner>
 
-          <div className='grid sm:grid-cols-4' >
-            <div className='sm:col-span-1 mt-14 hidden sm:grid'><IoMdMenu className='text-primary w-20 h-20' /></div>
-            <div className='grid gap-8 sm:col-span-3'>
+          <div className='grid md:grid-cols-4' >
+            <div className='grid gap-8 md:col-span-3'>
               <div className='font-bold text-3xl uppercase'>our process</div>
               <div className='leading-8 grid gap-8 text-[0.8rem]' >
                 <div>
@@ -127,6 +128,20 @@ export default function service() {
                   your-self”
                 </div>
 
+              </div>
+            </div>
+            <div className='grid md:col-span-1 mt-14 mb-auto hidden md:grid text-center'>
+              <div className='mx-auto mb-auto'>
+
+                <Link href='#get-in-touch'>
+                  <div className='hidden sm:grid mb-auto gap-3 mt-5'>
+                    <div className='whitespace-nowrap'>
+                      Get In Touch
+                    </div>
+
+                    <div className='mx-auto bg-surface rounded-full text-5xl grid'><GrDown className='m-auto p-2 font-' /></div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

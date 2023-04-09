@@ -87,19 +87,28 @@ export default function Index({ projects }) {
                 isHorizontalScrolling = true;
                 console.log(content.scrollLeft + container.clientWidth, content.scrollWidth, content.scrollLeft, content.scrollWidth - content.clientWidth)
                 
-                if(content.scrollLeft<=0 && scrollDirection=='down'){
+                if(content.scrollLeft<=1 && scrollDirection=='down'){
                     //horizontal
+                    console.log('condition 1')
                     event.preventDefault();
                     content.scrollLeft += event.deltaY;
-                }else if(content.scrollLeft<=0 && scrollDirection=='up'){
+                }else if(content.scrollLeft<=1 && scrollDirection=='up'){
                     // vertical
+                    console.log('condition 2')
+
                 }else if(content.scrollLeft>= content.scrollWidth - content.clientWidth && scrollDirection=='up'){
                     //horizontal
+                    console.log('condition 3')
+
                     event.preventDefault();
                     content.scrollLeft += event.deltaY;
                 }else if(content.scrollLeft>= content.scrollWidth - content.clientWidth && scrollDirection=='down'){
                     //vertical
+                    console.log('condition 4')
+
                 }else{
+                    console.log('condition 5' , content.scrollLeft, scrollDirection)
+
 
                     // Check if horizontal scrolling has reached the end
                     if (content.scrollLeft + container.clientWidth > content.scrollWidth ||
