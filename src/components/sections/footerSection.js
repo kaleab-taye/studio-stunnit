@@ -67,8 +67,8 @@ export default function FooterSection() {
                                 <div className={itemHeading}>Contact</div>
                                 <div className='grid gap-1 '>
                                     <div className={item}>Location: Hyberbad, India</div>
-                                    <div className={item}>Phone: +01983 619505</div>
-                                    <div className={item}>Email: studio.stunnit@gmail.comI</div>
+                                    <div className={item}>Phone: +919573523467</div>
+                                    <div className={item}>Email: namaste@studiostunnit.com</div>
                                     <div className={item}>Instagram: @studio_stunnit</div>
                                     <div className={item}>YouTube: @studio_stunnit</div>
                                 </div>

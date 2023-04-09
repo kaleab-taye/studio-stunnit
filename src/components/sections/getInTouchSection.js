@@ -12,14 +12,12 @@ export default function GetInTouchSection() {
             <div className='grid gap-1'>
                 <div className='text-lg font-medium'>Phone Number</div>
                 <div className='grid sm:grid-flow-col mx-auto gap- sm:gap-5 sm:gap-24'>
-                    <div className='font-light'>+01983619505</div>
-                    {/* <div className='font-light'>+01983619505</div> */}
-                    {/* <div className='font-light'>+01983619505</div> */}
+                    <div className='font-light'>+919573523467</div>
                 </div>
             </div>
             <div>
                 <div className='text-lg font-medium'>Email</div>
-                <div className='font-light'>studio.stunnit@gmail.com</div>
+                <div className='font-light'>namaste@studiostunnit.com</div>
             </div>
 
             <div></div>

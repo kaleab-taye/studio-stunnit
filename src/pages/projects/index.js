@@ -39,52 +39,96 @@ export default function Index({ projects }) {
     }, [router, selectedProject])
 
 
-    useEffect(() => {
 
+    useEffect(() => {
+        // start
         const container = document.getElementById('container');
         const content = document.getElementById('content');
         let isHorizontalScrolling = false; // Track horizontal scrolling state
+        var scrollDirection = 'down';
+
+
+        window.addEventListener('wheel', function(event) {
+            const deltaX = event.deltaX;
+            const deltaY = event.deltaY;
+          
+            // if (deltaX > 0) {
+            //   // Scrolling to the right
+            // } else if (deltaX < 0) {
+            //   // Scrolling to the left
+            // }
+          
+            if (deltaY > 0) {
+              // Scrolling down
+              scrollDirection='down'
+            } else if (deltaY < 0) {
+              // Scrolling up
+              scrollDirection='up'
+            }
+          });
+
 
         container?.addEventListener('wheel', (event) => {
+
             // Check if horizontal scrolling is needed
             if (content.scrollWidth > container.clientWidth) {
                 // Prevent vertical scrolling
-                event.preventDefault();
+
 
                 // Scroll horizontally
                 // if(isHorizontalScrolling && event.deltaY){
                 //     console.log('isHorizontalScrolling', isHorizontalScrolling , event.deltaY )
-                    
-                    content.scrollLeft += event.deltaY;
-    
+
+
+
                 // }
 
                 // Update horizontal scrolling state
                 isHorizontalScrolling = true;
-
-                // Check if horizontal scrolling has reached the end
-                if (content.scrollLeft + container.clientWidth >= content.scrollWidth ||
-                    content.scrollLeft <= 0) {
-                    // Reset horizontal scrolling state when horizontal limit is reached
-                    isHorizontalScrolling = false;
-                    console.log('vertically scrolling')
+                console.log(content.scrollLeft + container.clientWidth, content.scrollWidth, content.scrollLeft, content.scrollWidth - content.clientWidth)
+                
+                if(content.scrollLeft<=0 && scrollDirection=='down'){
+                    //horizontal
+                    event.preventDefault();
+                    content.scrollLeft += event.deltaY;
+                }else if(content.scrollLeft<=0 && scrollDirection=='up'){
+                    // vertical
+                }else if(content.scrollLeft>= content.scrollWidth - content.clientWidth && scrollDirection=='up'){
+                    //horizontal
+                    event.preventDefault();
+                    content.scrollLeft += event.deltaY;
+                }else if(content.scrollLeft>= content.scrollWidth - content.clientWidth && scrollDirection=='down'){
+                    //vertical
                 }else{
-                    isHorizontalScrolling = true;
-                    console.log('horizontally scrolling')
+
+                    // Check if horizontal scrolling has reached the end
+                    if (content.scrollLeft + container.clientWidth > content.scrollWidth ||
+                        content.scrollLeft < 0) {
+                        // Reset horizontal scrolling state when horizontal limit is reached
+                        isHorizontalScrolling = false;
+                        console.log('vertically scrolling')
+                        // content.scrollTop += event.deltaY;
+                    } else {
+                        isHorizontalScrolling = true;
+                        console.log('horizontally scrolling')
+                        event.preventDefault();
+                        content.scrollLeft += event.deltaY;
+                    }
                 }
-            }
-            else {
-                console.log('else clicked')
-                // If not horizontally scrolling, scroll vertically
-                content.scrollTop += event.deltaY;
-            }
-
-            if(!isHorizontalScrolling && event.deltaY){
-                // console.log('isHorizontalScrolling', isHorizontalScrolling , event.deltaY )
-
-                content.scrollTop += event.deltaY;
 
             }
+            // else {
+            //     console.log('else clicked')
+            //     // If not horizontally scrolling, scroll vertically
+            //     content.scrollTop += event.deltaY;
+            // }
+
+            // if(!isHorizontalScrolling && event.deltaY){
+            //     // console.log('isHorizontalScrolling', isHorizontalScrolling , event.deltaY )
+
+            //     content.scrollTop += event.deltaY;
+
+            // }
         });
 
         // content?.addEventListener('scroll', () => {
@@ -95,6 +139,7 @@ export default function Index({ projects }) {
         //     }
         // });
 
+        // end
     }, [selectedProject])
 
     return (
@@ -128,8 +173,8 @@ export default function Index({ projects }) {
 
                                 {selectedProject.moreImages.map((imgUrl) =>
                                     // <img key={imgUrl} className='snap-center m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
-                                    <div key={imgUrl} className='h-[500px] w-[600px] border-2'>
-                                        <img key={imgUrl} className='object-cover w-full h-full' alt='detail image' src={imgUrl} />
+                                    <div key={imgUrl} className='item h-[500px] w-[600px] border-2'>
+                                        <img key={imgUrl} className=' object-cover w-full h-full' alt='detail image' src={imgUrl} />
                                     </div>
                                 )}
                             </div>
@@ -245,7 +290,7 @@ export async function getStaticProps() {
                     "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
                     "title": "K Murthy Project",
                     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "mainImage": "/images/Asset_16.png",
+                    "mainImage": "/images/hero/hero1.jpg",
                     "moreImages": [
                         "/images/Asset_16.png",
                         "/images/Asset_14.png",
@@ -260,7 +305,7 @@ export async function getStaticProps() {
                     "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
                     "title": "K Murthy Project",
                     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "mainImage": "/images/Asset_15.png",
+                    "mainImage": "/images/hero/hero2.jpg",
                     "moreImages": [
                         "/images/Asset_16.png",
                         "/images/Asset_14.png",

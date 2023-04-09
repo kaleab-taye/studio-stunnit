@@ -81,12 +81,12 @@ export default function GetInTouch() {
                                     <div className='grid grid-flow-row grid-rows-2 gap-5'>
                                         <div className='grid gap-1 mb-auto'>
                                             <div className='text-primary '>PHONE NUMBER:</div>
-                                            <div className='text-xs sm:ml-1'>+01983 619505 <br />+01976 718793 </div>
+                                            <div className='text-xs sm:ml-1'>+919573523467</div>
                                         </div>
 
                                         <div className='grid gap-1 mb-auto'>
                                             <div className='text-primary '>EMAIL:</div>
-                                            <div className='text-xs sm:ml-1'>studio.stunnit@gmail.com</div>
+                                            <div className='text-xs sm:ml-1'>namaste@studiostunnit.com</div>
                                         </div>
                                     </div>
                                 </div>
@@ -168,8 +168,8 @@ export default function GetInTouch() {
                                 <div className={itemHeading}>Contact</div>
                                 <div className='grid gap-1 '>
                                     <div className={item}>Location: Hyberbad, India</div>
-                                    <div className={item}>Phone: +01983 619505</div>
-                                    <div className={item}>Email: studio.stunnit@gmail.comI</div>
+                                    <div className={item}>Phone: +919573523467</div>
+                                    <div className={item}>Email: namaste@studiostunnit.com</div>
                                     <div className={item}>Instagram: @studio_stunnit</div>
                                     <div className={item}>YouTube: @studio_stunnit</div>
                                 </div>
