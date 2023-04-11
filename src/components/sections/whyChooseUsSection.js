@@ -7,7 +7,7 @@ export default function WhyChooseUsSection() {
     <div className='bg-surface py-8'>
 
       <LeftRightAligner>
-        <div className='lg:mx-auto max-w-[1200px] gap-4 lg:gap-8 grid grid-flow-row md:grid-flow-col text-center md:text-left'>
+        <div className='lg:mx-auto w-full gap-4 lg:gap-8 grid grid-flow-row md:grid-flow-col text-center md:text-left'>
           <div className='mb-auto text-xl font-bold uppercase'>why choose us</div>
           <div className='grid grid-flow-col gap-1.5'>
             <div className='grid grid-flow-row md:grid-flow-col gap-1.5 md:gap-0 lg:gap-2'>

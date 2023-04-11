@@ -40,7 +40,7 @@ console.log("logg youtubeVIDExtractor",youtubeVIDExtractor("https://www.youtube.
         },
         large: {
             height: '500px',
-            width: '700px',
+            width: '800px',
             playerVars: {
                 // https://developers.google.com/youtube/player_parameters
                 autoplay: 0,

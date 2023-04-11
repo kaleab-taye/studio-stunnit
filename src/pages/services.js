@@ -18,51 +18,61 @@ export default function service() {
         <Navbar />
         <PageHeading image={serviceImage} name='Services' />
         <LeftRightAligner>
-          <div className='grid gap-10 my-12'>
-            <ServiceCard heading='design only'>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-              minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-              ex ea commodo consequat.
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-              dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
-              nulla facilisi.
-              Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-              minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-              ex ea commodo consequat.
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-              dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
-              nulla facilisi.
-              Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+          <div className='grid gap-10 md:gap-[64px] my-8 md:my-14'>
+            <ServiceCard heading='design only'
+              content="
+            Under this facility, we only design your area for 2D and 3D views without any execution.
+            
+            Our experienced interior designers’ team will create a design plan for your space, but won’t carry out the physical implementation of the design. You’ll be at liberty to implement the design with or without blending other ideas.
+
+            Our designer will typically provide detailed drawings, sketches, and specifications for the design, as well as a list of materials and finishes that should be used.
+
+            We can help you choose the perfect color scheme that complements your sense of beauty and style. Also, look no further if you need a professional hand for the best home decor ideas or office arrangements for you.
+
+            Studio Stunnit can assist you in giving your residency or workplace more individuality by adopting a customized strategy and using components that are specifically yours.
+            "
+            >
             </ServiceCard>
-            <ServiceCard heading='design & execution' direction='rtl'>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-              minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-              ex ea commodo consequat.
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-              dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
-              nulla facilisi.
-              Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-              minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-              ex ea commodo consequat.
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-              dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
-              nulla facilisi.
-              Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+            <ServiceCard heading='design & execution' direction='rtl'
+              content="
+            With this facility, Studio Stunnit saves both your time and stress from all the designing works as we plan and execute the task from start to finish.
+
+            This comprises creating 2D and 3D drawings, mood boards, choosing materials, planning, organizing transportation, carrying out the project, and managing it.
+
+            There will be regular updates on the status of the consultation, monitoring, and visits.
+
+            We pride ourselves on providing the highest quality interior design services to our clients. With a team of experienced and talented designers, we are dedicated to creating sophisticated and elegant spaces that reflect our client’s personal style and vision.
+
+            Looking for the ideal setup for your area or spaces?
+            Feeling confused about puja room design or living room decor?
+
+            Never mind! Leave this responsibility to our experts now.
+            With the aid of our furnishing service, interior space efficiency and aesthetic improvement through a range of textures, colors, dimensions, and sizes are both feasible.
+
+            By creating a floor plan that maximizes both function and mobility, we can help you make the most of the space you have available.
+
+            Studio Stunnit can help you choose furniture, window treatments, area rugs, accessories, and artwork that fit the dimensions of your particular space and your specific preferences.
+
+            Also, if you can't find the precise item of your choice we can work with you to create a one-of-a-kind bedroom interior design or Kitchen interior design that perfectly satisfies your needs and matches your style.
+
+            Our classic decorative service includes assistance with the placement of hardware and ornamental accents, as well as color choices for paint, wallpaper, artwork, and other wall decors.
+
+            The creation of a comprehensive and uniform atmosphere is something Studio Stunnit is dedicated to. You can be sure that every square inch of your property will be taken into consideration with this service.
+
+            Furniture Arrangements: From sofas and armchairs to Wall mirrors and bedroom sets, we will help you choose the furniture that will fit your requirements and look the best in your home.
+
+            Window treatments: We'll help you choose the finest window coverings and set-ups so you can improve the aesthetics of your space while preserving your privacy.
+
+            Accessories and decor: We can help you choose the right furniture and accessories to make your space come to life, from throw pillows and rugs to wall decoration items and plants.
+
+            Curation of art: Our experienced team will help you choose the pieces of art that will look best in your wall decor for the living room. In collaboration with you, we will look for home decor items that fit your aesthetic preferences and budget.
+            "
+            >
             </ServiceCard>
           </div>
         </LeftRightAligner>
         {/* orange divider */}
-        <div className='h-5 bg-primary my-16'></div>
+        <div className='h-5 bg-primary mt-6 md:mt-10 mb-[70px] md:mb-[110px]'></div>
         <LeftRightAligner>
 
           <div className='grid md:grid-cols-4' >
