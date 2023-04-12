@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function ServiceCard({ heading,content, direction }) {
+export default function ServiceCard({ heading,content, direction,children }) {
     const [smallScreenFullTextContent, setSmallScreenFullTextContent] = useState(false)
     const [smallScreenFullTextContent1, setSmallScreenFullTextContent1] = useState(false)
     let parentStyle = ' grid md:grid-flow-col gap-4 md:grid-cols-3'

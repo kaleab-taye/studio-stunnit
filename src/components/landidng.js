@@ -25,7 +25,7 @@ export default function LandingComponet() {
                     <div className="m-auto py-4 flex space-between flex-col  h-[75vh] md:h-screen">
 
                         <div ></div>
-                        <Image className="sm:max-w-[430px] m-auto px-5 " alt='logo' src={logo} />
+                        <Image className="max-w-[330px] sm:max-w-[430px] m-auto px-5 " alt='logo' src={logo} />
                         <div className="text-onPrimary text-center animate-bounce"><SlArrowDown className="m-auto text-4xl"/></div>
                     </div>
                 </div>

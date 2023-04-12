@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import NavbarItem from './navbarItem'
-import logo from '../../public/SVG/Asset_26.svg'
+import logo from '../../public/SVG/Brown_with_Black.svg'
+import logo2 from '../../public/SVG/Asset_26.svg'
+
 import Button from './button'
 import { FiMenu } from 'react-icons/fi';
 import LeftRightAligner from './left-right-aligner'
@@ -28,7 +30,7 @@ export default function Navbar() {
                 {/* logo start */}
                 <div className='mr-auto my-auto grid my-auto'>
                     <Link href='/'>
-                        <Image className='max-w-[35px] md:max-w-[40px]' src={logo} alt='logo' />
+                        <Image className='max-w-[35px] md:max-w-[40px]' src={logo2} alt='logo' />
                     </Link>
                 </div>
                 {/* nav items start */}
@@ -64,10 +66,10 @@ export default function Navbar() {
                 open={drawerState}
                 onClose={() => toggleDrawer(false)}
             >
-                <div className='grid'>
+                <div className='grid font-common_font'>
                     <div className='grid grid-flow-col px-4 py-4 gap-2'>
-                        <Image src={logo} alt='logo' className='my-auto w-7' />
-                        <div className='text-primary font-medium text-xl my-auto'>Studio Stunnit</div>
+                        <Image src={logo} alt='logo' className='my-auto w-32' />
+                        {/* <div className='text-primary font-medium text-xl my-auto'>Studio Stunnit</div> */}
                     </div>
                     <div className='border'></div>
                     <div className='grid-flow-row my-2 grid mx-5'>
@@ -75,31 +77,42 @@ export default function Navbar() {
                             <div className={router.pathname == '/' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Home
                             </div>
+                            {/* <hr/> */}
+
                         </Link>
                         <Link href='/services'>
                             <div className={router.pathname == '/services' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Services
                             </div>
+                            {/* <hr/> */}
                         </Link>
                         <Link href='/projects'>
                             <div className={router.pathname == '/projects' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Projects
                             </div>
+                            {/* <hr/> */}
+
                         </Link>
                         <Link href='/about_us'>
                             <div className={router.pathname == '/about_us' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 About Us
                             </div>
+                            {/* <hr/> */}
+
                         </Link>
                         <Link href='/testimonials'>
                             <div className={router.pathname == '/testimonials' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 Testimonials
                             </div>
+                            {/* <hr/> */}
+
                         </Link>
                         <Link href='/faq'>
                             <div className={router.pathname == '/faq' ? 'text-xl py-1 font-bold text-primary' : 'text-xl py-1 font-[300]'}>
                                 FAQ&apos;s
                             </div>
+                            {/* <hr/> */}
+
                         </Link>
 
                     </div>
