@@ -43,7 +43,7 @@ export default function ProjectsProjectsSection({ projects }) {
                         className=' grid h-full'
                     >
 
-                        <img alt='project image' src={PathToImages + currentProject.mainImage} className='min-h-screen w-screen mx-auto  object-cover  brightness-[.8]' />
+                        <img alt='project image' src={PathToImages + currentProject.mainImage} className='min-h-screen w-screen mx-auto  object-cover object-center brightness-[.8]' />
 
                     </motion.div>
                     {/* </AnimatePresence> */}

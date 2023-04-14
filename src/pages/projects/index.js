@@ -51,21 +51,21 @@ export default function Index({ projects }) {
         window.addEventListener('wheel', function(event) {
             const deltaX = event.deltaX;
             const deltaY = event.deltaY;
-          
+
             // if (deltaX > 0) {
             //   // Scrolling to the right
             // } else if (deltaX < 0) {
             //   // Scrolling to the left
             // }
-          
+
             if (deltaY > 0) {
-              // Scrolling down
+                // Scrolling down
               scrollDirection='down'
             } else if (deltaY < 0) {
-              // Scrolling up
+                // Scrolling up
               scrollDirection='up'
             }
-          });
+        });
 
 
         container?.addEventListener('wheel', (event) => {
@@ -86,7 +86,7 @@ export default function Index({ projects }) {
                 // Update horizontal scrolling state
                 isHorizontalScrolling = true;
                 console.log(content.scrollLeft + container.clientWidth, content.scrollWidth, content.scrollLeft, content.scrollWidth - content.clientWidth)
-                
+
                 if(content.scrollLeft<=1 && scrollDirection=='down'){
                     //horizontal
                     console.log('condition 1')
@@ -182,8 +182,8 @@ export default function Index({ projects }) {
 
                                 {selectedProject.moreImages.map((imgUrl) =>
                                     // <img key={imgUrl} className='snap-center m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
-                                    <div key={imgUrl} className='item h-[500px] w-[600px] border-2'>
-                                        <img key={imgUrl} className=' object-cover w-full h-full' alt='detail image' src={imgUrl} />
+                                    <div key={imgUrl} className='item h-[500px] border-2'>
+                                        <img key={imgUrl} className=' object-cover object-center w-full h-full' alt='detail image' src={imgUrl} />
                                     </div>
                                 )}
                             </div>
@@ -301,27 +301,28 @@ export async function getStaticProps() {
                     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
                     "mainImage": "/images/hero/hero1.jpg",
                     "moreImages": [
-                        "/images/Asset_16.png",
-                        "/images/Asset_14.png",
-                        "/images/Asset_15.png",
-                        "/images/Asset_16.png",
-                        "/images/Asset_14.png",
-                        "/images/Asset_15.png"
+                        "/projects/myBhoojaDaughterRoomView/01.png",
+                        "/projects/myBhoojaDaughterRoomView/10.png",
+                        "/projects/myBhoojaDaughterRoomView/11.png",
+                        "/projects/myBhoojaDaughterRoomView/12.png",
+                        "/projects/myBhoojaDaughterRoomView/13.png",
+                        "/projects/myBhoojaDaughterRoomView/14.png",
                     ],
                     "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
                     "viewCount": 0
                 }, {
-                    "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
-                    "title": "K Murthy Project",
+                    "id": "0dd24843-1cb3-4d7e-8f80-d2683a519cd8d",
+                    "title": "My Home Project",
                     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
                     "mainImage": "/images/hero/hero2.jpg",
                     "moreImages": [
-                        "/images/Asset_16.png",
-                        "/images/Asset_14.png",
-                        "/images/Asset_15.png",
-                        "/images/Asset_16.png",
-                        "/images/Asset_14.png",
-                        "/images/Asset_15.png"
+                        "/projects/myBhoojaDaughterRoomView/02.png",
+                        "/projects/myBhoojaDaughterRoomView/03.png",
+                        "/projects/myBhoojaDaughterRoomView/04.png",
+                        "/projects/myBhoojaDaughterRoomView/05.png",
+                        "/projects/myBhoojaDaughterRoomView/06.png",
+                        "/projects/myBhoojaDaughterRoomView/07.png",
+                        "/projects/myBhoojaDaughterRoomView/08.png"
                     ],
                     "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
                     "viewCount": 0
