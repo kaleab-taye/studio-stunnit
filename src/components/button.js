@@ -6,7 +6,7 @@ export default function Button({ name,padding }) {
 
     return (
 
-        <div className={'bg-primary text-primaryColor uppercase rounded mx-auto'+' '+padding_x }>
+        <div className={'cursor-pointer bg-primary text-primaryColor uppercase rounded mx-auto'+' '+padding_x }>
             <div className='mx-5 py-2'>
                 {name}</div>
         </div>

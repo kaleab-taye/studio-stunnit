@@ -181,7 +181,7 @@ export async function getStaticProps() {
                     testimonials: [
                         {
                             "id": "a59a6f34-b16c-4ef0-92b4-2c956d1db5e9",
-                            "avatarUrl": "/images/Asset_12.png",
+                            "avatarUrl": "/images/Asset_12.png.webp",
                             "name": "K Murthy,",
                             "occupation": "Director Manager, K Murthy Company",
                             "rating": 5,
@@ -189,7 +189,7 @@ export async function getStaticProps() {
                         },
                         {
                             "id": "2e7092d6-6306-4f08-bd77-d660df9c7335",
-                            "avatarUrl": "/images/Asset_17.png",
+                            "avatarUrl": "/images/Asset_17.png.webp",
                             "name": "Aruna",
                             "occupation": "Director Manager, Aruna Company",
                             "rating": 5,
@@ -197,7 +197,7 @@ export async function getStaticProps() {
                         },
                         {
                             "id": "c6bf8d89-a218-4d59-afe6-76271f379c08",
-                            "avatarUrl": "/images/Asset_17.png",
+                            "avatarUrl": "/images/Asset_17.png.webp",
                             "name": "Sanjeev,",
                             "occupation": "Director Manager, Sanjeev Company",
                             "rating": 4,
@@ -205,7 +205,7 @@ export async function getStaticProps() {
                         },
                         {
                             "id": "1ca92c62-e0bf-47bf-b4df-08373ac90792",
-                            "avatarUrl": "/images/Asset_12.png",
+                            "avatarUrl": "/images/Asset_12.png.webp",
                             "name": "Punith,",
                             "occupation": "Director Manager, Punith Company",
                             "rating": 5,

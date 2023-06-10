@@ -1,7 +1,7 @@
 import React from 'react'
-import img1 from '../images/Asset_14.png'
-import img2 from '../images/Asset_16.png'
-import img3 from '../images/Asset_20.png'
+import img1 from '../images/Asset_14.png.webp'
+import img2 from '../images/Asset_16.png.webp'
+import img3 from '../images/Asset_20.png.webp'
 export default function ProjectsData() {
 
   return  [

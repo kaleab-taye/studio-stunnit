@@ -2,9 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import Button from './button'
 import LeftRightAligner from './left-right-aligner'
-import image1 from '../../public/images/Asset_16.png'
-import icon1 from '../../public/images/Asset_10.png'
-import icon2 from '../../public/images/Asset_11.png'
+import image1 from '../../public/images/Asset_16.png.webp'
+import icon1 from '../../public/images/Asset_10.png.webp'
+import icon2 from '../../public/images/Asset_11.png.webp'
 
 
 import WhatWeDoSectionCard from './whatWeDoSectionCard'

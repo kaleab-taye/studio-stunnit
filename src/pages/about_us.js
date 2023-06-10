@@ -5,7 +5,7 @@ import Navbar from '../components/navbar'
 import PageHeading from '../components/pageHeading'
 import React, { useState } from 'react'
 import { IoMdMenu } from 'react-icons/io'
-import aboutUsImage from '../../public/images/Asset_20.png'
+import aboutUsImage from '../../public/images/Asset_20.png.webp'
 import Link from 'next/link'
 import { GrDown } from 'react-icons/gr'
 
@@ -144,13 +144,13 @@ const founders = [
     {
         name: "K Murthy",
         position: "Director Manager, K Murthy",
-        avatarUrl: "/images/Asset 17.png",
+        avatarUrl: "/images/Asset 17.png.webp",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
     },
     {
         name: "Aruna",
         position: "Director Manager, K Murthy",
-        avatarUrl: "/images/Asset 12.png",
+        avatarUrl: "/images/Asset 12.png.webp",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
     },
 ]

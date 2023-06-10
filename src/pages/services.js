@@ -5,7 +5,7 @@ import PageHeading from '../components/pageHeading'
 import ServiceCard from '../components/serviceCard'
 import React, { useState } from 'react'
 import { IoMdMenu } from 'react-icons/io'
-import serviceImage from '../../public/images/Asset_20.png'
+import serviceImage from '../../public/images/Asset_20.png.webp'
 import Link from 'next/link'
 import { GrDown } from 'react-icons/gr'
 export default function Service() {

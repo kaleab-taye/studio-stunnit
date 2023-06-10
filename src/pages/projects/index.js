@@ -1,5 +1,3 @@
-// import { Carousel } from 'flowbite';
-// import { Carousel } from 'flowbite';
 import HomeProjectsSection from '../../components/homeProjectsSection';
 import Layout from '../../components/layout';
 import LeftRightAligner from '../../components/left-right-aligner';
@@ -12,8 +10,8 @@ import { IoIosArrowDown, IoIosArrowDropdownCircle } from 'react-icons/io';
 import { GrDown } from 'react-icons/gr';
 
 import ProjectsData from '../../../public/dummyData/projectsData';
-import img1 from '../../../public/images/Asset_14.png'
-import img2 from '../../../public/images/Asset_20.png'
+import img1 from '../../../public/images/Asset_14.png.webp'
+import img2 from '../../../public/images/Asset_20.png.webp'
 import ProjectsProjectsSection from '../../components/projectsProjectsSection';
 
 
@@ -159,27 +157,10 @@ export default function Index({ projects }) {
                 <Navbar />
                 <div className='grid gap-2 '>
                     {selectedProject == -1 ? <></> : <div >
-                        {/* <div id='wrapper' className='height-screen overflow-hidden'> */}
-                        {/* <div id="container">
-                            <div id="content">
-                                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-                                <div class="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
-                                <div class="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
-                                <div class="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
-                                <div class="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
-                                <div class="item">Rem nobis facere provident magni minima iste commodi aliquam harum? Facere error quos cumque perspiciatis voluptatibus deserunt maiores, fugiat sunt sit ab inventore natus saepe, eveniet alias ipsam placeat voluptas!</div>
-                                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
-                                <div class="item">Magnam eveniet inventore assumenda ullam. At saepe voluptatibus sed dicta reiciendis, excepturi nisi perferendis, accusantium est suscipit tempora dolorum praesentium cupiditate doloribus non? Sint numquam recusandae dolore quis esse ea?</div>
-                                <div class="item">Temporibus cum dolor minima consequatur esse veritatis enim nemo cupiditate laborum doloribus reiciendis perferendis, quas fugit earum rerum, at beatae alias amet aspernatur dolorem dolore error commodi. Perspiciatis, reiciendis amet!</div>
-                                <div class="item">Vitae, tenetur beatae error corrupti odit expedita quisquam commodi ea aspernatur aliquid, eveniet reprehenderit sequi, similique maiores praesentium quam! Optio tenetur saepe unde voluptatem minus tempora maxime temporibus ducimus ullam!</div>
-                            </div>
-                        </div> */}
+                       
                         <div id='container' className='hidden sm:grid' >
                             <div id='content' className=''>
-                                {/* <div id='horizontal-scrollable' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-56 sm:h-[372px] lg:h-[472px] gap-3 overflow-x-auto overflow-y-hidden'> */}
-                                {/* <div className='snap-center w-[400px] h-[10px] bg-red-500'></div> */}
-                                {/* <div id='carousel' className='flex w-full h-full flex-nowrap	'> */}
-
+                             
                                 {selectedProject.moreImages.map((imgUrl) =>
                                     // <img key={imgUrl} className='snap-center m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
                                     <div key={imgUrl} className='item h-[500px] border-2'>
@@ -188,14 +169,7 @@ export default function Index({ projects }) {
                                 )}
                             </div>
                         </div>
-                        {/* <hr /> */}
-                        {/* <div id='container' >
-                            <div id='content' className='grid snap-mandatory snap-x hidden sm:flex w-[100%] m-auto h-[68vh] gap-3 overflow-x-auto overflow-y-hidden'>
-                                {selectedProject.moreImages.map((imgUrl) =>
-                                    <img key={imgUrl} className='snap-center m-auto object-cover h-[65vh]' alt='detail image' src={imgUrl} />
-                                )}
-                            </div>
-                        </div> */}
+                       
                         <LeftRightAligner>
                             <div className='grid gap-6 sm:gap-12 my-10 sm:my-24'>
                                 <div className='grid grid-flow-col sm:gap-20 lg:gap-40'>
@@ -299,14 +273,14 @@ export async function getStaticProps() {
                     "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
                     "title": "K Murthy Project",
                     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "mainImage": "/images/hero/hero1.jpg",
+                    "mainImage": "/images/hero/hero1.jpg.webp",
                     "moreImages": [
-                        "/projects/myBhoojaDaughterRoomView/01.png",
-                        "/projects/myBhoojaDaughterRoomView/10.png",
-                        "/projects/myBhoojaDaughterRoomView/11.png",
-                        "/projects/myBhoojaDaughterRoomView/12.png",
-                        "/projects/myBhoojaDaughterRoomView/13.png",
-                        "/projects/myBhoojaDaughterRoomView/14.png",
+                        "/projects/myBhoojaDaughterRoomView/01.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/10.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/11.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/12.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/13.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/14.png.webp",
                     ],
                     "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
                     "viewCount": 0
@@ -314,15 +288,15 @@ export async function getStaticProps() {
                     "id": "0dd24843-1cb3-4d7e-8f80-d2683a519cd8d",
                     "title": "My Home Project",
                     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "mainImage": "/images/hero/hero2.jpg",
+                    "mainImage": "/images/hero/hero2.jpg.webp",
                     "moreImages": [
-                        "/projects/myBhoojaDaughterRoomView/02.png",
-                        "/projects/myBhoojaDaughterRoomView/03.png",
-                        "/projects/myBhoojaDaughterRoomView/04.png",
-                        "/projects/myBhoojaDaughterRoomView/05.png",
-                        "/projects/myBhoojaDaughterRoomView/06.png",
-                        "/projects/myBhoojaDaughterRoomView/07.png",
-                        "/projects/myBhoojaDaughterRoomView/08.png"
+                        "/projects/myBhoojaDaughterRoomView/02.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/03.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/04.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/05.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/06.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/07.png.webp",
+                        "/projects/myBhoojaDaughterRoomView/08.png.webp"
                     ],
                     "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
                     "viewCount": 0

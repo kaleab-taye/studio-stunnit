@@ -84,15 +84,15 @@ export async function getStaticProps() {
           "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
           "title": "K Murthy Project",
           "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
-          "mainImage": "/images/hero/hero1.jpg",
+          "mainImage": "/images/hero/hero1.jpg.webp",
           "moreImages": [
-            "/images/Asset_16.png",
-            "/images/Asset_14.png",
-            "/images/Asset_15.png",
-            "/images/Asset_16.png",
-            "/images/Asset_14.png",
-            "/images/Asset_15.png",
-            "/projects/myBhoojaDaughterRoomView/09.png"
+            "/images/Asset_16.png.webp",
+            "/images/Asset_14.png.webp",
+            "/images/Asset_15.png.webp",
+            "/images/Asset_16.png.webp",
+            "/images/Asset_14.png.webp",
+            "/images/Asset_15.png.webp",
+            "/projects/myBhoojaDaughterRoomView/09.png.webp"
           ],
           "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
           "viewCount": 0
@@ -100,14 +100,14 @@ export async function getStaticProps() {
           "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
           "title": "K Murthy Project",
           "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
-          "mainImage": "/images/hero/hero2.jpg",
+          "mainImage": "/images/hero/hero2.jpg.webp",
           "moreImages": [
-            "/images/Asset_16.png",
-            "/images/Asset_14.png",
-            "/images/Asset_15.png",
-            "/images/Asset_16.png",
-            "/images/Asset_14.png",
-            "/images/Asset_15.png"
+            "/images/Asset_16.png.webp",
+            "/images/Asset_14.png.webp",
+            "/images/Asset_15.png.webp",
+            "/images/Asset_16.png.webp",
+            "/images/Asset_14.png.webp",
+            "/images/Asset_15.png.webp"
           ],
           "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing\r\nelit, sed diam nonummy nibh euismod tincidunt ut\r\nlaoreet dolore magna aliquam erat volutpat. Ut wisi\r\nenim ad minim veniamd exerci tation ullamcorper sus-\r\ncipit lobortis nisl uttate velit esse molestie consequat,\r\nvel illum dolore eu feugiat nulla facilisis at vero eros et\r\naccumsan et",
           "viewCount": 0
@@ -116,7 +116,7 @@ export async function getStaticProps() {
       testimonials: [
         {
           "id": "a59a6f34-b16c-4ef0-92b4-2c956d1db5e9",
-          "avatarUrl": "/images/Asset_12.png",
+          "avatarUrl": "/images/Asset_12.png.webp",
           "name": "K Murthy,",
           "occupation": "Director Manager, K Murthy Company",
           "rating": 5,
@@ -124,7 +124,7 @@ export async function getStaticProps() {
         },
         {
           "id": "2e7092d6-6306-4f08-bd77-d660df9c7335",
-          "avatarUrl": "/images/Asset_17.png",
+          "avatarUrl": "/images/Asset_17.png.webp",
           "name": "Aruna",
           "occupation": "Director Manager, Aruna Company",
           "rating": 5,
@@ -132,7 +132,7 @@ export async function getStaticProps() {
         },
         {
           "id": "c6bf8d89-a218-4d59-afe6-76271f379c08",
-          "avatarUrl": "/images/Asset_17.png",
+          "avatarUrl": "/images/Asset_17.png.webp",
           "name": "Sanjeev,",
           "occupation": "Director Manager, Sanjeev Company",
           "rating": 4,
@@ -140,7 +140,7 @@ export async function getStaticProps() {
         },
         {
           "id": "1ca92c62-e0bf-47bf-b4df-08373ac90792",
-          "avatarUrl": "/images/Asset_12.png",
+          "avatarUrl": "/images/Asset_12.png.webp",
           "name": "Punith,",
           "occupation": "Director Manager, Punith Company",
           "rating": 5,

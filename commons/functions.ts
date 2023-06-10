@@ -1,5 +1,5 @@
 import { v4 } from "uuid";
-import nodemailer from "nodemailer"
+import nodemailer from "nodemailer";
 import path from "path";
 const fs = require('fs')
 const _ = require("lodash");
@@ -21,7 +21,7 @@ async function sendEmail(subject, html, to = process.env.EMAIL_FROM, from = proc
     } else {
         const mailOptions = { from, to, subject, html };
         const transporter = nodemailer.createTransport(smtpUrl);
-        await transporter.sendMail(mailOptions);
+        const result = await transporter.sendMail(mailOptions);
         return true
     }
 }
@@ -47,7 +47,11 @@ const functions = {
         emailHtml = replaceAll(emailHtml, "-1-email-9-", email ?? "-");
         emailHtml = replaceAll(emailHtml, "-1-message-9-", message ?? "-");
         emailHtml = replaceAll(emailHtml, "-1-whatsapp-9-", whatsapp ? "Yes" : "No");
-        return sendEmail("New Get In Touch Message", emailHtml)
+        try {
+            return sendEmail("New Get In Touch Message", emailHtml)
+        } catch (error) {
+            console.log("ERROR: sendGetInTouchEmail:",error)
+        }
     },
     sendEmail,
     hasSingleValue,
