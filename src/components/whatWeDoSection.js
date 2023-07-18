@@ -1,17 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
-import Button from './button'
-import LeftRightAligner from './left-right-aligner'
-import image1 from '../../public/images/Asset_16.png.webp'
 import icon1 from '../../public/images/Asset_10.png.webp'
 import icon2 from '../../public/images/Asset_11.png.webp'
+import image1 from '../../public/images/Asset_16.jpg'
+import Button from './button'
+import LeftRightAligner from './left-right-aligner'
 
 
-import WhatWeDoSectionCard from './whatWeDoSectionCard'
-import { FiSettings } from 'react-icons/fi';
-import { IoIosArrowForward } from 'react-icons/io';
 import Link from 'next/link'
 import PrimaryLinkButton from './primaryLinkButton'
+import WhatWeDoSectionCard from './whatWeDoSectionCard'
 
 export default function WhatWeDoSection() {
     return (
@@ -43,7 +41,7 @@ export default function WhatWeDoSection() {
                         </div>
                     </div>
                     {/* right section */}
-                    <div className='grid w-full '>
+                    <div className='grid w-full my-auto'>
                         <Image alt='intro' className='mx-auto rounded-3xl max-w-[420px] md:max-w-[350px] lg:max-w-[500px] w-full' src={image1} />
                     </div>
                 </div>
@@ -57,7 +55,7 @@ export default function WhatWeDoSection() {
                         </div>
                         <div className='mr-auto ml-auto md:ml-0 md:mr-auto'>
                             <Link href='/services'>
-                                <PrimaryLinkButton text='Learn More'/>
+                                <PrimaryLinkButton text='Learn More' />
 
                             </Link>
 
@@ -72,7 +70,7 @@ export default function WhatWeDoSection() {
                         implementation of the design. You’ll be
                         at liberty to implement the design with
                         or without blending other ideas">
-                            <Image height={50}  src={icon2} alt='icon'/>
+                            <Image height={50} src={icon2} alt='icon' />
                         </WhatWeDoSectionCard>
                         <WhatWeDoSectionCard
                             heading="Design with Execution"
@@ -81,7 +79,7 @@ export default function WhatWeDoSection() {
                         implementing those designs by choosing materials, planning, organizing
                         transportation, carrying out the project,
                         and managing it">
-                            <Image height={50}  src={icon1} alt='icon'/>
+                            <Image height={50} src={icon1} alt='icon' />
                         </WhatWeDoSectionCard>
                     </div>
                 </div>

@@ -1,12 +1,13 @@
+import { Box, Tab, styled, useTheme } from '@mui/material'
+import Tabs from '@mui/material/Tabs'
+import { Accordion } from 'flowbite-react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../components/layout'
 import LeftRightAligner from '../components/left-right-aligner'
 import Navbar from '../components/navbar'
-import { Accordion } from 'flowbite-react'
-import React, { useEffect, useState } from 'react'
-import { Box, styled, Tab, Typography, useTheme } from '@mui/material';
-import Tabs from '@mui/material/Tabs';
 // import { TabPanel } from '@mui/joy'
 import SwipeableViews from 'react-swipeable-views'
+import SeoHeader from '../components/seoHeader'
 
 const AntTab = styled((props) => <Tab disableRipple {...props} />)({
   // borderBottom: '1px solid #e8e8e8',
@@ -40,8 +41,6 @@ const StyledTabs = styled((props) => (
 
 export default function Faq({ faqs }) {
   const [currentCategoryId, setCurrentCategoryId] = useState(faqCategories[0]?.id)
-  console.log("loggg faqs", faqs)
-  console.log("loggg", process.env.url)
   const theme = useTheme();
   const [selectedTab, setSelectedTab] = useState(0)
 
@@ -59,6 +58,8 @@ export default function Faq({ faqs }) {
 
   return (
     <div>
+      <SeoHeader pageName="FAQ" />
+
       <Layout>
         <Navbar />
         <LeftRightAligner>
@@ -181,23 +182,33 @@ function TabPanel(props) {
 const FAQs = [
   {
     categoryId: "c1",
-    question: "Labore et otate cillum.",
-    answer: "Non consequat incididunt id amet dolore do consectetur nisi proident id magna do fugiat. Ea id nulla ipsum non incididunt proident fugiat exercitation culpa esse. Cillum consequat eu ad dolore et ex ad quis laborum in anim et deserunt. Eu non adipisicing ipsum exercitation pariatur."
+    question: "What if we don’t like the designs ?",
+    answer: "We provided 2-3 options to choose. Generally our clients select from one of these designs. If you don’t like it - we make it right with better option."
   },
   {
     categoryId: "c1",
-    question: "Labore et officia volupum.",
-    answer: "Non consequat incididunt id amet dolore do consectetur nisi proident id magna do fugiat. Ea id nulla ipsum non incididunt proident fugiat exercitation culpa esse. Cillum consequat eu ad dolore et ex ad quis laborum in anim et deserunt. Eu non adipisicing ipsum exercitation pariatur."
+    question: "What is the general timeline for designs creation ?",
+    answer: "It depends on requirement, scale and complexity of the project involved. It varies from case to case."
   },
   {
     categoryId: "c1",
-    question: "Labore et officia voluptate cillum.",
-    answer: "Non consequat incididunt id amet dolore do consectetur nisi proident id magna do fugiat. Ea id nulla ipsum non incididunt proident fugiat exercitation culpa esse. Cillum consequat eu ad dolore et ex ad quis laborum in anim et deserunt. Eu non adipisicing ipsum exercitation pariatur."
+    question: "Will you include laminate selections in design 3D pictures ?",
+    answer: "Yes if Laminate selections are done on time during design phase we can incorporate the same in 3D pictures."
   },
   {
-    categoryId: "c2",
-    question: "cia voluptate cillum.",
-    answer: "Non consequat incididunt id amet dolore do consectetur nisi proident id magna do fugiat. Ea id nulla ipsum non incididunt proident fugiat exercitation culpa esse. Cillum consequat eu ad dolore et ex ad quis laborum in anim et deserunt. Eu non adipisicing ipsum exercitation pariatur."
+    categoryId: "c1",
+    question: "What do I get as part of designs ?",
+    answer: "We will provide 2D in PDF and 3D Designs as agreed for space."
+  },
+  {
+    categoryId: "c1",
+    question: "Will my designs look realistic ?",
+    answer: "We provide best possible looking designs that can help you imagine your space before execution."
+  },
+  {
+    categoryId: "c1",
+    question: "Why should we get it designed with you ? What’s special here?",
+    answer: "We create 2Ds according to you (after understanding your interest) and 3Ds are of Global standards which differentiates us from others in market. \nQuality and Time matters to us. We take pride in to give you a quality product on time."
   },
   {
     categoryId: "c3",
@@ -233,20 +244,8 @@ const faqCategories = [
   },
   {
     id: "c2",
-    name: "Excution"
-  },
-  {
-    id: "c3",
-    name: "Lourem"
-  },
-  {
-    id: "c4",
-    name: "Ipsum"
-  },
-  // {
-  //   id: "c5",
-  //   name: "Option 5"
-  // },
+    name: "Execution"
+  }
 ]
 
 export async function getStaticProps() {
@@ -275,29 +274,78 @@ export async function getStaticProps() {
     props: {
       faqs: [
         {
-          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
+          "id": "b16b2939-abed-4bd7-be79-57e6d165413f",
           "category": "Design",
-          "question": "What if I don’t like the design? How many op- tions do I get?",
-          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
+          "question": "What if we don’t like the designs ?",
+          "answer": "We provided 2-3 options to choose. Generally our clients select from one of these designs. If you don’t like it - we make it right with better option."
         },
         {
-          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
-          "category": "Excution",
-          "question": "What if I don’t like the design? How many op- tions do I get?",
-          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
+          "id": "b16b2939-abea-4bd7-be79-57e6d165413f",
+          "category": "Design",
+          "question": "What is the general timeline for designs creation ?",
+          "answer": "It depends on requirement, scale and complexity of the project involved. It varies from case to case."
         },
         {
-          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
-          "category": "Lourem",
-          "question": "What if I don’t like the design? How many op- tions do I get?",
-          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
+          "id": "b16b2939-abed-4bdw-be79-57e6d165413f",
+          "category": "Design",
+          "question": "Will you include laminate selections in design 3D pictures ?",
+          "answer": "Yes if Laminate selections are done on time during design phase we can incorporate the same in 3D pictures."
         },
         {
-          "id": "b16b2939-abe3-4bd7-be79-57e6d165413f",
-          "category": "Ipsum",
-          "question": "What if I don’t like the design? How many op- tions do I get?",
-          "answer": "Studio Stunnit is a multidisciplinary design ﬁrm\nenvisioning interior designs that are unique and\nspell-binding. Established in 2022, helmed by\neminent interior designers in Hyderabad, the\nstudio focuses on crafting a premium style ap-\nproach-visualising spaces with aesthetic coher-\nence and functional congruity. With 8 years of\ndesign experience."
-        }
+          "id": "b16b2939-abrd-4bd7-be79-57e6d165413f",
+          "category": "Design",
+          "question": "What do I get as part of designs ?",
+          "answer": "We will provide 2D in PDF and 3D Designs as agreed for space."
+        },
+        {
+          "id": "b16b2939-abed-4hd7-be79-57e6d165413f",
+          "category": "Design",
+          "question": "Will my designs look realistic ?",
+          "answer": "We provide best possible looking designs that can help you imagine your space before execution."
+        },
+        {
+          "id": "b16b2939-abed-4bd7-be79-57hjd165413f",
+          "category": "Design",
+          "question": "Why should we get it designed with you ? What’s special here?",
+          "answer": "We create 2Ds according to you (after understanding your interest) and 3Ds are of Global standards which differentiates us from others in market. \nQuality and Time matters to us. We take pride in to give you a quality product on time."
+        },
+
+        {
+          "id": "b1rb2939-abed-4rbd7-be79-57hjd165413f",
+          "category": "Execution",
+          "question": "Will there be frequent updates and visits during execution ?",
+          "answer": "We will visit the site to ensure project deliverables are progressed on time as agreed (turn key projects) and we provided timely key updates."
+        },
+        {
+          "id": "b1rbr2939-abed-erh7-be79-57hjd165413f",
+          "category": "Execution",
+          "question": "What work generally happens in execution ?",
+          "answer": "We will engage and obtain materials sourcing (Plywood, Glass, Hardware, Laminates etc) and Services from Carpentry, Tiles, Electrical, Glass, Painting and Plumbing works as necessary based on the designs."
+        }, {
+          "id": "b1rredsw9-abed-4bd7-be79-57hjd165413f",
+          "category": "Execution",
+          "question": "Is possible to modify design during execution ?",
+          "answer": "We highly recommend no changes during execution unless during exception cases where necessary and well discussed in advance avoiding re-work."
+        },
+
+        {
+          "id": "lkmedsw9-arbed-4bd7-be79-57hjd165413f",
+          "category": "Execution",
+          "question": "How long generally it takes to execute ?",
+          "answer": "It depends on scale and design. Generally it would get over within 2 to 3 months once designs are finalized."
+        },
+        {
+          "id": "b1redsw9-abed-4bd7-be79r-57hjd165s7df",
+          "category": "Execution",
+          "question": "Can we visit the client during execution ?",
+          "answer": "Yes we discuss key decisions at site during work execution."
+        },
+        {
+          "id": "b1redsw9-abred-4bd7-be79-9w6djd165413f",
+          "category": "Execution",
+          "question": "Is Execution services available outside Hyderabad ?",
+          "answer": "Currently it is available only in Hyderabad. But we are open to take up projects outside Hyderabad based on project, scale, design and discussion etc..."
+        },
       ],
       // error: error,
     }

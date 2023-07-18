@@ -1,23 +1,17 @@
-import HomeProjectsSection from '../../components/homeProjectsSection';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { GrDown } from 'react-icons/gr';
+import { IoIosArrowDown } from 'react-icons/io';
 import Layout from '../../components/layout';
 import LeftRightAligner from '../../components/left-right-aligner';
 import Navbar from '../../components/navbar';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react'
-import { IoIosArrowDown, IoIosArrowDropdownCircle } from 'react-icons/io';
-import { GrDown } from 'react-icons/gr';
 
-import ProjectsData from '../../../public/dummyData/projectsData';
-import img1 from '../../../public/images/Asset_14.png.webp'
-import img2 from '../../../public/images/Asset_20.png.webp'
 import ProjectsProjectsSection from '../../components/projectsProjectsSection';
+import SeoHeader from '../../components/seoHeader';
 
 
 export default function Index({ projects }) {
-
-    console.log('projjjj', projects)
 
     const router = useRouter()
     const [selectedProject, setSelectedProject] = useState(-1);
@@ -46,7 +40,7 @@ export default function Index({ projects }) {
         var scrollDirection = 'down';
 
 
-        window.addEventListener('wheel', function(event) {
+        window.addEventListener('wheel', function (event) {
             const deltaX = event.deltaX;
             const deltaY = event.deltaY;
 
@@ -58,10 +52,10 @@ export default function Index({ projects }) {
 
             if (deltaY > 0) {
                 // Scrolling down
-              scrollDirection='down'
+                scrollDirection = 'down'
             } else if (deltaY < 0) {
                 // Scrolling up
-              scrollDirection='up'
+                scrollDirection = 'up'
             }
         });
 
@@ -85,27 +79,27 @@ export default function Index({ projects }) {
                 isHorizontalScrolling = true;
                 console.log(content.scrollLeft + container.clientWidth, content.scrollWidth, content.scrollLeft, content.scrollWidth - content.clientWidth)
 
-                if(content.scrollLeft<=1 && scrollDirection=='down'){
+                if (content.scrollLeft <= 1 && scrollDirection == 'down') {
                     //horizontal
                     console.log('condition 1')
                     event.preventDefault();
                     content.scrollLeft += event.deltaY;
-                }else if(content.scrollLeft<=1 && scrollDirection=='up'){
+                } else if (content.scrollLeft <= 1 && scrollDirection == 'up') {
                     // vertical
                     console.log('condition 2')
 
-                }else if(content.scrollLeft>= content.scrollWidth - content.clientWidth && scrollDirection=='up'){
+                } else if (content.scrollLeft >= content.scrollWidth - content.clientWidth && scrollDirection == 'up') {
                     //horizontal
                     console.log('condition 3')
 
                     event.preventDefault();
                     content.scrollLeft += event.deltaY;
-                }else if(content.scrollLeft>= content.scrollWidth - content.clientWidth && scrollDirection=='down'){
+                } else if (content.scrollLeft >= content.scrollWidth - content.clientWidth && scrollDirection == 'down') {
                     //vertical
                     console.log('condition 4')
 
-                }else{
-                    console.log('condition 5' , content.scrollLeft, scrollDirection)
+                } else {
+                    console.log('condition 5', content.scrollLeft, scrollDirection)
 
 
                     // Check if horizontal scrolling has reached the end
@@ -152,15 +146,16 @@ export default function Index({ projects }) {
     return (
         <div>
 
+            <SeoHeader pageName="Projects" />
 
             <Layout>
                 <Navbar />
                 <div className='grid gap-2 '>
                     {selectedProject == -1 ? <></> : <div >
-                       
+
                         <div id='container' className='hidden sm:grid' >
                             <div id='content' className=''>
-                             
+
                                 {selectedProject.moreImages.map((imgUrl) =>
                                     // <img key={imgUrl} className='snap-center m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
                                     <div key={imgUrl} className='item h-[500px] border-2'>
@@ -169,7 +164,7 @@ export default function Index({ projects }) {
                                 )}
                             </div>
                         </div>
-                       
+
                         <LeftRightAligner>
                             <div className='grid gap-6 sm:gap-12 my-10 sm:my-24'>
                                 <div className='grid grid-flow-col sm:gap-20 lg:gap-40'>

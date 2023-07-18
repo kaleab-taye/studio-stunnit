@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import React from 'react'
 
 export default function FounderCard({ founder }) {
   return (
     <div className='flex flex-col gap-4 items-center w-full rounded-md bg-surface scroll py-14 px-6 sm:px-10 text-center h-full'>
       <div className='space-y-8 flex flex-col items-center'>
-        <img src={founder.avatarUrl} alt={founder.name} className="w-[150px] h-[150px] rounded-full object-cover" />
+        {/* <img src={founder.avatarUrl} alt={founder.name} className="w-[150px] h-[150px] rounded-full object-cover" /> */}
         <div>
           <h3 className='font-bold text-xl md:text-lg lg2:text-xl'>
             {founder.name}

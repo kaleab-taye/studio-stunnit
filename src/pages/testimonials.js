@@ -1,19 +1,18 @@
+import { Carousel } from 'flowbite-react'
+import React, { useState } from 'react'
+import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
+import YouTube from 'react-youtube'
 import Layout from '../components/layout'
 import LeftRightAligner from '../components/left-right-aligner'
 import Navbar from '../components/navbar'
 import Placeholder from '../components/placeholder'
+import SeoHeader from '../components/seoHeader'
 import TestimonialCard from '../components/testimonial-card'
-import { Carousel } from 'flowbite-react'
-import { AnimatePresence, motion } from 'framer-motion'
-import React, { useState } from 'react'
-import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
-import Slider from 'react-slick'
-import YouTube from 'react-youtube'
 
 
 
 export default function Testimonials({ testimonials, testimonialsYT }) {
-console.log("logg youtubeVIDExtractor",youtubeVIDExtractor("https://www.youtube.com/watch?v=knPnspjCgcU"))
+    console.log("logg youtubeVIDExtractor", youtubeVIDExtractor("https://www.youtube.com/watch?v=knPnspjCgcU"))
     const [currentProject, setCurrentProject] = useState(0)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [loadingState, setLoadingState] = useState(true)
@@ -51,6 +50,7 @@ console.log("logg youtubeVIDExtractor",youtubeVIDExtractor("https://www.youtube.
     // <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={(e) => { e.target.pauseVideo(); }} />
     return (
         <div>
+            <SeoHeader pageName="Testimonials" />
             <Layout>
                 <Navbar />
                 <LeftRightAligner>
@@ -139,10 +139,10 @@ function finishedLoading(e, setLoadingState) {
     setLoadingState(true);
 }
 
-function youtubeVIDExtractor(ytLink){
+function youtubeVIDExtractor(ytLink) {
 
     let res = ytLink.split('v=')
-    console.log("logg youtubeVIDExtractor or",res)
+    console.log("logg youtubeVIDExtractor or", res)
 
     return res[1]
 }
@@ -177,54 +177,62 @@ export async function getStaticProps() {
     // }
 
     return {
-                props: {
-                    testimonials: [
-                        {
-                            "id": "a59a6f34-b16c-4ef0-92b4-2c956d1db5e9",
-                            "avatarUrl": "/images/Asset_12.png.webp",
-                            "name": "K Murthy,",
-                            "occupation": "Director Manager, K Murthy Company",
-                            "rating": 5,
-                            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
-                        },
-                        {
-                            "id": "2e7092d6-6306-4f08-bd77-d660df9c7335",
-                            "avatarUrl": "/images/Asset_17.png.webp",
-                            "name": "Aruna",
-                            "occupation": "Director Manager, Aruna Company",
-                            "rating": 5,
-                            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
-                        },
-                        {
-                            "id": "c6bf8d89-a218-4d59-afe6-76271f379c08",
-                            "avatarUrl": "/images/Asset_17.png.webp",
-                            "name": "Sanjeev,",
-                            "occupation": "Director Manager, Sanjeev Company",
-                            "rating": 4,
-                            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
-                        },
-                        {
-                            "id": "1ca92c62-e0bf-47bf-b4df-08373ac90792",
-                            "avatarUrl": "/images/Asset_12.png.webp",
-                            "name": "Punith,",
-                            "occupation": "Director Manager, Punith Company",
-                            "rating": 5,
-                            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
-                        }
-                    ],
-                    testimonialsYT: [
-                        {
-                            "id": "4a346661-4072-4f53-9776-deaa3e0cd75d",
-                            "youtubeLink": "https://www.youtube.com/watch?v=QvrMNDv6iYU"
-                        },
-                        {
-                            "id": "1f069693-109f-4458-9b2c-9cc25f2b39ae",
-                            "youtubeLink": "https://www.youtube.com/watch?v=P6KTCjwmdzs"
-                        }
-                    ],
-                    //       error: error,
+        props: {
+            testimonials: [
+                {
+                    "id": "a59a6f34-b16c-4ef0-92b4-2c956d1db5e9",
+                    "avatarUrl": "/images/Asset_12.png.webp",
+                    "name": "Mr Murthy,",
+                    "occupation": "My Home Bhooja",
+                    "rating": 5,
+                    "description": "Luxury Designs. Superb Detailing and Awesome looking. Marvellous outlook"
+                },
+                {
+                    "id": "2e7092d6-6306-4f08-bd77-d660df9c7335",
+                    "avatarUrl": "/images/Asset_17.png.webp",
+                    "name": "Ms Aruna,",
+                    "occupation": "My Home Bhooja",
+                    "rating": 5,
+                    "description": "Elegant Designs. Great Finish and Well implemented"
+                },
+                {
+                    "id": "c6bf8d89-a218-4d59-afe6-76271f379c08",
+                    "avatarUrl": "/images/Asset_17.png.webp",
+                    "name": "Mr Raju,",
+                    "occupation": "My Home Bhooja",
+                    "rating": 4,
+                    "description": "Excellent Designs. Liked a lot"
+                },
+                {
+                    "id": "1ca92c62-e0bf-47bf-b4df-08373ac90792",
+                    "avatarUrl": "/images/Asset_12.png.webp",
+                    "name": "Ms Aruna,",
+                    "occupation": "DSR",
+                    "rating": 5,
+                    "description": "Grand styling and Tasteful looking designs"
+                },
+                {
+                    "id": "1ca92c62-e0bf-47bf-b4df-08373ac9k792",
+                    "avatarUrl": "/images/Asset_12.png.webp",
+                    "name": "Ms Sujatha,",
+                    "occupation": "Prestige",
+                    "rating": 5,
+                    "description": "Creative concepts Designs with perfect execution"
                 }
-            };
+            ],
+            testimonialsYT: [
+                {
+                    "id": "4a346661-4072-4f53-9776-deaa3e0cd75d",
+                    "youtubeLink": "https://www.youtube.com/watch?v=QvrMNDv6iYU"
+                },
+                {
+                    "id": "1f069693-109f-4458-9b2c-9cc25f2b39ae",
+                    "youtubeLink": "https://www.youtube.com/watch?v=P6KTCjwmdzs"
+                }
+            ],
+            //       error: error,
+        }
+    };
 
-    
+
 }

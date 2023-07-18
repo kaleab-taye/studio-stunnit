@@ -1,19 +1,21 @@
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { GrDown } from 'react-icons/gr'
+import aboutUsImage from '../../public/images/Asset_20.png.webp'
 import FounderCard from '../components/founderCard'
 import Layout from '../components/layout'
 import LeftRightAligner from '../components/left-right-aligner'
 import Navbar from '../components/navbar'
 import PageHeading from '../components/pageHeading'
-import React, { useState } from 'react'
-import { IoMdMenu } from 'react-icons/io'
-import aboutUsImage from '../../public/images/Asset_20.png.webp'
-import Link from 'next/link'
-import { GrDown } from 'react-icons/gr'
+import SeoHeader from '../components/seoHeader'
 
 export default function About_us() {
 
     const [smallScreenFullTextContent, setSmallScreenFullTextContent] = useState(false);
     return (
         <div>
+            <SeoHeader pageName="About Us" />
+
             <Layout>
                 <Navbar />
                 <PageHeading name='About Us' image={aboutUsImage} />
@@ -53,7 +55,7 @@ export default function About_us() {
                                                     Our concepts intimately weave with the client&apos;s needs and aspirations. At Studio Stunnit, our
                                                     designs explore a holistic composition, and we sensitively curate forms, textures, and material
                                                     combinations in spaces to create a tranquil and experiential living.      </div>
-                                                    <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
+                                                <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                                     “We have a fabulous design idea. Are you ready to build your dreams?”
                                                 </div>
                                             </div>
@@ -65,24 +67,24 @@ export default function About_us() {
                                 </div>
                                 {/* large screen full display */}
                                 <div className='hidden sm:grid gap-8 font-light text-sm' >
-                                <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
+                                    <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         Studio Stunnit is a multidisciplinary design firm envisioning interior designs that are unique
                                         and spell-binding. Established in 2022, helmed by eminent interior designers in Hyderabad,
                                         the studio focuses on crafting a premium style approach-visualising spaces with aesthetic coherence and functional congruity. With 8 years of design experience and work on 50-plus projects, principal designer Sahithi G entwines a myriad of bespoke elements that bring forth a remarkable impression to interior spaces. Sunny G ropes in 11 years of expertise in the corporate
                                         domain and a passion for design, technology and entrepreneurship, adding an unparalleled
                                         level of flavour to the studio&apos;s development and business strategies. </div>
-                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
+                                    <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         Our projects take off from a conceptual framework to delivering a complete spatial affair. For
                                         assignments outside Hyderabad, we currently provide only designs. Our firm traces context,
                                         social engagement, narrative and human interactions to define the essence of a particular
                                         project  </div>
-                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
+                                    <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         “Studio Stunnit traverses ideas and innovations that transform your spaces.”    </div>
-                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
+                                    <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         Our concepts intimately weave with the client&apos;s needs and aspirations. At Studio Stunnit, our
                                         designs explore a holistic composition, and we sensitively curate forms, textures, and material
                                         combinations in spaces to create a tranquil and experiential living.      </div>
-                                        <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
+                                    <div className='grid font-light text-sm leading-7 md:leading-8 text-[0.8rem]'>
                                         “We have a fabulous design idea. Are you ready to build your dreams?”
                                     </div>
                                 </div>
@@ -110,7 +112,7 @@ export default function About_us() {
                     <div className='text-center mt-10 mb-14 md:my-16'>
                         <div className='italic mx-auto font-bold text-[13.5px] md:text-sm max-w-[520px]'>
                             “It&apos;s always about you and how you use spaces. <br className='hidden md:grid' />
-                            At the end of the day, making your space attractive and  <br className='hidden md:grid'/>
+                            At the end of the day, making your space attractive and  <br className='hidden md:grid' />
                             meaningful is our quest!”
                         </div>
                     </div>
@@ -142,15 +144,13 @@ export default function About_us() {
 
 const founders = [
     {
-        name: "K Murthy",
-        position: "Director Manager, K Murthy",
-        avatarUrl: "/images/Asset 17.png.webp",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
+        name: "Sunil G",
+        position: "Strategist & Manager",
+        description: "Ex Investment Banker in corporate for more than 13 years performing Strategy and Management functions for the Studio Stunnit. Like connecting the best of East and West creating global solutions.",
     },
     {
-        name: "Aruna",
-        position: "Director Manager, K Murthy",
-        avatarUrl: "/images/Asset 12.png.webp",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum.",
+        name: "Sahithi G",
+        position: "Interior Designer & Creative Director",
+        description: "Principal Interior Designer designing and executing interior spaces from more than 9 years. Looking into creative side of the Studio Stunnit.",
     },
 ]

@@ -6,7 +6,7 @@ import Button from '../button'
 export default function GetInTouchForm() {
     const [status, setStatus] = useState("idl")
     const [message, setMessage] = useState("")
-    const sendEmail = async() => {
+    const sendEmail = async () => {
         setStatus("loading")
         try {
             let name = document.getElementById("name-field").value
@@ -34,18 +34,18 @@ export default function GetInTouchForm() {
                 return
             }
             let whatsapp = document.getElementById("whatsapp-field").value
-            console.log("---------1",name,email,phone,message,whatsapp)
+            console.log("---------1", name, email, phone, message, whatsapp)
             let response = await fetch(`${process.env.url}/get-in-touch-email`, {
                 method: "POST",
-                body: JSON.stringify({name,email,phone,message,whatsapp}),
-              });
-            if(response.ok){
+                body: JSON.stringify({ name, email, phone, message, whatsapp }),
+            });
+            if (response.ok) {
                 setStatus("success")
                 setMessage("Email has been sent successfully")
-            } else{
+            } else {
                 console.log(response)
-            setStatus("error")
-            setMessage("sending message failed, please try again.")
+                setStatus("error")
+                setMessage("sending message failed, please try again.")
             }
 
         } catch (error) {
@@ -105,13 +105,13 @@ export default function GetInTouchForm() {
                     </div>
                 </div>
             </div>
-            {status == "loading" || status == "error" || status == "success" ? <div className='mb-[-16px] mt-[-30px] md:mt-[-16px] h-0 mr-auto h-fit grid'>
-                {status == "loading" ? <div>Loading . . .</div> : null}
-                {status == "error" ? <div>{message}</div> : null}
-                {status == "success" ? <div>Your Email Has Been Sent Successfully</div> : null}
+            {status == "loading" || status == "error" || status == "success" ? <div className='mb-[-16px] mt-[-30px] md:mt-[-16px] h-0 m-auto h-fit grid'>
+                {status == "loading" ? <div className='text-sm mt-5 text-primary bg-surface'>Sending Email . . .</div> : null}
+                {status == "error" ? <div className='text-sm mt-5 text-dangerColor bg-surface'>{message}</div> : null}
+                {status == "success" ? <div className='text-sm mt-5 text-primary bg-surface'>Your Email Has Been Sent Successfully!</div> : null}
             </div> : null}
-            <div className='mx-auto' onClick={() => sendEmail()}>
-                <Button padding='px-14' name='Submit' />
+            <div className='mx-auto' onClick={() => status != 'loading' ? sendEmail() : null}>
+                <Button padding='px-14' name='Submit' status={status} />
             </div>
         </div>
     )

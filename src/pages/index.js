@@ -1,33 +1,23 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '../styles/Home.module.css'
 import LandingComponet from '../components/landidng'
-import WhatWeDoSection from '../components/whatWeDoSection'
-import Navbar from '../components/navbar'
 import Layout from '../components/layout'
-import WhyChooseUsSection from '../components/sections/whyChooseUsSection'
-import HomeTestimonialSection from '../components/sections/homeTestimonialSection'
-import HomeProjectsSection from '../components/homeProjectsSection'
-import DesignInStepsSection from '../components/sections/designInStepsSection'
+import Navbar from '../components/navbar'
 import ProjectsProjectsSection from '../components/projectsProjectsSection'
+import DesignInStepsSection from '../components/sections/designInStepsSection'
+import HomeTestimonialSection from '../components/sections/homeTestimonialSection'
+import WhyChooseUsSection from '../components/sections/whyChooseUsSection'
+import SeoHeader from '../components/seoHeader'
+import WhatWeDoSection from '../components/whatWeDoSection'
 
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ projects, testimonials }) {
-  console.log(projects)
   return (
     <div>
-      <Head>
-        <title>Studio Stunnit</title>
-        <meta name="description" content="We help you step into stunning Interior design spaces that is
-                        customized to ﬁt your personal value. Get in touch and let’s
-                        start customizing a design that ﬁts just right for you!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SeoHeader pageName="Studio Stunnit" />
+
       <main className='' >
         <Layout>
           <LandingComponet />
@@ -117,34 +107,42 @@ export async function getStaticProps() {
         {
           "id": "a59a6f34-b16c-4ef0-92b4-2c956d1db5e9",
           "avatarUrl": "/images/Asset_12.png.webp",
-          "name": "K Murthy,",
-          "occupation": "Director Manager, K Murthy Company",
+          "name": "Mr Murthy,",
+          "occupation": "My Home Bhooja",
           "rating": 5,
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
+          "description": "Luxury Designs. Superb Detailing and Awesome looking. Marvellous outlook"
         },
         {
           "id": "2e7092d6-6306-4f08-bd77-d660df9c7335",
           "avatarUrl": "/images/Asset_17.png.webp",
-          "name": "Aruna",
-          "occupation": "Director Manager, Aruna Company",
+          "name": "Ms Aruna,",
+          "occupation": "My Home Bhooja",
           "rating": 5,
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
+          "description": "Elegant Designs. Great Finish and Well implemented"
         },
         {
           "id": "c6bf8d89-a218-4d59-afe6-76271f379c08",
           "avatarUrl": "/images/Asset_17.png.webp",
-          "name": "Sanjeev,",
-          "occupation": "Director Manager, Sanjeev Company",
-          "rating": 4,
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
+          "name": "Mr Raju,",
+          "occupation": "My Home Bhooja",
+          "rating": 5,
+          "description": "Excellent Designs. Liked a lot"
         },
         {
           "id": "1ca92c62-e0bf-47bf-b4df-08373ac90792",
           "avatarUrl": "/images/Asset_12.png.webp",
-          "name": "Punith,",
-          "occupation": "Director Manager, Punith Company",
+          "name": "Ms Aruna,",
+          "occupation": "DSR",
           "rating": 5,
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed\r\ndiam nonummy nibh euismod tincidunt ut laoreet dolore magna\r\naliquam erat volutpat. Ut wisi llamcorper suscipit lobortis nisl ut\r\naliquip ex ea commodo consequat. Duis autem vel"
+          "description": "Grand styling and Tasteful looking designs"
+        },
+        {
+          "id": "1ca92c62-e0bf-47bf-b4df-08373ac9k792",
+          "avatarUrl": "/images/Asset_12.png.webp",
+          "name": "Ms Sujatha,",
+          "occupation": "Prestige",
+          "rating": 5,
+          "description": "Creative concepts Designs with perfect execution"
         }
       ],
       //       error: error,

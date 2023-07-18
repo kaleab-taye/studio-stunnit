@@ -1,18 +1,20 @@
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { GrDown } from 'react-icons/gr'
+import serviceImage from '../../public/images/Asset_20.png.webp'
 import Layout from '../components/layout'
 import LeftRightAligner from '../components/left-right-aligner'
 import Navbar from '../components/navbar'
 import PageHeading from '../components/pageHeading'
+import SeoHeader from '../components/seoHeader'
 import ServiceCard from '../components/serviceCard'
-import React, { useState } from 'react'
-import { IoMdMenu } from 'react-icons/io'
-import serviceImage from '../../public/images/Asset_20.png.webp'
-import Link from 'next/link'
-import { GrDown } from 'react-icons/gr'
 export default function Service() {
   const [smallScreenFullTextContent, setSmallScreenFullTextContent] = useState(false)
 
   return (
     <div className='leading-loose scroll-smooth'>
+      <SeoHeader pageName="Services" />
+
       <Layout>
         <Navbar />
         <PageHeading image={serviceImage} name='Services' />

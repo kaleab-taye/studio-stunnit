@@ -1,21 +1,19 @@
-import Image from 'next/image'
-import React from 'react'
-import LeftRightAligner from '../left-right-aligner'
-import logo from '../../../public/SVG/Asset_27.svg'
-import { BsYoutube, BsInstagram } from 'react-icons/bs';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { TiSocialTwitter } from 'react-icons/ti';
-import FooterIconContainer from '../footerIconContainer';
-import GetInTouchSection from './getInTouchSection';
-import GetInTouchForm from './getInTouchForm';
+import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import { BsInstagram, BsYoutube } from 'react-icons/bs';
+import logo from '../../../public/SVG/Asset_27.svg';
+import FooterIconContainer from '../footerIconContainer';
+import LeftRightAligner from '../left-right-aligner';
+import GetInTouchForm from './getInTouchForm';
+import GetInTouchSection from './getInTouchSection';
 
 
 export default function FooterSection() {
     var itemHeading = 'uppercase font-bold text-md'
     var item = 'font-light '
     return (
-        <div  id='get-in-touch' className='grid bg-surface pt-12'>
+        <div id='get-in-touch' className='grid bg-surface pt-12'>
             <LeftRightAligner>
                 <GetInTouchSection />
                 <div className='mb-20'>
@@ -41,22 +39,22 @@ export default function FooterSection() {
                                 <div className={itemHeading}>PAGES</div>
                                 <div className='grid gap-1'>
                                     <Link href='/'>
-                                    <div className={item + ' hover:underline underline-offset-4'}>Home</div>
+                                        <div className={item + ' hover:underline underline-offset-4'}>Home</div>
                                     </Link>
                                     <Link href='/services'>
-                                    <div className={item + ' hover:underline underline-offset-4'}>Services</div>
+                                        <div className={item + ' hover:underline underline-offset-4'}>Services</div>
                                     </Link>
                                     <Link href='/projects'>
-                                    <div className={item + ' hover:underline underline-offset-4'}>Projects</div>
+                                        <div className={item + ' hover:underline underline-offset-4'}>Projects</div>
                                     </Link>
                                     <Link href='/about_us'>
-                                    <div className={item+ ' hover:underline underline-offset-4'}>About Us</div>
+                                        <div className={item + ' hover:underline underline-offset-4'}>About Us</div>
                                     </Link>
                                     <Link href='/testimonials'>
-                                    <div className={item + " hover:underline underline-offset-4"}>Testimonials</div>
+                                        <div className={item + " hover:underline underline-offset-4"}>Testimonials</div>
                                     </Link>
                                     <Link href='/faq'>
-                                    <div className={item +' hover:underline underline-offset-4'}>FAQs</div>
+                                        <div className={item + ' hover:underline underline-offset-4'}>FAQs</div>
                                     </Link>
                                 </div>
                             </div>
@@ -82,12 +80,12 @@ export default function FooterSection() {
                                     <FooterIconContainer>
                                         <BsInstagram className='w-[24px] h-[24px] m-auto' />
                                     </FooterIconContainer>
-                                    <FooterIconContainer>
+                                    {/* <FooterIconContainer>
                                         <FaLinkedinIn className='w-[24px] h-[24px] m-auto' />
                                     </FooterIconContainer>
                                     <FooterIconContainer>
                                         <TiSocialTwitter className='w-[25px] h-[25px] m-auto' />
-                                    </FooterIconContainer>
+                                    </FooterIconContainer> */}
 
 
                                 </div>
