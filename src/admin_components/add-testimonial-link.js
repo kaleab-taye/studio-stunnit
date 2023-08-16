@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import LinkTextformfield from './linkTF'
+import CircularProgress from '@mui/joy/CircularProgress'
+import React, { useEffect, useState } from 'react'
 import Button2 from './button2'
-import YoutubeLinks from './youtube_links'
 import Heading from './heading'
-import CircularProgress from '@mui/joy/CircularProgress';
 import TestimonialLinkTextformfield from './testimonial-link-TF'
+import YoutubeLinks from './youtube_links'
 
 const AddTestimonialLink = ({ links, addLinks, removeLink }) => {
   const [isLinkInvalid, setIsLinkInvalid] = useState()
@@ -60,7 +59,6 @@ const AddTestimonialLink = ({ links, addLinks, removeLink }) => {
       });
   
       let data = await response.text();
-      console.log(JSON.parse(data));
       addLinks(JSON.parse(data));
       handleButtonClick();
       clearTxt();

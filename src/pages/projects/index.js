@@ -12,12 +12,11 @@ import SeoHeader from '../../components/seoHeader';
 
 
 export default function Index({ projects }) {
-
     const router = useRouter()
     const [selectedProject, setSelectedProject] = useState(-1);
     const [smallScreenFullTextContent, setSmallScreenFullTextContent] = useState(false)
     const childDesign = 'w-10 h-10 bg-red-500'
-
+    const serverUrl = process.env.url
     useEffect(() => {
         if (router.query.id != null) {
             projects.map((proj) => {
@@ -44,12 +43,6 @@ export default function Index({ projects }) {
             const deltaX = event.deltaX;
             const deltaY = event.deltaY;
 
-            // if (deltaX > 0) {
-            //   // Scrolling to the right
-            // } else if (deltaX < 0) {
-            //   // Scrolling to the left
-            // }
-
             if (deltaY > 0) {
                 // Scrolling down
                 scrollDirection = 'down'
@@ -59,49 +52,27 @@ export default function Index({ projects }) {
             }
         });
 
-
         container?.addEventListener('wheel', (event) => {
 
             // Check if horizontal scrolling is needed
             if (content.scrollWidth > container.clientWidth) {
                 // Prevent vertical scrolling
 
-
-                // Scroll horizontally
-                // if(isHorizontalScrolling && event.deltaY){
-                //     console.log('isHorizontalScrolling', isHorizontalScrolling , event.deltaY )
-
-
-
-                // }
-
                 // Update horizontal scrolling state
                 isHorizontalScrolling = true;
-                console.log(content.scrollLeft + container.clientWidth, content.scrollWidth, content.scrollLeft, content.scrollWidth - content.clientWidth)
-
                 if (content.scrollLeft <= 1 && scrollDirection == 'down') {
                     //horizontal
-                    console.log('condition 1')
                     event.preventDefault();
                     content.scrollLeft += event.deltaY;
                 } else if (content.scrollLeft <= 1 && scrollDirection == 'up') {
                     // vertical
-                    console.log('condition 2')
-
                 } else if (content.scrollLeft >= content.scrollWidth - content.clientWidth && scrollDirection == 'up') {
                     //horizontal
-                    console.log('condition 3')
-
                     event.preventDefault();
                     content.scrollLeft += event.deltaY;
                 } else if (content.scrollLeft >= content.scrollWidth - content.clientWidth && scrollDirection == 'down') {
                     //vertical
-                    console.log('condition 4')
-
                 } else {
-                    console.log('condition 5', content.scrollLeft, scrollDirection)
-
-
                     // Check if horizontal scrolling has reached the end
                     if (content.scrollLeft + container.clientWidth > content.scrollWidth ||
                         content.scrollLeft < 0) {
@@ -118,48 +89,23 @@ export default function Index({ projects }) {
                 }
 
             }
-            // else {
-            //     console.log('else clicked')
-            //     // If not horizontally scrolling, scroll vertically
-            //     content.scrollTop += event.deltaY;
-            // }
-
-            // if(!isHorizontalScrolling && event.deltaY){
-            //     // console.log('isHorizontalScrolling', isHorizontalScrolling , event.deltaY )
-
-            //     content.scrollTop += event.deltaY;
-
-            // }
         });
 
-        // content?.addEventListener('scroll', () => {
-        //     // Reset horizontal scrolling state when horizontal scrolling ends
-        //     if (!content.scrollLeft && isHorizontalScrolling) {
-        //         console.log('check')
-        //         isHorizontalScrolling = false;
-        //     }
-        // });
-
-        // end
     }, [selectedProject])
 
     return (
         <div>
-
             <SeoHeader pageName="Projects" />
-
             <Layout>
                 <Navbar />
                 <div className='grid gap-2 '>
                     {selectedProject == -1 ? <></> : <div >
-
                         <div id='container' className='hidden sm:grid' >
                             <div id='content' className=''>
 
                                 {selectedProject.moreImages.map((imgUrl) =>
-                                    // <img key={imgUrl} className='snap-center m-auto object-cover h-56 sm:h-[372px] lg:h-[472px]' alt='detail image' src={imgUrl} />
                                     <div key={imgUrl} className='item h-[500px] border-2'>
-                                        <img key={imgUrl} className=' object-cover object-center w-full h-full' alt='detail image' src={imgUrl} />
+                                        <img key={imgUrl} className=' object-cover object-center w-full h-full' alt='detail image' src={serverUrl+"/"+imgUrl} />
                                     </div>
                                 )}
                             </div>
@@ -199,12 +145,8 @@ export default function Index({ projects }) {
                                 {/* responsive mobile project image */}
                                 <div className='grid sm:hidden gap-2'>
                                     {selectedProject.moreImages.map((imgUrl) =>
-                                        <img key={imgUrl} className='m-auto w-full object-cover h-56 md:h-72 lg:h-80 xl:h-92' alt='detail image' src={imgUrl} />
+                                        <img key={imgUrl} className='m-auto w-full object-cover h-56 md:h-72 lg:h-80 xl:h-92' alt='detail image' src={serverUrl+"/"+imgUrl} />
                                     )}
-                                    {/* <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img2} />
-                                    <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img1} />
-                                    <Image className='m-auto object-cover h-56 md:h-72 lg:h-80 xl:h-92' src={img2} /> */}
-
                                 </div>
                                 <div className='grid gap-4 sm:gap-5'>
                                     <div className='text-2xl sm:text-[28px] md:text-[34px]'>Client’s Word :</div>
@@ -241,64 +183,22 @@ export default function Index({ projects }) {
 
 
 export async function getStaticProps() {
-    // try {
-    //     let res = await fetch(`${process.env.url}/projects`);
-    //     let projects = await res.json();
-    //     return {
-    //         props: {
-    //             projects: projects,
-    //         },
-    //         revalidate: 10,
-    //     };
-    // } catch (error) {
-    //     console.error("error happened while fetching projects : ", error)
-
-    //     return {
-    //         props: {
-    //             projects: [],
-    //             //       error: error,
-    //         }
-    //     };
-    // }
-
-    return {
-        props: {
-            projects: [
-                {
-                    "id": "0dd24843-1cb3-4d7e-8f80-d2683a19cd8d",
-                    "title": "K Murthy Project",
-                    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "mainImage": "/images/hero/hero1.jpg.webp",
-                    "moreImages": [
-                        "/projects/myBhoojaDaughterRoomView/01.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/10.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/11.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/12.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/13.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/14.png.webp",
-                    ],
-                    "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "viewCount": 0
-                }, {
-                    "id": "0dd24843-1cb3-4d7e-8f80-d2683a519cd8d",
-                    "title": "My Home Project",
-                    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "mainImage": "/images/hero/hero2.jpg.webp",
-                    "moreImages": [
-                        "/projects/myBhoojaDaughterRoomView/02.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/03.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/04.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/05.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/06.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/07.png.webp",
-                        "/projects/myBhoojaDaughterRoomView/08.png.webp"
-                    ],
-                    "clientsWord": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamd exerci tation ullamcorper sus- cipit lobortis nisl uttate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et",
-                    "viewCount": 0
-                }
-            ],
-            //       error: error,
-        }
-    };
-
+    try {
+        let res = await fetch(`${process.env.url}/api/projects`);
+        let projects = await res.json();
+        return {
+            props: {
+                projects: projects,
+            },
+            revalidate: 10,
+        };
+    } catch (error) {
+        console.error("error happened while fetching projects : ", error)
+        return {
+            props: {
+                projects: [],
+                //       error: error,
+            }
+        };
+    }
 }

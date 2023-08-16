@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import UploadButton from './upload_button';
-import {AiOutlineDelete} from 'react-icons/ai'
 
 export default function UploadListImages({imageUrls}) {
   const [images, setImages] = useState([]);
@@ -37,7 +35,7 @@ export default function UploadListImages({imageUrls}) {
           <div key={index}>
             <div className='relative max-w-[250px] h-[150px] rounded-lg overflow-hidden'>
             <img className='object-cover w-full h-full' src={URL.createObjectURL(image)}/>
-            <div onClick={() => removeImage(index)} class="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
+            <div onClick={() => removeImage(index)} className="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
             </div>
           </div>
         ))}
@@ -49,7 +47,7 @@ export default function UploadListImages({imageUrls}) {
           <div key={index}>
             <div className='relative max-w-[250px] h-[150px] rounded-lg overflow-hidden'>
             <img className='object-cover w-full h-full' src={image}/>
-            <div onClick={() => removeImage(index)} class="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
+            <div onClick={() => removeImage(index)} className="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
             </div>
           </div>
         ))}

@@ -1,14 +1,13 @@
-import React from 'react'
-import Textform from './textformfield'
-import DescriptionTF from './descriptionTF'
-import ClientTF from './clientTF'
-import Button2 from './button2'
-import Heading from './heading'
-import UploadButton from './upload_button'
-import { useState } from 'react'
-import { Url } from '../../config'
+import CircularProgress from '@mui/joy/CircularProgress'
 import { useRouter } from 'next/router'
-import CircularProgress from '@mui/joy/CircularProgress';
+import React, { useState } from 'react'
+import { Url } from '../../config'
+import Button2 from './button2'
+import ClientTF from './clientTF'
+import DescriptionTF from './descriptionTF'
+import Heading from './heading'
+import Textform from './textformfield'
+import UploadButton from './upload_button'
 
 export default function EditProject({ project }) {
 
@@ -132,7 +131,7 @@ export default function EditProject({ project }) {
                 <div key={index}>
                   <div className='relative max-w-[250px] h-[150px] rounded-lg overflow-hidden'>
                     <img className='object-cover w-full h-full' src={typeof (image) === 'string' ? image : URL.createObjectURL(image)} />
-                    <div onClick={() => removeImage(index)} class="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
+                    <div onClick={() => removeImage(index)} className="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
                   </div>
                 </div>
               ))}

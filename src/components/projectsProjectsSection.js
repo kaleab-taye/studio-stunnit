@@ -1,24 +1,17 @@
-import { Carousel } from 'flowbite-react'
-import { AnimatePresence, motion } from 'framer-motion'
-import React, { useState } from 'react'
-import image1 from '../../public/images/Asset_14.png.webp'
-import image2 from '../../public/images/Asset_16.png.webp'
-import image3 from '../../public/images/Asset_20.png.webp'
-import image4 from '../../public/images/Asset_14.png.webp'
-import { MdArrowBackIos, MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
-import Image from 'next/image'
-import LeftRightAligner from './left-right-aligner'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import ProjectsData from '../../public/dummyData/projectsData'
+import React, { useState } from 'react'
+import { MdArrowBackIos, MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md'
 
 export default function ProjectsProjectsSection({ projects }) {
 
 
     // const data = ProjectsData()
-    const PathToImages = '/../..'
+    const PathToImages = process.env.url
     const data = projects
     const [currentProject, setCurrentProject] = useState(data[0])
     const [currentIndex, setCurrentIndex] = useState(0)
+    console.log("chefche 2", currentProject.mainImage)
 
 
     return (

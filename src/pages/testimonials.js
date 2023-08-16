@@ -150,89 +150,89 @@ function youtubeVIDExtractor(ytLink) {
 
 
 export async function getStaticProps() {
-    // try {
-    //     let testimonialsRes = await fetch(`${process.env.url}/testimonials`);
-    //     let testimonials = await testimonialsRes.json()
+    try {
+        let testimonialsRes = await fetch(`${process.env.url}/api/testimonials`);
+        let testimonials = await testimonialsRes.json()
 
-    //     let testimonialsYTRes = await fetch(`${process.env.url}/testimonial-youtube-links`);
-    //     let testimonialsYT = await testimonialsYTRes.json()
+        let testimonialsYTRes = await fetch(`${process.env.url}/api/testimonial-youtube-links`);
+        let testimonialsYT = await testimonialsYTRes.json()
 
-    //     return {
-    //         props: {
-    //             testimonials: testimonials,
-    //             testimonialsYT: testimonialsYT,
-    //         },
-    //         revalidate: 10,
-    //     };
-    // } catch (error) {
-    //     console.error("error happened while fetching testimonials : ", error)
+        return {
+            props: {
+                testimonials: testimonials,
+                testimonialsYT: testimonialsYT,
+            },
+            revalidate: 10,
+        };
+    } catch (error) {
+        console.error("error happened while fetching testimonials : ", error)
 
-    //     return {
-    //         props: {
-    //             testimonials: [],
-    //             testimonialsYT: [],
-    //             //       error: error,
-    //         }
-    //     };
-    // }
+        return {
+            props: {
+                testimonials: [],
+                testimonialsYT: [],
+                //       error: error,
+            }
+        };
+    }
 
-    return {
-        props: {
-            testimonials: [
-                {
-                    "id": "a59a6f34-b16c-4ef0-92b4-2c956d1db5e9",
-                    "avatarUrl": "/images/Asset_12.png.webp",
-                    "name": "Mr Murthy,",
-                    "occupation": "My Home Bhooja",
-                    "rating": 5,
-                    "description": "Luxury Designs. Superb Detailing and Awesome looking. Marvellous outlook"
-                },
-                {
-                    "id": "2e7092d6-6306-4f08-bd77-d660df9c7335",
-                    "avatarUrl": "/images/Asset_17.png.webp",
-                    "name": "Ms Aruna,",
-                    "occupation": "My Home Bhooja",
-                    "rating": 5,
-                    "description": "Elegant Designs. Great Finish and Well implemented"
-                },
-                {
-                    "id": "c6bf8d89-a218-4d59-afe6-76271f379c08",
-                    "avatarUrl": "/images/Asset_17.png.webp",
-                    "name": "Mr Raju,",
-                    "occupation": "My Home Bhooja",
-                    "rating": 4,
-                    "description": "Excellent Designs. Liked a lot"
-                },
-                {
-                    "id": "1ca92c62-e0bf-47bf-b4df-08373ac90792",
-                    "avatarUrl": "/images/Asset_12.png.webp",
-                    "name": "Ms Aruna,",
-                    "occupation": "DSR",
-                    "rating": 5,
-                    "description": "Grand styling and Tasteful looking designs"
-                },
-                {
-                    "id": "1ca92c62-e0bf-47bf-b4df-08373ac9k792",
-                    "avatarUrl": "/images/Asset_12.png.webp",
-                    "name": "Ms Sujatha,",
-                    "occupation": "Prestige",
-                    "rating": 5,
-                    "description": "Creative concepts Designs with perfect execution"
-                }
-            ],
-            testimonialsYT: [
-                {
-                    "id": "4a346661-4072-4f53-9776-deaa3e0cd75d",
-                    "youtubeLink": "https://www.youtube.com/watch?v=QvrMNDv6iYU"
-                },
-                {
-                    "id": "1f069693-109f-4458-9b2c-9cc25f2b39ae",
-                    "youtubeLink": "https://www.youtube.com/watch?v=P6KTCjwmdzs"
-                }
-            ],
-            //       error: error,
-        }
-    };
+    // return {
+    //     props: {
+    //         testimonials: [
+    //             {
+    //                 "id": "a59a6f34-b16c-4ef0-92b4-2c956d1db5e9",
+    //                 "avatarUrl": "/images/Asset_12.png.webp",
+    //                 "name": "Mr Murthy,",
+    //                 "occupation": "My Home Bhooja",
+    //                 "rating": 5,
+    //                 "description": "Luxury Designs. Superb Detailing and Awesome looking. Marvellous outlook"
+    //             },
+    //             {
+    //                 "id": "2e7092d6-6306-4f08-bd77-d660df9c7335",
+    //                 "avatarUrl": "/images/Asset_17.png.webp",
+    //                 "name": "Ms Aruna,",
+    //                 "occupation": "My Home Bhooja",
+    //                 "rating": 5,
+    //                 "description": "Elegant Designs. Great Finish and Well implemented"
+    //             },
+    //             {
+    //                 "id": "c6bf8d89-a218-4d59-afe6-76271f379c08",
+    //                 "avatarUrl": "/images/Asset_17.png.webp",
+    //                 "name": "Mr Raju,",
+    //                 "occupation": "My Home Bhooja",
+    //                 "rating": 4,
+    //                 "description": "Excellent Designs. Liked a lot"
+    //             },
+    //             {
+    //                 "id": "1ca92c62-e0bf-47bf-b4df-08373ac90792",
+    //                 "avatarUrl": "/images/Asset_12.png.webp",
+    //                 "name": "Ms Aruna,",
+    //                 "occupation": "DSR",
+    //                 "rating": 5,
+    //                 "description": "Grand styling and Tasteful looking designs"
+    //             },
+    //             {
+    //                 "id": "1ca92c62-e0bf-47bf-b4df-08373ac9k792",
+    //                 "avatarUrl": "/images/Asset_12.png.webp",
+    //                 "name": "Ms Sujatha,",
+    //                 "occupation": "Prestige",
+    //                 "rating": 5,
+    //                 "description": "Creative concepts Designs with perfect execution"
+    //             }
+    //         ],
+    //         testimonialsYT: [
+    //             {
+    //                 "id": "4a346661-4072-4f53-9776-deaa3e0cd75d",
+    //                 "youtubeLink": "https://www.youtube.com/watch?v=QvrMNDv6iYU"
+    //             },
+    //             {
+    //                 "id": "1f069693-109f-4458-9b2c-9cc25f2b39ae",
+    //                 "youtubeLink": "https://www.youtube.com/watch?v=P6KTCjwmdzs"
+    //             }
+    //         ],
+    //         //       error: error,
+    //     }
+    // };
 
 
 }

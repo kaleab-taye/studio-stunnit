@@ -9,7 +9,7 @@ export default function Placeholder({ isLoading, children }) {
     <div className="relative">
       {isLoading ? (
         <div className=" absolute w-full h-full grid">
-          <span class="m-auto animate-pulse inline-flex h-full w-full bg-surface "></span>
+          <span className="m-auto animate-pulse inline-flex h-full w-full bg-surface "></span>
         </div>
       ) :
         <motion.div

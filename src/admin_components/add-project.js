@@ -1,12 +1,11 @@
-import React from 'react'
-import Textform from './textformfield'
-import DescriptionTF from './descriptionTF'
-import ClientTF from './clientTF'
+import CircularProgress from '@mui/joy/CircularProgress'
+import { useEffect, useState } from 'react'
 import Button2 from './button2'
+import ClientTF from './clientTF'
+import DescriptionTF from './descriptionTF'
 import Heading from './heading'
-import { useState, useEffect } from 'react'
+import Textform from './textformfield'
 import UploadButton from './upload_button'
-import CircularProgress from '@mui/joy/CircularProgress';
 
 export default function AddProject({ addProject }) {
   const [isImageNull, setIsImageNull] = useState(false)
@@ -151,7 +150,7 @@ export default function AddProject({ addProject }) {
                     <div key={index}>
                       <div className='relative max-w-[250px] h-[150px] rounded-lg overflow-hidden'>
                         <img className='object-cover w-full h-full' src={URL.createObjectURL(image)} />
-                        <div onClick={() => removeImage(index)} class="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
+                        <div onClick={() => removeImage(index)} className="absolute w-full py-2.5 bottom-0 inset-x-0 bg-dangerColor text-white text-xs text-center leading-4 cursor-pointer">Delete</div>
                       </div>
                     </div>
                   ))}
