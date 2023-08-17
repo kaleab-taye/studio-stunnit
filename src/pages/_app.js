@@ -1,10 +1,10 @@
-import '../styles/globals.css'
-import '../styles/faqList.css'
-import NextNProgress from 'nextjs-progressbar';
 import { motion } from 'framer-motion';
+import NextNProgress from 'nextjs-progressbar';
+import '../styles/faqList.css';
+import '../styles/globals.css';
 
 import Router, { useRouter } from 'next/router';
-import NProgress from 'nprogress'; 
+import NProgress from 'nprogress';
 
 NProgress.configure({ showSpinner: false });
 
