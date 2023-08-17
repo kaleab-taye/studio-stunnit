@@ -11,22 +11,15 @@ export default function ProjectsProjectsSection({ projects }) {
     const data = projects
     const [currentProject, setCurrentProject] = useState(data[0])
     const [currentIndex, setCurrentIndex] = useState(0)
-    console.log("chefche 2", currentProject.mainImage)
-
 
     return (
 
         <div className="relative grid bg-center bg-surface">
             {/* <Image src={image2} alt='place' className='absolute opacity-0 mx-auto cover max-h-screen max-w-screen' /> */}
 
-            <div className='w-full h-[91vh] grid my-auto overflow-hidden cursor-pointer' onClick={() => { console.log('cccccccccc') }}>
+            <div className='w-full h-[91vh] grid my-auto overflow-hidden cursor-pointer'>
                 <div className='m-auto'>
-
-                    {/* <Image alt='project image' src={currentProject.primaryImage} className='min-h-screen w-screen mx-auto  object-cover h-full w-full brightness-75' /> */}
-                    {/* <AnimatePresence className=' '> */}
-                    {/* {currentProject.map((item) => ( */}
                     <motion.div
-
                         key={currentProject.id}
                         // style={{ x: -100 }}
                         initial={{ x: -100, opacity: 0 }}
@@ -35,9 +28,7 @@ export default function ProjectsProjectsSection({ projects }) {
                         // transition={{ duration: 2 }}
                         className=' grid h-full'
                     >
-
                         <img alt='project image' src={PathToImages + currentProject.mainImage} className='min-h-screen w-screen mx-auto  object-cover object-center brightness-[.8]' />
-
                     </motion.div>
                     {/* </AnimatePresence> */}
                 </div>
@@ -119,7 +110,6 @@ function next(index, setCurrentIndex, fullData) {
 }
 
 function prev(index, setCurrentIndex, fullData) {
-    console.log('prev called', index, fullData)
     if (index > 0) {
         setCurrentIndex(index - 1)
         return index - 1

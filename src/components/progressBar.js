@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const ProgressBar = ({ duration, className, progress, setProgress }) => {
   // const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(progress)
       setProgress((prevProgress) => {
         if (prevProgress >= 100) {
           return 0;

@@ -78,11 +78,9 @@ export default function Index({ projects }) {
                         content.scrollLeft < 0) {
                         // Reset horizontal scrolling state when horizontal limit is reached
                         isHorizontalScrolling = false;
-                        console.log('vertically scrolling')
                         // content.scrollTop += event.deltaY;
                     } else {
                         isHorizontalScrolling = true;
-                        console.log('horizontally scrolling')
                         event.preventDefault();
                         content.scrollLeft += event.deltaY;
                     }

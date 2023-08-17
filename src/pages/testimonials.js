@@ -12,7 +12,6 @@ import TestimonialCard from '../components/testimonial-card'
 
 
 export default function Testimonials({ testimonials, testimonialsYT }) {
-    console.log("logg youtubeVIDExtractor", youtubeVIDExtractor("https://www.youtube.com/watch?v=knPnspjCgcU"))
     const [currentProject, setCurrentProject] = useState(0)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [loadingState, setLoadingState] = useState(true)
@@ -133,7 +132,6 @@ export default function Testimonials({ testimonials, testimonialsYT }) {
 }
 
 function finishedLoading(e, setLoadingState) {
-    console.log('finished loading');
     e.target.pauseVideo();
 
     setLoadingState(true);
@@ -142,8 +140,6 @@ function finishedLoading(e, setLoadingState) {
 function youtubeVIDExtractor(ytLink) {
 
     let res = ytLink.split('v=')
-    console.log("logg youtubeVIDExtractor or", res)
-
     return res[1]
 }
 
@@ -165,8 +161,6 @@ export async function getStaticProps() {
             revalidate: 10,
         };
     } catch (error) {
-        console.error("error happened while fetching testimonials : ", error)
-
         return {
             props: {
                 testimonials: [],

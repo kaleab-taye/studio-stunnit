@@ -167,8 +167,7 @@ export async function getStaticProps() {
       revalidate: 10,
     };
   } catch (error) {
-    console.error("error happened while fetching projects : ", error)
-
+    // console.error("error happened while fetching projects : ", error)
     return {
       props: {
         faqs: [],

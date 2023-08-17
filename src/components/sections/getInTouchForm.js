@@ -34,7 +34,6 @@ export default function GetInTouchForm() {
                 return
             }
             let whatsapp = document.getElementById("whatsapp-field").value
-            console.log("---------1", name, email, phone, message, whatsapp)
             let response = await fetch(`${process.env.url}/get-in-touch-email`, {
                 method: "POST",
                 body: JSON.stringify({ name, email, phone, message, whatsapp }),
@@ -43,7 +42,6 @@ export default function GetInTouchForm() {
                 setStatus("success")
                 setMessage("Email has been sent successfully")
             } else {
-                console.log(response)
                 setStatus("error")
                 setMessage("sending message failed, please try again.")
             }
@@ -53,7 +51,6 @@ export default function GetInTouchForm() {
             setStatus("error")
             setMessage("sending message failed, please try again.")
         }
-        // console.log(name, email, phone, whatsapp)
 
     }
     return (
